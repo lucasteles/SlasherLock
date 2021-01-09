@@ -1,0 +1,1774 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 43
+    width: 1920
+    height: 1037
+  m_ShowMode: 4
+  m_Title: Project
+  m_RootView: {fileID: 2}
+  m_MinSize: {x: 875, y: 663}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 1
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  - {fileID: 5}
+  - {fileID: 4}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 1037
+  m_MinSize: {x: 875, y: 663}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 30
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LoadedToolbars:
+  - {fileID: 23}
+  m_MainToolbar: {fileID: 23}
+  m_LastLoadedLayoutName: 
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 1017
+    width: 1920
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 14}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1920
+    height: 987
+  m_MinSize: {x: 709, y: 613}
+  m_MaxSize: {x: 18004, y: 18063}
+  vertical: 1
+  controlID: 130
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 10}
+  - {fileID: 13}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 792
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
+  vertical: 0
+  controlID: 131
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 8}
+  - {fileID: 9}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 343
+    height: 792
+  m_MinSize: {x: 231, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 113
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneHierarchyWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 343
+    height: 355
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 355
+    width: 343
+    height: 437
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 19}
+  m_Panes:
+  - {fileID: 19}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 11}
+  - {fileID: 12}
+  m_Position:
+    serializedVersion: 2
+    x: 343
+    y: 0
+    width: 1151
+    height: 792
+  m_MinSize: {x: 202, y: 442}
+  m_MaxSize: {x: 4002, y: 8042}
+  vertical: 1
+  controlID: 132
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1151
+    height: 403
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 20}
+  m_Panes:
+  - {fileID: 20}
+  - {fileID: 16}
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 2
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: GameView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 403
+    width: 1151
+    height: 389
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: InspectorWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1494
+    y: 0
+    width: 426
+    height: 792
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 21}
+  m_Panes:
+  - {fileID: 21}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 792
+    width: 1920
+    height: 195
+  m_MinSize: {x: 100, y: 121}
+  m_MaxSize: {x: 4000, y: 4021}
+  m_ActualView: {fileID: 22}
+  m_Panes:
+  - {fileID: 22}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13953, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 800, y: 250}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Package Manager
+    m_Image: {fileID: -2824328813065806953, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2263
+    y: 292
+    width: 1149
+    height: 382
+  m_ViewDataDictionary: {fileID: 0}
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2263
+    y: 292
+    width: 1149
+    height: 382
+  m_ViewDataDictionary: {fileID: 0}
+  m_Spl:
+    ID: 198
+    splitterInitialOffset: 483
+    currentActiveSplitter: -1
+    realSizes:
+    - 482
+    - 667
+    relativeSizes:
+    - 0.41949522
+    - 0.5805048
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 1149
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 16}
+    newResultList:
+    - id: 1003
+      uniqueId: '[3rdPersonCharacterController][suite]'
+      name: 3rdPersonCharacterController
+      fullName: 3rdPersonCharacterController
+      resultStatus: 1
+      duration: 0.5880316
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1027
+      uniqueId: '[PlayMode.dll][suite]'
+      name: PlayMode.dll
+      fullName: C:/git/Unity/3rdPersonCharacterController/Library/ScriptAssemblies/PlayMode.dll
+      resultStatus: 1
+      duration: 0.488089
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[3rdPersonCharacterController][suite]'
+    - id: 1028
+      uniqueId: PlayMode.dll/[PlayMode][Tests][suite]
+      name: Tests
+      fullName: Tests
+      resultStatus: 1
+      duration: 0.471206
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[PlayMode.dll][suite]'
+    - id: 1011
+      uniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandleJumpInputTests][suite]
+      name: HandleJumpInputTests
+      fullName: Tests.HandleJumpInputTests
+      resultStatus: 1
+      duration: 0.3258549
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/[PlayMode][Tests][suite]
+    - id: 1016
+      uniqueId: PlayMode.dll/Tests/HandleJumpInputTests/[PlayMode][Tests.HandleJumpInputTests.ShouldNotChangeJumpTimerWhenJumpInputIsTrue]
+      name: ShouldNotChangeJumpTimerWhenJumpInputIsTrue
+      fullName: Tests.HandleJumpInputTests.ShouldNotChangeJumpTimerWhenJumpInputIsTrue
+      resultStatus: 1
+      duration: 0.0105105
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandleJumpInputTests][suite]
+    - id: 1014
+      uniqueId: PlayMode.dll/Tests/HandleJumpInputTests/[PlayMode][Tests.HandleJumpInputTests.ShouldSetBaseIsJumpingToJumpInput][suite]
+      name: ShouldSetBaseIsJumpingToJumpInput
+      fullName: Tests.HandleJumpInputTests.ShouldSetBaseIsJumpingToJumpInput
+      resultStatus: 1
+      duration: 0.0230898
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1011
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandleJumpInputTests][suite]
+    - id: 1012
+      uniqueId: PlayMode.dll/Tests/HandleJumpInputTests/ShouldSetBaseIsJumpingToJumpInput/[PlayMode][Tests.HandleJumpInputTests.ShouldSetBaseIsJumpingToJumpInput(True)]
+      name: ShouldSetBaseIsJumpingToJumpInput(True)
+      fullName: Tests.HandleJumpInputTests.ShouldSetBaseIsJumpingToJumpInput(True)
+      resultStatus: 1
+      duration: 0.0011355
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: PlayMode.dll/Tests/HandleJumpInputTests/[PlayMode][Tests.HandleJumpInputTests.ShouldSetBaseIsJumpingToJumpInput][suite]
+    - id: 1013
+      uniqueId: PlayMode.dll/Tests/HandleJumpInputTests/ShouldSetBaseIsJumpingToJumpInput/[PlayMode][Tests.HandleJumpInputTests.ShouldSetBaseIsJumpingToJumpInput(False)]
+      name: ShouldSetBaseIsJumpingToJumpInput(False)
+      fullName: Tests.HandleJumpInputTests.ShouldSetBaseIsJumpingToJumpInput(False)
+      resultStatus: 1
+      duration: 0.0003535
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: PlayMode.dll/Tests/HandleJumpInputTests/[PlayMode][Tests.HandleJumpInputTests.ShouldSetBaseIsJumpingToJumpInput][suite]
+    - id: 1015
+      uniqueId: PlayMode.dll/Tests/HandleJumpInputTests/[PlayMode][Tests.HandleJumpInputTests.ShouldZeroJumpTimerWhenJumpInputIsFalse]
+      name: ShouldZeroJumpTimerWhenJumpInputIsFalse
+      fullName: Tests.HandleJumpInputTests.ShouldZeroJumpTimerWhenJumpInputIsFalse
+      resultStatus: 1
+      duration: 0.0005108
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandleJumpInputTests][suite]
+    - id: 1009
+      uniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandleLookInputTests][suite]
+      name: HandleLookInputTests
+      fullName: Tests.HandleLookInputTests
+      resultStatus: 1
+      duration: 0.0190506
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/[PlayMode][Tests][suite]
+    - id: 1010
+      uniqueId: PlayMode.dll/Tests/HandleLookInputTests/[PlayMode][Tests.HandleLookInputTests.ShouldSetLookVectorToInputVector]
+      name: ShouldSetLookVectorToInputVector
+      fullName: Tests.HandleLookInputTests.ShouldSetLookVectorToInputVector
+      resultStatus: 1
+      duration: 0.0012901
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandleLookInputTests][suite]
+    - id: 1003
+      uniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandleMovementInputTests][suite]
+      name: HandleMovementInputTests
+      fullName: Tests.HandleMovementInputTests
+      resultStatus: 1
+      duration: 0.0183468
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/[PlayMode][Tests][suite]
+    - id: 1004
+      uniqueId: PlayMode.dll/Tests/HandleMovementInputTests/[PlayMode][Tests.HandleMovementInputTests.ShouldSetPlayerMovementVectorToInputVector]
+      name: ShouldSetPlayerMovementVectorToInputVector
+      fullName: Tests.HandleMovementInputTests.ShouldSetPlayerMovementVectorToInputVector
+      resultStatus: 1
+      duration: 0.0019269
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandleMovementInputTests][suite]
+    - id: 1017
+      uniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+      name: HandlePlayerMovementTests
+      fullName: Tests.HandlePlayerMovementTests
+      resultStatus: 1
+      duration: 0.0510342
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/[PlayMode][Tests][suite]
+    - id: 1022
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldApplyGravityToVerticalVelocity]
+      name: ShouldApplyGravityToVerticalVelocity
+      fullName: Tests.HandlePlayerMovementTests.ShouldApplyGravityToVerticalVelocity
+      resultStatus: 1
+      duration: 0.0121624
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1018
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldCalculateHorizontalVelocity]
+      name: ShouldCalculateHorizontalVelocity
+      fullName: Tests.HandlePlayerMovementTests.ShouldCalculateHorizontalVelocity
+      resultStatus: 1
+      duration: 0.0014896
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1021
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldDecreaseJumpTimerIfIsJumpingAndJumpTimerIsGreaterThan0]
+      name: ShouldDecreaseJumpTimerIfIsJumpingAndJumpTimerIsGreaterThan0
+      fullName: Tests.HandlePlayerMovementTests.ShouldDecreaseJumpTimerIfIsJumpingAndJumpTimerIsGreaterThan0
+      resultStatus: 1
+      duration: 0.0006954
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1020
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldHavePositiveVerticalVelocityIfIsJumpingAndJumpTimerIsGreaterThan0]
+      name: ShouldHavePositiveVerticalVelocityIfIsJumpingAndJumpTimerIsGreaterThan0
+      fullName: Tests.HandlePlayerMovementTests.ShouldHavePositiveVerticalVelocityIfIsJumpingAndJumpTimerIsGreaterThan0
+      resultStatus: 1
+      duration: 0.0007905
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1020
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldNotResetJumpTimerIfGroundedButNotJumping]
+      name: ShouldNotResetJumpTimerIfGroundedButNotJumping
+      fullName: Tests.HandlePlayerMovementTests.ShouldNotResetJumpTimerIfGroundedButNotJumping
+      resultStatus: 1
+      duration: 0.006529
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1019
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldResetJumpTimerIfGroundedAndJumping]
+      name: ShouldResetJumpTimerIfGroundedAndJumping
+      fullName: Tests.HandlePlayerMovementTests.ShouldResetJumpTimerIfGroundedAndJumping
+      resultStatus: 1
+      duration: 0.0009922
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1026
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldRotateCameraByLookVectorIfNotMoving]
+      name: ShouldRotateCameraByLookVectorIfNotMoving
+      fullName: Tests.HandlePlayerMovementTests.ShouldRotateCameraByLookVectorIfNotMoving
+      resultStatus: 1
+      duration: 0.0016993
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1025
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldRotateCameraIfNotMoving]
+      name: ShouldRotateCameraIfNotMoving
+      fullName: Tests.HandlePlayerMovementTests.ShouldRotateCameraIfNotMoving
+      resultStatus: 1
+      duration: 0.0008384
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1023
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldRotatePlayerIfMoving]
+      name: ShouldRotatePlayerIfMoving
+      fullName: Tests.HandlePlayerMovementTests.ShouldRotatePlayerIfMoving
+      resultStatus: 1
+      duration: 0.0006359
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1019
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldSetIsJumpingToFalseWhenIsJumpingAndJumpTimerIsLessThanOrEqualTo0]
+      name: ShouldSetIsJumpingToFalseWhenIsJumpingAndJumpTimerIsLessThanOrEqualTo0
+      fullName: Tests.HandlePlayerMovementTests.ShouldSetIsJumpingToFalseWhenIsJumpingAndJumpTimerIsLessThanOrEqualTo0
+      resultStatus: 1
+      duration: 0.0008758
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1018
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldSetVerticalVelocityToZeroIfGroundedAndVerticalVelocityIsNegative]
+      name: ShouldSetVerticalVelocityToZeroIfGroundedAndVerticalVelocityIsNegative
+      fullName: Tests.HandlePlayerMovementTests.ShouldSetVerticalVelocityToZeroIfGroundedAndVerticalVelocityIsNegative
+      resultStatus: 1
+      duration: 0.0006224
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1024
+      uniqueId: PlayMode.dll/Tests/HandlePlayerMovementTests/[PlayMode][Tests.HandlePlayerMovementTests.ShouldTiltCameraIfLookingWhileMoving]
+      name: ShouldTiltCameraIfLookingWhileMoving
+      fullName: Tests.HandlePlayerMovementTests.ShouldTiltCameraIfLookingWhileMoving
+      resultStatus: 1
+      duration: 0.000718
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HandlePlayerMovementTests][suite]
+    - id: 1001
+      uniqueId: PlayMode.dll/Tests/[PlayMode][Tests.PlayerMovementTests][suite]
+      name: PlayerMovementTests
+      fullName: Tests.PlayerMovementTests
+      resultStatus: 1
+      duration: 0.014824
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/[PlayMode][Tests][suite]
+    - id: 1002
+      uniqueId: PlayMode.dll/Tests/PlayerMovementTests/[PlayMode][Tests.PlayerMovementTests.ShouldCreate]
+      name: ShouldCreate
+      fullName: Tests.PlayerMovementTests.ShouldCreate
+      resultStatus: 1
+      duration: 0.0008638
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.PlayerMovementTests][suite]
+    - id: 1005
+      uniqueId: PlayMode.dll/Tests/[PlayMode][Tests.WhenStartedMoving][suite]
+      name: WhenStartedMoving
+      fullName: Tests.WhenStartedMoving
+      resultStatus: 1
+      duration: 0.0234095
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/[PlayMode][Tests][suite]
+    - id: 1008
+      uniqueId: PlayMode.dll/Tests/WhenStartedMoving/[PlayMode][Tests.WhenStartedMoving.ShouldNotHaveRotationAroundZAxis]
+      name: ShouldNotHaveRotationAroundZAxis
+      fullName: Tests.WhenStartedMoving.ShouldNotHaveRotationAroundZAxis
+      resultStatus: 1
+      duration: 0.0007005
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.WhenStartedMoving][suite]
+    - id: 1007
+      uniqueId: PlayMode.dll/Tests/WhenStartedMoving/[PlayMode][Tests.WhenStartedMoving.ShouldResetCameraTargetRotationButKeepHorizontalIncline]
+      name: ShouldResetCameraTargetRotationButKeepHorizontalIncline
+      fullName: Tests.WhenStartedMoving.ShouldResetCameraTargetRotationButKeepHorizontalIncline
+      resultStatus: 1
+      duration: 0.0006178
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.WhenStartedMoving][suite]
+    - id: 1006
+      uniqueId: PlayMode.dll/Tests/WhenStartedMoving/[PlayMode][Tests.WhenStartedMoving.ShouldSetTransformForwardToNormalizedCameraHorizontalForward]
+      name: ShouldSetTransformForwardToNormalizedCameraHorizontalForward
+      fullName: Tests.WhenStartedMoving.ShouldSetTransformForwardToNormalizedCameraHorizontalForward
+      resultStatus: 1
+      duration: 0.0006782
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.WhenStartedMoving][suite]
+    - id: 1010
+      uniqueId: '[Unity.InputSystem.IntegrationTests][C:/git/Unity/3rdPersonCharacterController/Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll][suite]'
+      name: Unity.InputSystem.IntegrationTests.dll
+      fullName: C:/git/Unity/3rdPersonCharacterController/Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll
+      resultStatus: 1
+      duration: 0.0498497
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[3rdPersonCharacterController][suite]'
+    - id: 1008
+      uniqueId: Unity.InputSystem.IntegrationTests.dll/[Unity.InputSystem.IntegrationTests][IntegrationTests][suite]
+      name: IntegrationTests
+      fullName: IntegrationTests
+      resultStatus: 1
+      duration: 0.0443886
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1010
+      parentUniqueId: '[Unity.InputSystem.IntegrationTests][C:/git/Unity/3rdPersonCharacterController/Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll][suite]'
+    - id: 1009
+      uniqueId: Unity.InputSystem.IntegrationTests.dll/IntegrationTests/[Unity.InputSystem.IntegrationTests][IntegrationTests.Integration_CanSendAndReceiveEvents]
+      name: Integration_CanSendAndReceiveEvents
+      fullName: IntegrationTests.Integration_CanSendAndReceiveEvents
+      resultStatus: 1
+      duration: 0.0378708
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Integration
+      parentId: 1008
+      parentUniqueId: Unity.InputSystem.IntegrationTests.dll/[Unity.InputSystem.IntegrationTests][IntegrationTests][suite]
+    m_ResultText: 3rdPersonCharacterController (0,588s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 33fb1ebf
+      m_LastClickedID: -1088488653
+      m_ExpandedIDs: 8c826888b2de258c9f5c62b633fb1ebf5f309fc9e413ee17bd2ca2230664c95397461e56dc07a65be47db869bc805a6dffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Integration
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 16}
+    newResultList:
+    - id: 1000
+      uniqueId: '[3rdPersonCharacterController][suite]'
+      name: 3rdPersonCharacterController
+      fullName: 3rdPersonCharacterController
+      resultStatus: 1
+      duration: 0.2695194
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1004
+      uniqueId: '[EditMode.dll][suite]'
+      name: EditMode.dll
+      fullName: C:/git/Unity/3rdPersonCharacterController/Library/ScriptAssemblies/EditMode.dll
+      resultStatus: 1
+      duration: 0.2212985
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[3rdPersonCharacterController][suite]'
+    - id: 1003
+      uniqueId: EditMode.dll/[Tests][suite]
+      name: Tests
+      fullName: Tests
+      resultStatus: 1
+      duration: 0.218211
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1002
+      parentUniqueId: '[EditMode.dll][suite]'
+    - id: 1004
+      uniqueId: EditMode.dll/Tests/[EditMode][suite]
+      name: EditMode
+      fullName: Tests.EditMode
+      resultStatus: 1
+      duration: 0.2164275
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1003
+      parentUniqueId: EditMode.dll/[Tests][suite]
+    - id: 1001
+      uniqueId: EditMode.dll/Tests/EditMode/[EditMode][Tests.EditMode.SampleSceneTests][suite]
+      name: SampleSceneTests
+      fullName: Tests.EditMode.SampleSceneTests
+      resultStatus: 1
+      duration: 0.1959166
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1004
+      parentUniqueId: EditMode.dll/Tests/[EditMode][suite]
+    - id: 1008
+      uniqueId: EditMode.dll/Tests/EditMode/SampleSceneTests/[EditMode][Tests.EditMode.SampleSceneTests.CineMachineFollowCamShouldFollowPlayerCameraTarget]
+      name: CineMachineFollowCamShouldFollowPlayerCameraTarget
+      fullName: Tests.EditMode.SampleSceneTests.CineMachineFollowCamShouldFollowPlayerCameraTarget
+      resultStatus: 1
+      duration: 0.0110172
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/Tests/EditMode/[EditMode][Tests.EditMode.SampleSceneTests][suite]
+    - id: 1007
+      uniqueId: EditMode.dll/Tests/EditMode/SampleSceneTests/[EditMode][Tests.EditMode.SampleSceneTests.ShouldHaveACineMachineFollowCam]
+      name: ShouldHaveACineMachineFollowCam
+      fullName: Tests.EditMode.SampleSceneTests.ShouldHaveACineMachineFollowCam
+      resultStatus: 1
+      duration: 0.0398
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/Tests/EditMode/[EditMode][Tests.EditMode.SampleSceneTests][suite]
+    - id: 1004
+      uniqueId: EditMode.dll/Tests/EditMode/SampleSceneTests/[EditMode][Tests.EditMode.SampleSceneTests.ShouldHaveAGameObjectControllableByThePlayer]
+      name: ShouldHaveAGameObjectControllableByThePlayer
+      fullName: Tests.EditMode.SampleSceneTests.ShouldHaveAGameObjectControllableByThePlayer
+      resultStatus: 1
+      duration: 0.0011299
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/Tests/EditMode/[EditMode][Tests.EditMode.SampleSceneTests][suite]
+    - id: 1005
+      uniqueId: EditMode.dll/Tests/EditMode/SampleSceneTests/[EditMode][Tests.EditMode.SampleSceneTests.ShouldHaveAGameObjectMovableByThePlayer]
+      name: ShouldHaveAGameObjectMovableByThePlayer
+      fullName: Tests.EditMode.SampleSceneTests.ShouldHaveAGameObjectMovableByThePlayer
+      resultStatus: 1
+      duration: 0.0010352
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/Tests/EditMode/[EditMode][Tests.EditMode.SampleSceneTests][suite]
+    - id: 1006
+      uniqueId: EditMode.dll/Tests/EditMode/SampleSceneTests/[EditMode][Tests.EditMode.SampleSceneTests.ShouldHaveAMainCamera]
+      name: ShouldHaveAMainCamera
+      fullName: Tests.EditMode.SampleSceneTests.ShouldHaveAMainCamera
+      resultStatus: 1
+      duration: 0.0042161
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/Tests/EditMode/[EditMode][Tests.EditMode.SampleSceneTests][suite]
+    - id: 1008
+      uniqueId: EditMode.dll/Tests/EditMode/SampleSceneTests/[EditMode][Tests.EditMode.SampleSceneTests.ShouldHaveAnInputEventSystem]
+      name: ShouldHaveAnInputEventSystem
+      fullName: Tests.EditMode.SampleSceneTests.ShouldHaveAnInputEventSystem
+      resultStatus: 1
+      duration: 0.000828
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/Tests/EditMode/[EditMode][Tests.EditMode.SampleSceneTests][suite]
+    - id: 1003
+      uniqueId: EditMode.dll/Tests/EditMode/SampleSceneTests/[EditMode][Tests.EditMode.SampleSceneTests.ShouldHaveAPlayer]
+      name: ShouldHaveAPlayer
+      fullName: Tests.EditMode.SampleSceneTests.ShouldHaveAPlayer
+      resultStatus: 1
+      duration: 0.0008112
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/Tests/EditMode/[EditMode][Tests.EditMode.SampleSceneTests][suite]
+    - id: 1002
+      uniqueId: EditMode.dll/Tests/EditMode/SampleSceneTests/[EditMode][Tests.EditMode.SampleSceneTests.ShouldLoadTheCorrectScene]
+      name: ShouldLoadTheCorrectScene
+      fullName: Tests.EditMode.SampleSceneTests.ShouldLoadTheCorrectScene
+      resultStatus: 1
+      duration: 0.0024106
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/Tests/EditMode/[EditMode][Tests.EditMode.SampleSceneTests][suite]
+    m_ResultText: CineMachineFollowCamShouldFollowPlayerCameraTarget (0,011s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: dd1d92c6
+      m_LastClickedID: -963502627
+      m_ExpandedIDs: 33fb1ebf383f85f24d6b1050993e88644b5ea47cffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 343
+    y: 476
+    width: 1149
+    height: 368
+  m_ViewDataDictionary: {fileID: 0}
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1149, y: 347}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_MaximizeOnPlay: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 1
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -574.5
+    m_HBaseRangeMax: 574.5
+    m_VBaseRangeMin: -173.5
+    m_VBaseRangeMax: 173.5
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 1149
+      height: 347
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 574.5, y: 173.5}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -574.5
+      y: -173.5
+      width: 1149
+      height: 347
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1149, y: 368}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 73
+    width: 342
+    height: 334
+  m_ViewDataDictionary: {fileID: 0}
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 3afaffff
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 8}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 7ef5c20e85161534f87aba3553edba35
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 428
+    width: 342
+    height: 416
+  m_ViewDataDictionary: {fileID: 0}
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_VersionControlStates: []
+    m_SoftLockControlStates: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders: []
+    m_Globs: []
+    m_OriginalText: 
+  m_ViewMode: 0
+  m_StartGridSize: 16
+  m_LastFolders: []
+  m_LastFoldersGridSize: 16
+  m_LastProjectPath: C:\git\gamejam\Slasherlock
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 6e3b0000
+    m_LastClickedID: 15214
+    m_ExpandedIDs: 
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff88500000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 9}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: 
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 16
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 109.66667
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Scene
+    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 343
+    y: 73
+    width: 1149
+    height: 382
+  m_ViewDataDictionary: {fileID: 0}
+  m_ShowContextualTools: 0
+  m_WindowGUID: 22bdf1df50a32e54fbd0af191470b2ee
+  m_Gizmos: 0
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 1
+  m_SceneLighting: 1
+  m_2DMode: 1
+  m_isRotationLocked: 0
+  m_PlayAudio: 0
+  m_AudioPlay: 0
+  m_Position:
+    m_Target: {x: 0, y: 0, z: 0}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0}
+  m_RenderMode: 0
+  m_CameraMode:
+    drawMode: 0
+    name: Shaded
+    section: Shading Mode
+  m_ValidateTrueMetals: 0
+  m_DoValidateTrueMetals: 0
+  m_ExposureSliderValue: 0
+  m_SceneViewState:
+    m_AlwaysRefresh: 0
+    showFog: 1
+    showSkybox: 1
+    showFlares: 1
+    showImageEffects: 1
+    showParticleSystems: 1
+    showVisualEffectGraphs: 1
+    m_FxEnabled: 1
+  m_Grid:
+    xGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0, y: 0}
+    yGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 1
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0.25, y: 0.25}
+    zGrid:
+      m_Fade:
+        m_Target: 1
+        speed: 2
+        m_Value: 1
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0.25, y: 0.25}
+    m_ShowGrid: 1
+    m_GridAxis: 1
+    m_gridOpacity: 0.5
+  m_Rotation:
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  m_Size:
+    m_Target: 10
+    speed: 2
+    m_Value: 10
+  m_Ortho:
+    m_Target: 1
+    speed: 2
+    m_Value: 1
+  m_CameraSettings:
+    m_Speed: 1
+    m_SpeedNormalized: 0.5
+    m_SpeedMin: 0.001
+    m_SpeedMax: 2
+    m_EasingEnabled: 1
+    m_EasingDuration: 0.4
+    m_AccelerationEnabled: 1
+    m_FieldOfViewHorizontalOrVertical: 60
+    m_NearClip: 0.03
+    m_FarClip: 10000
+    m_DynamicClip: 1
+    m_OcclusionCulling: 0
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewOrtho: 0
+  m_ReplacementShader: {fileID: 0}
+  m_ReplacementString: 
+  m_SceneVisActive: 1
+  m_LastLockedObject: {fileID: 0}
+  m_ViewIsLockedToObject: 0
+--- !u!114 &21
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1494
+    y: 73
+    width: 425
+    height: 771
+  m_ViewDataDictionary: {fileID: 0}
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: -160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &22
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 865
+    width: 1920
+    height: 174
+  m_ViewDataDictionary: {fileID: 0}
+--- !u!114 &23
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13963, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DontSaveToLayout: 0
