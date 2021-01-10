@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Interactables
+namespace Assets.Interactables.Physics
 {
     public class Door : MonoBehaviour
     {

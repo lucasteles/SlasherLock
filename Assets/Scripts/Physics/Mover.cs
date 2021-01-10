@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Physics
+namespace Assets.Scripts.Physics
 {
     public class Mover : MonoBehaviour
     {

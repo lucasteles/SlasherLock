@@ -1,7 +1,7 @@
 ﻿using Assets.Physics;
 using UnityEngine;
 
-namespace Assets.Controllers
+namespace Assets.Scripts.Controllers
 {
     public class InputHandler : MonoBehaviour
     {
