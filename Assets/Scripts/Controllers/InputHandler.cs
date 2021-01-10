@@ -1,4 +1,4 @@
-﻿using Assets.Physics;
+﻿using Assets.Scripts.Physics;
 using UnityEngine;
 
 namespace Assets.Scripts.Controllers
