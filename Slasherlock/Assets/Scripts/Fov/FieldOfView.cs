@@ -7,6 +7,7 @@ namespace Assets.Scripts.Fov
         [SerializeField] LayerMask layerMask;
         [SerializeField] float fov;
         [SerializeField] float viewDistance;
+        [SerializeField] int rayCount = 50;
         Mesh mesh;
         Vector3 origin;
 
@@ -18,7 +19,6 @@ namespace Assets.Scripts.Fov
 
         private void LateUpdate()
         {
-            const int rayCount = 50;
             var angle = 0f;
             var angleIncrease = fov / rayCount;
 
@@ -34,11 +34,16 @@ namespace Assets.Scripts.Fov
             for (var i = 0; i <= rayCount; i++)
             {
                 Vector3 vertex;
-                var raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
+                Vector3 vectorForCurrentAngle = GetVectorFromAngle(angle);
+                var raycastHit2D = Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance, layerMask);
 
                 if (raycastHit2D.collider == null)
-                    vertex = origin + GetVectorFromAngle(angle) * viewDistance;
-                else vertex = raycastHit2D.point;
+                    vertex = origin + vectorForCurrentAngle * viewDistance;
+                else
+                {
+                    var hitPoint = new Vector3(raycastHit2D.point.x, raycastHit2D.point.y);
+                    vertex = hitPoint;
+                }
 
                 vertices[vertexIndex] = vertex;
 
