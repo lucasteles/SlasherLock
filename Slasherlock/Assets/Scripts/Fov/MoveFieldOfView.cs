@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Controllers
+namespace Assets.Scripts.Fov
 {
-    public class UpdateFieldOfView : MonoBehaviour
+    public class MoveFieldOfView : MonoBehaviour
     {
         [SerializeField] FieldOfView fieldOfView;
 
