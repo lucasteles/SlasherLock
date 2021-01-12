@@ -8,46 +8,30 @@ public class PlayWhenWalk : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float minDistance;
     [SerializeField] float minMaxVolumeDistance;
-    
     AudioSource audioSource;
-    Vector3 oldPosisition;
-     
+    CheckWalking checkWalking;
     
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        oldPosisition = transform.position;
+        checkWalking = new CheckWalking(transform);    
     }
 
     void Update()
     {
-        if (player)
+        var playerDistance = (transform.position - player.position).magnitude;
+        if (checkWalking.IsWaking() && playerDistance < minDistance)
         {
-            var playerDistance = (transform.position - player.position).magnitude;
-            if (transform.position != oldPosisition && playerDistance < minDistance)
-            {
-                if (playerDistance <= minMaxVolumeDistance)
-                    audioSource.volume = 1;
-                else
-                    audioSource.volume = 1 - (playerDistance / minDistance);
-                if (!audioSource.isPlaying)
-                    audioSource.Play();
-            }
+            if (playerDistance <= minMaxVolumeDistance)
+                audioSource.volume = 1;
             else
-                audioSource.Stop();
+                audioSource.volume = 1 - (playerDistance / minDistance);
+            
+            audioSource.PlayIfNotPlaying();
         }
         else
-        {
-            if (transform.position != oldPosisition)
-            {
-                if (!audioSource.isPlaying)
-                    audioSource.Play();
-            }
-            else
-                audioSource.Stop();
-        }
-        
-        
-        oldPosisition = transform.position;
+            audioSource.Stop();
+
+        checkWalking.Update();
     }
 }
