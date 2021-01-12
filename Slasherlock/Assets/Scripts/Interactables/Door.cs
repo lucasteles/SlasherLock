@@ -24,13 +24,9 @@ namespace Assets.Interactables.Physics
 
         private void Update()
         {
-            Debug.Log(canOpen);
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                AstarPath.active.UpdateGraphs(door.GetComponent<BoxCollider2D>().bounds);
-                door.SetActive(!door.activeSelf);
-            }
+            if (!Input.GetKeyDown(KeyCode.Space)) return;
+            AstarPath.active.UpdateGraphs(door.GetComponent<BoxCollider2D>().bounds);
+            door.SetActive(!door.activeSelf);
         }
     }
 }

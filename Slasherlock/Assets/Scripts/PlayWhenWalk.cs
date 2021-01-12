@@ -21,20 +21,33 @@ public class PlayWhenWalk : MonoBehaviour
 
     void Update()
     {
-        var playerDistance = (transform.position - player.position).magnitude;
-        
-        if (transform.position != oldPosisition && playerDistance < minDistance)
+        if (player)
         {
-            if (playerDistance <= minMaxVolumeDistance)
-                audioSource.volume = 1;
+            var playerDistance = (transform.position - player.position).magnitude;
+            if (transform.position != oldPosisition && playerDistance < minDistance)
+            {
+                if (playerDistance <= minMaxVolumeDistance)
+                    audioSource.volume = 1;
+                else
+                    audioSource.volume = 1 - (playerDistance / minDistance);
+                if (!audioSource.isPlaying)
+                    audioSource.Play();
+            }
             else
-                audioSource.volume = 1 - (playerDistance / minDistance);
-            if (!audioSource.isPlaying)
-                audioSource.Play();
+                audioSource.Stop();
         }
         else
-            audioSource.Stop();
-
+        {
+            if (transform.position != oldPosisition)
+            {
+                if (!audioSource.isPlaying)
+                    audioSource.Play();
+            }
+            else
+                audioSource.Stop();
+        }
+        
+        
         oldPosisition = transform.position;
     }
 }
