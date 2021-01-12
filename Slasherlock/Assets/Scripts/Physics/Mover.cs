@@ -10,10 +10,15 @@ namespace Assets.Scripts.Physics
         float yInput;
 
         [SerializeField] float moveSpeed;
-        [SerializeField] LayerMask collisionMask;
 
         public void SetXInput(float xInput) => this.xInput = xInput;
+
         public void SetYInput(float yInput) => this.yInput = yInput;
+        public void StopInput()
+        {
+            xInput = 0;
+            yInput = 0;
+        }
 
         void FixedUpdate()
         {

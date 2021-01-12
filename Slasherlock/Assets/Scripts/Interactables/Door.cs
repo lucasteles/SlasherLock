@@ -24,8 +24,6 @@ namespace Assets.Interactables.Physics
 
         private void Update()
         {
-            Debug.Log(canOpen);
-
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 AstarPath.active.UpdateGraphs(door.GetComponent<BoxCollider2D>().bounds);
