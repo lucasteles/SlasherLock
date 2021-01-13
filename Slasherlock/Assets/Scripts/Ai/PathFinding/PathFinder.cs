@@ -43,7 +43,6 @@ namespace Assets.Scripts.Ai.PathFinding
             if (seeker.IsDone())
             {
                 seeker.StartPath(transform.position, target.position, OnPathComplete);
-                MoveToNextWayPoint(path.vectorPath[0]);
             }
         }
 
@@ -53,6 +52,8 @@ namespace Assets.Scripts.Ai.PathFinding
             {
                 path = p;
                 currentWaypoint = 0;
+                
+                MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
             }
         }
 

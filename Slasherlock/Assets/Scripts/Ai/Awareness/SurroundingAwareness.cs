@@ -19,6 +19,7 @@ namespace Assets.Scripts.Ai.Awareness
                 var directionToTarget = (hit.collider.transform.position - transform.position).normalized;
                 var hitFromRay = Physics2D.Raycast(transform.position, directionToTarget, sightRadius);
 
+                LastTargetFound = hit.collider.transform;
                 return hit.collider == hitFromRay.collider;
             }
 

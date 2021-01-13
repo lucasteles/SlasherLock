@@ -1,13 +1,14 @@
 ﻿using Assets.Scripts.Ai.Awareness;
 using Assets.Scripts.Ai.PathFinding;
 using Assets.Scripts.Physics;
+using Assets.Scripts.Systems.Observables;
 using UnityEngine;
 
 namespace Assets.Scripts.Ai.FiniteStateMachine
 {
     [RequireComponent(typeof(Mover))]
     [RequireComponent(typeof(SurroundingAwareness))]
-    public abstract class Fsm : MonoBehaviour
+    public abstract class Fsm : EventSender<IState>
     {
         protected IState currentState;
         public Mover Mover { private set; get; }
@@ -19,7 +20,10 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
         private void Awake()
         {
             Mover = GetComponent<Mover>();
+            PathFinder = GetComponent<PathFinder>();
             Awareness = GetComponent<SurroundingAwareness>();
+
+            Listeners.AddRange(GetComponentsInChildren<IEventListener<IState>>());
         }
 
         private void Start()
@@ -31,6 +35,8 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
         {
             currentState = firstState;
             currentState.OnEnter();
+
+            NotifyListeners(currentState);
         }
 
         public void ChangeState(IState newState)
@@ -39,11 +45,18 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
             newState.OnEnter();
 
             currentState = newState;
+
+            NotifyListeners(currentState);
         }
 
         protected void UpdateFsm()
         {
             currentState.Update();
+        }
+
+        void Update()
+        {
+            UpdateFsm();    
         }
     }
 }
