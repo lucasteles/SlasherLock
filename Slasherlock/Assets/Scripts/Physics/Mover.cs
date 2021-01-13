@@ -32,7 +32,6 @@ namespace Assets.Scripts.Physics
             currentVelocity.y = yInput * moveSpeed;
 
             var velocity = currentVelocity * Time.fixedDeltaTime;
-            //transform.Translate(velocity);
             rb.MovePosition(rb.position + velocity);
         }
     }
