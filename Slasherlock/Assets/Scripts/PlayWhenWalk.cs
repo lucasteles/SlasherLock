@@ -27,9 +27,9 @@ public class PlayWhenWalk : MonoBehaviour
             
             audioSource.PlayIfNotPlaying();
         }
-        else
+        else if (checkWalking.IsStopped())
             audioSource.Stop();
 
-        checkWalking.Update();
+        checkWalking.Update(Time.deltaTime);
     }
 }
