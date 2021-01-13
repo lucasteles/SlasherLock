@@ -6,44 +6,47 @@ namespace Assets.Scripts.Ai.PathFinding
 {
     [RequireComponent(typeof(Seeker))]
     [RequireComponent(typeof(Path))]
+    [RequireComponent(typeof(Collider2D))]
     public class PathFinder : MonoBehaviour
     {
         Seeker seeker;
         Path path;
         Mover mover;
         Transform target;
+        Collider2D collider;
 
         int currentWaypoint = 0;
 
         [SerializeField] float speed;
         [SerializeField] float nextWaypointDistance = 3f;
 
-        const string methodToInvokeRepeating = "UpdatePath";
 
         void Awake()
         {
             seeker = GetComponent<Seeker>();
             mover = GetComponent<Mover>();
+            collider = GetComponent<Collider2D>();
         }
 
         public void FollowTarget(Transform target) 
         { 
             this.target = target; 
-            InvokeRepeating(methodToInvokeRepeating, 0f, .5f);
+            InvokeRepeating(nameof(UpdatePath), 0f, .5f);
         }
 
         public void StopFollowing()
         {
             target = null;
-            CancelInvoke(methodToInvokeRepeating);
+            CancelInvoke(nameof(UpdatePath));
         }
 
         void UpdatePath()
         {
+            var size = collider.bounds.size/2;
+            var position = transform.position + new Vector3(size.x,size.y,0);
+            
             if (seeker.IsDone())
-            {
                 seeker.StartPath(transform.position, target.position, OnPathComplete);
-            }
         }
 
         void OnPathComplete(Path p)
@@ -59,7 +62,7 @@ namespace Assets.Scripts.Ai.PathFinding
 
         bool HasAnotherWayPoint() => currentWaypoint < path.vectorPath.Count;
 
-        void FixedUpdate()
+        void Update()
         {
             if (path == null) return;
 
