@@ -13,7 +13,6 @@ namespace Assets.Scripts.Ai.PathFinding
         Path path;
         Mover mover;
         Transform target;
-        Collider2D collider;
 
         int currentWaypoint = 0;
 
@@ -42,9 +41,6 @@ namespace Assets.Scripts.Ai.PathFinding
 
         void UpdatePath()
         {
-            var size = collider.bounds.size/2;
-            var position = transform.position + new Vector3(size.x,size.y,0);
-            
             if (seeker.IsDone())
                 seeker.StartPath(transform.position, target.position, OnPathComplete);
         }
