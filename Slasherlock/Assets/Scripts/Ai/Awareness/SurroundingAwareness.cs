@@ -7,10 +7,7 @@ namespace Assets.Scripts.Ai.Awareness
         [SerializeField] LayerMask layersToSearchFor;
         [SerializeField] float sightRadius;
 
-        private void Update()
-        {
-            Debug.Log(HasTargetOnSight());
-        }
+        public Transform LastTargetFound { private set; get; }
 
         public bool HasTargetOnSight()
         {

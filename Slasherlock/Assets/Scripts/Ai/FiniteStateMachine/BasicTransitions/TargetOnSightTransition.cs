@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
+﻿namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
 {
-    class TargetOnSightTransition
+    public class TargetOnSightTransition : Transition
     {
+        public TargetOnSightTransition(Fsm fsm, IState nextState) : base(fsm, nextState) {}
+
+        public override bool IsValid() => fsm.Awareness.HasTargetOnSight();
+
+        public override void OnTransition() {}
     }
 }

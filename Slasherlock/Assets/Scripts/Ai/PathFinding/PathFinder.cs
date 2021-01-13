@@ -18,16 +18,25 @@ namespace Assets.Scripts.Ai.PathFinding
         [SerializeField] float speed;
         [SerializeField] float nextWaypointDistance = 3f;
 
+        const string methodToInvokeRepeating = "UpdatePath";
+
         void Awake()
         {
             seeker = GetComponent<Seeker>();
             mover = GetComponent<Mover>();
         }
 
-        void Start() => InvokeRepeating("UpdatePath", 0f, .5f);
+        public void FollowTarget(Transform target) 
+        { 
+            this.target = target; 
+            InvokeRepeating(methodToInvokeRepeating, 0f, .5f);
+        }
 
-        public void FollowTarget(Transform target) => this.target = target;
-        public void RemoveTarget() => target = null;
+        public void StopFollowing()
+        {
+            target = null;
+            CancelInvoke(methodToInvokeRepeating);
+        }
 
         void UpdatePath()
         {
