@@ -5,6 +5,8 @@ using UnityEngine;
 
 namespace Assets.Scripts.Ai.FiniteStateMachine
 {
+    [RequireComponent(typeof(Mover))]
+    [RequireComponent(typeof(SurroundingAwareness))]
     public abstract class Fsm : MonoBehaviour
     {
         protected IState currentState;
@@ -16,10 +18,13 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
 
         private void Awake()
         {
-            SetupStates();
-
             Mover = GetComponent<Mover>();
-            Awareness = GetComponentInChildren<SurroundingAwareness>();
+            Awareness = GetComponent<SurroundingAwareness>();
+        }
+
+        private void Start()
+        {
+            SetupStates();
         }
 
         protected void SetFirstState(IState firstState)

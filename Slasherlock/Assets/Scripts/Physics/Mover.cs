@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Physics
 {
@@ -12,8 +11,6 @@ namespace Assets.Scripts.Physics
 
         [SerializeField] float moveSpeed;
 
-        Rigidbody2D rb;
-        
         public void SetXInput(float xInput) => this.xInput = xInput;
 
         public void SetYInput(float yInput) => this.yInput = yInput;
@@ -23,20 +20,13 @@ namespace Assets.Scripts.Physics
             yInput = 0;
         }
 
-        private void Start()
-        {
-            rb = GetComponent<Rigidbody2D>();
-        }
-
         void FixedUpdate()
         {
             currentVelocity.x = xInput * moveSpeed;
             currentVelocity.y = yInput * moveSpeed;
 
             var velocity = currentVelocity * Time.fixedDeltaTime;
-
-            //transform.Translate(velocity);
-            rb.MovePosition(rb.position + velocity);
+            transform.Translate(velocity);
         }
     }
 }

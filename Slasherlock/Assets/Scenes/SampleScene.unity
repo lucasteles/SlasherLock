@@ -302,7 +302,6 @@ GameObject:
   - component: {fileID: 113535486}
   - component: {fileID: 113535487}
   - component: {fileID: 113535489}
-  - component: {fileID: 113535488}
   - component: {fileID: 113535491}
   - component: {fileID: 113535493}
   - component: {fileID: 113535492}
@@ -1371,6 +1370,7 @@ GameObject:
   - component: {fileID: 416435320}
   - component: {fileID: 416435321}
   - component: {fileID: 416435324}
+  - component: {fileID: 416435325}
   m_Layer: 12
   m_Name: Jason New
   m_TagString: Untagged
@@ -1464,6 +1464,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   sightRadius: 10
+--- !u!114 &416435325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416435319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4ef946e72b5654aad09c6f6bbb68c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &496323967
 GameObject:
   m_ObjectHideFlags: 0
