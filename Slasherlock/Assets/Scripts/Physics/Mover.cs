@@ -10,6 +10,7 @@ namespace Assets.Scripts.Physics
         float yInput;
 
         [SerializeField] float moveSpeed;
+        Rigidbody2D rb;
 
         public void SetXInput(float xInput) => this.xInput = xInput;
 
@@ -20,13 +21,19 @@ namespace Assets.Scripts.Physics
             yInput = 0;
         }
 
+        private void Awake()
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
+
         void FixedUpdate()
         {
             currentVelocity.x = xInput * moveSpeed;
             currentVelocity.y = yInput * moveSpeed;
 
             var velocity = currentVelocity * Time.fixedDeltaTime;
-            transform.Translate(velocity);
+            //transform.Translate(velocity);
+            rb.MovePosition(rb.position + velocity);
         }
     }
 }
