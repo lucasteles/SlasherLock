@@ -1159,6 +1159,7 @@ GameObject:
   - component: {fileID: 416435322}
   - component: {fileID: 416435320}
   - component: {fileID: 416435321}
+  - component: {fileID: 416435324}
   m_Layer: 12
   m_Name: Jason New
   m_TagString: Untagged
@@ -1191,7 +1192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57dc9dcf7557947468c6f9c0594522bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 113535485}
   speed: 1
   nextWaypointDistance: 0.5
 --- !u!114 &416435322
@@ -1237,6 +1237,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &416435324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416435319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9d7607e9631984891f566eb1484e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layersToSearchFor:
+    serializedVersion: 2
+    m_Bits: 128
+  sightRadius: 10
 --- !u!1 &496323967
 GameObject:
   m_ObjectHideFlags: 0
