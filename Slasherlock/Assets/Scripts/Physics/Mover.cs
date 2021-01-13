@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Physics
 {
@@ -11,14 +10,18 @@ namespace Assets.Scripts.Physics
         float yInput;
 
         [SerializeField] float moveSpeed;
-        [SerializeField] LayerMask collisionMask;
-
         Rigidbody2D rb;
-        
-        public void SetXInput(float xInput) => this.xInput = xInput;
-        public void SetYInput(float yInput) => this.yInput = yInput;
 
-        private void Start()
+        public void SetXInput(float xInput) => this.xInput = xInput;
+
+        public void SetYInput(float yInput) => this.yInput = yInput;
+        public void StopInput()
+        {
+            xInput = 0;
+            yInput = 0;
+        }
+
+        private void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
         }
@@ -29,8 +32,6 @@ namespace Assets.Scripts.Physics
             currentVelocity.y = yInput * moveSpeed;
 
             var velocity = currentVelocity * Time.fixedDeltaTime;
-
-            //transform.Translate(velocity);
             rb.MovePosition(rb.position + velocity);
         }
     }
