@@ -24,7 +24,6 @@ namespace Assets.Scripts.Ai.PathFinding
         {
             seeker = GetComponent<Seeker>();
             mover = GetComponent<Mover>();
-            collider = GetComponent<Collider2D>();
         }
 
         public void FollowTarget(Transform target) 
