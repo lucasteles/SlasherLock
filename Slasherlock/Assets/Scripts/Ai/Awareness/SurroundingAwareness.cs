@@ -25,7 +25,6 @@ namespace Assets.Scripts.Ai.Awareness
             return hit.collider == hitFromRay.collider;
         }
 
-
         [CustomEditor(typeof(SurroundingAwareness))]
         public class SurroundingAwarenessEditor : Editor
         {

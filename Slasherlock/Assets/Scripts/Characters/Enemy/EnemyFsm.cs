@@ -1,19 +1,26 @@
 ﻿using Assets.Scripts.Ai.FiniteStateMachine;
 using Assets.Scripts.Ai.FiniteStateMachine.BasicStates;
 using Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions;
+using Assets.Scripts.Characters.Enemy.States;
+using UnityEngine;
 
 namespace Assets.Scripts.Characters.Enemy
 {
     public class EnemyFsm : Fsm
     {
+        [SerializeField] float distanceToKillTarget;
+
         protected override void SetupStates()
         {
             var stoppedState = new StoppedState(this);
             var followingState = new FollowingTarget(this);
+            var killingTargetState = new KillingTargetState(this);
 
             var seenTargetTransition = new TargetOnSightTransition(this, followingState);
+            var targetIsCloseToKill = new TargetIsClose(this, killingTargetState, distanceToKillTarget);
 
             stoppedState.SetTransitions(seenTargetTransition);
+            followingState.SetTransitions(targetIsCloseToKill);
 
             SetFirstState(stoppedState);
         }
