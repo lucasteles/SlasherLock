@@ -17,14 +17,16 @@ namespace Assets.Scripts.SceneManagement
             if (Instance == null)
             {
                 Instance = this;
-
-                var transitionInScreen = Instantiate(objectWithTransition);
-                transition = transitionInScreen.GetComponentInChildren<Animator>();
-
                 return;
             }
 
             Destroy(gameObject);
+        }
+
+        private void Start()
+        {
+            var transitionInScreen = Instantiate(objectWithTransition);
+            transition = transitionInScreen.GetComponentInChildren<Animator>();
         }
 
         public void LoadScene(string level)
