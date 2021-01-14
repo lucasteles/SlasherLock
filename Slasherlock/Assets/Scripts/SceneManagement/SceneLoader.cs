@@ -27,10 +27,10 @@ namespace Assets.Scripts.SceneManagement
             Destroy(gameObject);
         }
 
-        public void LoadLevel(string level)
-            => StartCoroutine(LoadLevelAsync(level));
+        public void LoadScene(string level)
+            => StartCoroutine(LoadSceneWithTransition(level));
 
-        IEnumerator LoadLevelAsync(string level)
+        IEnumerator LoadSceneWithTransition(string level)
         {
             transition.SetTrigger("start");
 
