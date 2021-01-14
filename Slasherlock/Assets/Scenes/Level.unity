@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToKill: 0.5
+  gameOverScene: GameOver
 --- !u!82 &113535491
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1456,13 +1457,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 416435323}
+  - component: {fileID: 416435327}
+  - component: {fileID: 416435326}
   - component: {fileID: 416435322}
   - component: {fileID: 416435320}
   - component: {fileID: 416435321}
   - component: {fileID: 416435324}
   - component: {fileID: 416435325}
-  - component: {fileID: 416435326}
-  - component: {fileID: 416435327}
+  - component: {fileID: 416435328}
   m_Layer: 9
   m_Name: Jason New
   m_TagString: Untagged
@@ -1573,6 +1575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4ef946e72b5654aad09c6f6bbb68c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToKillTarget: 2
 --- !u!50 &416435326
 Rigidbody2D:
   serializedVersion: 4
@@ -1620,6 +1623,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1033916, y: 0.70646524}
   m_EdgeRadius: 0
+--- !u!114 &416435328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416435319}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25f9bd4b02c5f543a35e48dc932c950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &496323967
 GameObject:
   m_ObjectHideFlags: 0

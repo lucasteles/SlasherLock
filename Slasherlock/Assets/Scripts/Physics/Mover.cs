@@ -5,7 +5,7 @@ namespace Assets.Scripts.Physics
     public class Mover : MonoBehaviour
     {
         Vector2 currentVelocity;
-        bool canMove;
+        bool canMove = true;
         float xInput;
         float yInput;
 
