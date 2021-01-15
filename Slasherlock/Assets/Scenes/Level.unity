@@ -1498,6 +1498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceToKillTarget: 2
   tryingToOpenDoorSound: {fileID: 8300000, guid: 4d129d29dc4644691bf52fa1553a009c, type: 3}
+  seeYou: {fileID: 8300000, guid: d6407b8f133ce4d32ae74f11c3996f1a, type: 3}
   brokeDoorPercentage: 0.5
 --- !u!50 &416435326
 Rigidbody2D:
@@ -2605,7 +2606,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 526f2cfadcef74cf6b94058b0878cee5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.183
+  m_Volume: 0.105
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -11,6 +11,7 @@ namespace Assets.Scripts.Characters.Enemy
     {
         [SerializeField] float distanceToKillTarget;
         [SerializeField] AudioClip tryingToOpenDoorSound;
+        [SerializeField] AudioClip seeYou;
         [SerializeField] float brokeDoorPercentage;
         protected override void SetupStates()
         {
@@ -18,7 +19,7 @@ namespace Assets.Scripts.Characters.Enemy
             var followingState = new FollowingTarget(this, tryingToOpenDoorSound, brokeDoorPercentage);
             var killingTargetState = new KillingTargetState(this);
 
-            var seenTargetTransition = new TargetOnSightTransition(this, followingState);
+            var seenTargetTransition = new TargetOnSightTransition(this, followingState, seeYou);
             var targetIsCloseToKill = new TargetIsClose(this, killingTargetState, distanceToKillTarget);
 
             stoppedState.SetTransitions(seenTargetTransition);
