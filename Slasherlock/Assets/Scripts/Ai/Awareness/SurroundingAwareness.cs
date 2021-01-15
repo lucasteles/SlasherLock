@@ -27,6 +27,7 @@ namespace Assets.Scripts.Ai.Awareness
             return hit.collider == hitFromRay.collider;
         }
 
+#if EDITOR
         [CustomEditor(typeof(SurroundingAwareness))]
         public class SurroundingAwarenessEditor : Editor
         {
@@ -42,5 +43,6 @@ namespace Assets.Scripts.Ai.Awareness
                 Handles.DrawWireDisc(transform.position, transform.forward, sa.sightRadius);
             }
         }
+#endif
     }
 }
