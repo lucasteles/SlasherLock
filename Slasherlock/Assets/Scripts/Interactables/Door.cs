@@ -115,14 +115,14 @@ namespace Assets.Interactables.Physics
         void LockDoor()
         {
             if (CurrentState == State.Locked) return;
+            door.SetActive(true);
+            lockSimbol.enabled = true;
+            audioSource.PlayOneShot(lockDoor);
             CurrentState = State.Locked;
         }
         void ConfirmLockDoor()
         {
             if (CurrentState == State.ConfirmedLock) return;
-            door.SetActive(true);
-            lockSimbol.enabled = true;
-            audioSource.PlayOneShot(lockDoor);
             door.gameObject.layer = obstableLayer;
             UpdatePath();
             CurrentState = State.ConfirmedLock;
@@ -130,7 +130,7 @@ namespace Assets.Interactables.Physics
 
         void UnlockDoor()
         {
-            if (CurrentState != State.Locked || CurrentState != State.ConfirmedLock) return;
+            if (CurrentState != State.Locked && CurrentState != State.ConfirmedLock) return;
             door.SetActive(true);
             lockSimbol.enabled = false;
             door.gameObject.layer = playerObstableLayer;

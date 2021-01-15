@@ -473,7 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runAudioSource: {fileID: 113535491}
   breathAudioSource: {fileID: 113535493}
-  secondsToBreath: 3
+  secondsToBreath: 2
 --- !u!82 &113535493
 AudioSource:
   m_ObjectHideFlags: 0
