@@ -7,6 +7,7 @@ namespace Assets.Scripts.Ai.Awareness
     {
         [SerializeField] LayerMask layersToSearchFor;
         [SerializeField] LayerMask obstacleLayer;
+        [SerializeField] LayerMask playerObstacleLayer;
         [SerializeField] float sightRadius;
 
         public Transform LastTargetFound { private set; get; }
@@ -19,7 +20,7 @@ namespace Assets.Scripts.Ai.Awareness
             if (!hit) return false;
 
             var directionToTarget = (hit.collider.transform.position - transform.position).normalized;
-            var hitFromRay = Physics2D.Raycast(transform.position, directionToTarget, sightRadius, layersToSearchFor | obstacleLayer);
+            var hitFromRay = Physics2D.Raycast(transform.position, directionToTarget, sightRadius, layersToSearchFor | obstacleLayer | playerObstacleLayer);
 
             LastTargetFound = hit.collider.transform;
             return hit.collider == hitFromRay.collider;
