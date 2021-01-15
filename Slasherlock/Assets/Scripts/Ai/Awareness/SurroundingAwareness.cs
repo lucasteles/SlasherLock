@@ -20,26 +20,27 @@ namespace Assets.Scripts.Ai.Awareness
             if (!hit) return false;
 
             var directionToTarget = (hit.collider.transform.position - transform.position).normalized;
-            var hitFromRay = Physics2D.Raycast(transform.position, directionToTarget, sightRadius, layersToSearchFor | obstacleLayer | playerObstacleLayer);
+            var hitFromRay = Physics2D.Raycast(transform.position, directionToTarget, sightRadius,
+                layersToSearchFor | obstacleLayer | playerObstacleLayer);
 
             LastTargetFound = hit.collider.transform;
             return hit.collider == hitFromRay.collider;
         }
 
-    //    [CustomEditor(typeof(SurroundingAwareness))]
-    //    public class SurroundingAwarenessEditor : Editor
-    //    {
-    //        SurroundingAwareness sa;
+        [CustomEditor(typeof(SurroundingAwareness))]
+        public class SurroundingAwarenessEditor : Editor
+        {
+            SurroundingAwareness sa;
 
-    //        public void OnSceneGUI()
-    //        {
-    //            sa = target as SurroundingAwareness;
-    //            if (!sa) return;
+            public void OnSceneGUI()
+            {
+                sa = target as SurroundingAwareness;
+                if (!sa) return;
 
-    //            Handles.color = Color.red;
-    //            var transform = sa.transform;
-    //            Handles.DrawWireDisc(transform.position, transform.forward, sa.sightRadius);
-    //        }
-    //    }
+                Handles.color = Color.red;
+                var transform = sa.transform;
+                Handles.DrawWireDisc(transform.position, transform.forward, sa.sightRadius);
+            }
+        }
     }
 }

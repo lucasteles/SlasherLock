@@ -3,6 +3,12 @@ using UnityEngine;
 
 namespace Assets.Interactables.Physics
 {
+    public enum KeyNames
+    {
+        NoKey,
+        LeftDoor,
+    }
+
     public class Door : MonoBehaviour
     {
         public enum State
@@ -13,6 +19,7 @@ namespace Assets.Interactables.Physics
             ConfirmedLock,
         }
 
+        [SerializeField] KeyNames keyName = KeyNames.NoKey;
         [SerializeField] AudioClip open;
         [SerializeField] AudioClip close;
         [SerializeField] AudioClip lockDoor;
@@ -30,31 +37,40 @@ namespace Assets.Interactables.Physics
 
         bool enemyPlayLockSound = true;
         SpriteRenderer lockSimbol;
+        SpriteRenderer lockKeySimbol;
+        CharacterInventary	inventary;
 
         void Awake()
         {
             door = transform.GetChild(0).gameObject;
             lockSimbol = transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>();
+            lockKeySimbol = transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>();
             audioSource = GetComponent<AudioSource>();
 
             obstableLayer = LayerMask.NameToLayer("Obstacle");
             playerObstableLayer = LayerMask.NameToLayer("PlayerObstacle");
         }
 
+        void Start()
+        {
+            if (keyName != KeyNames.NoKey)
+            {
+                LockDoor(withKey: true);
+                ConfirmLockDoor();
+            }
+            inventary = FindObjectOfType<CharacterInventary>();
+        }
+
         void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject == door) return;
             hasSomeoneClose = true;
-            print("Entrou: " + collision.gameObject.name);
+            // print("Entrou: " + collision.gameObject.name);
             if (LayerMask.LayerToName(collision.gameObject.layer) == "Player")
                 canInteract = true;
         }
 
-        void EnableEnemyToPlayLockedSound()
-        {
-            print("enabled enemy sound");
-            enemyPlayLockSound = true;
-        }
+        void EnableEnemyToPlayLockedSound() => enemyPlayLockSound = true;
 
         void OnTriggerStay2D(Collider2D other)
         {
@@ -75,12 +91,13 @@ namespace Assets.Interactables.Physics
             if (other.gameObject == door) return;
             hasSomeoneClose = false;
 
-            print("Saiu: " + other.gameObject.name);
+            // print("Saiu: " + other.gameObject.name);
             if (LayerMask.LayerToName(other.gameObject.layer) == "Player")
                 canInteract = false;
             Invoke(nameof(AutoCloseDoor), timeToAutoClose);
         }
 
+        bool IsDoorLocked() => CurrentState == State.Locked || CurrentState == State.ConfirmedLock;
         void AutoCloseDoor()
         {
             if (!hasSomeoneClose)
@@ -89,7 +106,7 @@ namespace Assets.Interactables.Physics
 
         void CloseDoor()
         {
-            if (CurrentState == State.Closed || CurrentState == State.Locked) return;
+            if (CurrentState == State.Closed || IsDoorLocked()) return;
             door.SetActive(true);
             audioSource.PlayOneShot(close);
             CurrentState = State.Closed;
@@ -99,7 +116,7 @@ namespace Assets.Interactables.Physics
         {
             if (CurrentState == State.Open) return;
 
-            if (CurrentState == State.Locked || CurrentState == State.ConfirmedLock)
+            if (IsDoorLocked())
             {
                 if (playLockedSound) audioSource.PlayOneShot(locked);
                 if (CurrentState == State.Locked) ConfirmLockDoor();
@@ -112,12 +129,13 @@ namespace Assets.Interactables.Physics
             CurrentState = State.Open;
         }
 
-        void LockDoor()
+        void LockDoor(bool withKey = false)
         {
             if (CurrentState == State.Locked) return;
             door.SetActive(true);
-            lockSimbol.enabled = true;
-            audioSource.PlayOneShot(lockDoor);
+            (withKey ? lockKeySimbol : lockSimbol).enabled = true;
+            if (!withKey)
+                audioSource.PlayOneShot(lockDoor);
             CurrentState = State.Locked;
         }
         void ConfirmLockDoor()
@@ -130,9 +148,22 @@ namespace Assets.Interactables.Physics
 
         void UnlockDoor()
         {
-            if (CurrentState != State.Locked && CurrentState != State.ConfirmedLock) return;
+            if (!IsDoorLocked()) return;
+
+            if (keyName != KeyNames.NoKey)
+            {
+                if (!inventary.HasKey(keyName))
+                {
+                    audioSource.PlayOneShot(locked);
+                    return;
+                }
+
+                inventary.Consume(keyName);
+                keyName = KeyNames.NoKey;
+            }
+
             door.SetActive(true);
-            lockSimbol.enabled = false;
+            lockSimbol.enabled = lockKeySimbol.enabled = false;
             door.gameObject.layer = playerObstableLayer;
             audioSource.PlayOneShot(lockDoor);
             UpdatePath();
@@ -159,7 +190,7 @@ namespace Assets.Interactables.Physics
             if (Input.GetKeyDown(KeyCode.Return))
                 if (CurrentState == State.Closed)
                     LockDoor();
-                else if (CurrentState == State.Locked || CurrentState == State.ConfirmedLock)
+                else if (IsDoorLocked())
                     UnlockDoor();
         }
     }
