@@ -9,7 +9,8 @@ namespace Assets.Interactables.Physics
         {
             Open,
             Closed,
-            Locked
+            Locked,
+            ConfirmedLock,
         }
 
         [SerializeField] AudioClip open;
@@ -98,9 +99,10 @@ namespace Assets.Interactables.Physics
         {
             if (CurrentState == State.Open) return;
 
-            if (CurrentState == State.Locked)
+            if (CurrentState == State.Locked || CurrentState == State.ConfirmedLock)
             {
                 if (playLockedSound) audioSource.PlayOneShot(locked);
+                if (CurrentState == State.Locked) ConfirmLockDoor();
                 return;
             }
 
@@ -113,17 +115,22 @@ namespace Assets.Interactables.Physics
         void LockDoor()
         {
             if (CurrentState == State.Locked) return;
+            CurrentState = State.Locked;
+        }
+        void ConfirmLockDoor()
+        {
+            if (CurrentState == State.ConfirmedLock) return;
             door.SetActive(true);
             lockSimbol.enabled = true;
             audioSource.PlayOneShot(lockDoor);
             door.gameObject.layer = obstableLayer;
             UpdatePath();
-            CurrentState = State.Locked;
+            CurrentState = State.ConfirmedLock;
         }
 
         void UnlockDoor()
         {
-            if (CurrentState != State.Locked) return;
+            if (CurrentState != State.Locked || CurrentState != State.ConfirmedLock) return;
             door.SetActive(true);
             lockSimbol.enabled = false;
             door.gameObject.layer = playerObstableLayer;
@@ -152,7 +159,7 @@ namespace Assets.Interactables.Physics
             if (Input.GetKeyDown(KeyCode.Return))
                 if (CurrentState == State.Closed)
                     LockDoor();
-                else if (CurrentState == State.Locked)
+                else if (CurrentState == State.Locked || CurrentState == State.ConfirmedLock)
                     UnlockDoor();
         }
     }

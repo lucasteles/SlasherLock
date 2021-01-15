@@ -4,7 +4,8 @@ namespace Assets.Scripts.Fov
 {
     public class FieldOfView : MonoBehaviour
     {
-        [SerializeField] LayerMask layerMask;
+        [SerializeField] LayerMask layerMask1;
+        [SerializeField] LayerMask layerMask2;
         [SerializeField] float fov;
         [SerializeField] float viewDistance;
         [SerializeField] int rayCount = 50;
@@ -35,7 +36,7 @@ namespace Assets.Scripts.Fov
             {
                 Vector3 vertex;
                 Vector3 vectorForCurrentAngle = GetVectorFromAngle(angle);
-                var raycastHit2D = Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance, layerMask);
+                var raycastHit2D = Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance, layerMask1 | layerMask2);
 
                 if (raycastHit2D.collider == null)
                     vertex = origin + vectorForCurrentAngle * viewDistance;

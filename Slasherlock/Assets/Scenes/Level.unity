@@ -1945,7 +1945,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63d117ccc6fa3c44928ae91f95587b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerMask:
+  layerMask1:
+    serializedVersion: 2
+    m_Bits: 16384
+  layerMask2:
     serializedVersion: 2
     m_Bits: 64
   fov: 360
@@ -2163,7 +2166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1054776842
 Transform:
   m_ObjectHideFlags: 0
@@ -2219,7 +2222,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 18ea1aa59e8ec23469a00734443622ae, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7607843}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9647059}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3025,6 +3028,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9209769732971255094, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
+      propertyPath: m_Volume
+      value: 0.673
+      objectReference: {fileID: 0}
     - target: {fileID: 9209769732971255095, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
       propertyPath: m_RootOrder
       value: 1
