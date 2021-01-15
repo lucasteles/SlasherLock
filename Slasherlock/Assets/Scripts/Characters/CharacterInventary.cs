@@ -8,10 +8,23 @@ public class CharacterInventary : MonoBehaviour
 {
     ICollection<KeyNames> keys = new HashSet<KeyNames>();
 
-    // TODO: lidar com quantidade de cadeados
-    int numberOfLocks = 1;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip pickSound;
+
+    int numberOfLocks = 0;
 
     public bool HasKey(KeyNames keyName) => keys.Contains(keyName);
+
+    public bool HasLocks() => numberOfLocks > 0;
+    public void AddLock() => numberOfLocks++;
+    public void UseLock() => numberOfLocks--;
+
+    void DoSound()
+    {
+        if (!audioSource.isPlaying)
+            audioSource.PlayOneShot(pickSound);
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.GetComponent<KeyData>() is {} key)
@@ -22,12 +35,16 @@ public class CharacterInventary : MonoBehaviour
             keys.Add(key.KeyName);
             print($"Get key:{key.KeyName}");
             Destroy(key.gameObject);
+            DoSound();
+        }
+        else if (other.gameObject.GetComponent<LockItem>() is { } item)
+        {
+            numberOfLocks++;
+            print("Get lock");
+            Destroy(item.gameObject);
+            DoSound();
         }
 
     }
 
-    public void Consume(KeyNames keyName)
-    {
-        keys.Remove(keyName);
-    }
 }
