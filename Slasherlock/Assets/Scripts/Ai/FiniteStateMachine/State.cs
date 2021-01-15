@@ -1,11 +1,15 @@
-﻿namespace Assets.Scripts.Ai.FiniteStateMachine
+﻿using UnityEngine;
+
+namespace Assets.Scripts.Ai.FiniteStateMachine
 {
     public interface IState
     {
         void Update();
         void OnEnter();
         void OnExit();
+        void OnTriggerEnter(Collider2D other);
         void Execute();
+        void OnTriggerStay(Collider2D other);
     }
 
     public abstract class State : IState
@@ -21,6 +25,8 @@
 
         public abstract void OnEnter();
         public abstract void OnExit();
+        public virtual void OnTriggerStay(Collider2D other) { }
+        public virtual void OnTriggerEnter(Collider2D other) { }
         public abstract void Execute();
 
         public void Update()

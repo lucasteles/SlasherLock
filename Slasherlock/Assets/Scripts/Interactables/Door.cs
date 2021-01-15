@@ -19,8 +19,11 @@ namespace Assets.Interactables.Physics
             ConfirmedLock,
         }
 
+        public State GetState() => CurrentState;
+
         [SerializeField] KeyNames keyName = KeyNames.NoKey;
         [SerializeField] AudioClip open;
+        [SerializeField] AudioClip openForced;
         [SerializeField] AudioClip close;
         [SerializeField] AudioClip lockDoor;
         [SerializeField] AudioClip needLockPad;
@@ -213,6 +216,17 @@ namespace Assets.Interactables.Physics
                     LockDoor();
                 else if (IsDoorLocked())
                     UnlockDoor();
+        }
+
+        public void ForceOpen()
+        {
+            hasLockIn = false;
+            door.SetActive(true);
+            lockSimbol.enabled = lockKeySimbol.enabled = false;
+            door.gameObject.layer = playerObstableLayer;
+            audioSource.PlayOneShot(openForced);
+            UpdatePath();
+            CurrentState = State.Closed;
         }
     }
 }

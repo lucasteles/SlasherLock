@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Ai.FiniteStateMachine;
+﻿using System;
+using Assets.Scripts.Ai.FiniteStateMachine;
 using Assets.Scripts.Ai.FiniteStateMachine.BasicStates;
 using Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions;
 using Assets.Scripts.Characters.Enemy.States;
@@ -9,11 +10,12 @@ namespace Assets.Scripts.Characters.Enemy
     public class EnemyFsm : Fsm
     {
         [SerializeField] float distanceToKillTarget;
-
+        [SerializeField] AudioClip tryingToOpenDoorSound;
+        [SerializeField] float brokeDoorPercentage;
         protected override void SetupStates()
         {
             var stoppedState = new StoppedState(this);
-            var followingState = new FollowingTarget(this);
+            var followingState = new FollowingTarget(this, tryingToOpenDoorSound, brokeDoorPercentage);
             var killingTargetState = new KillingTargetState(this);
 
             var seenTargetTransition = new TargetOnSightTransition(this, followingState);
@@ -24,5 +26,6 @@ namespace Assets.Scripts.Characters.Enemy
 
             SetFirstState(stoppedState);
         }
+
     }
 }
