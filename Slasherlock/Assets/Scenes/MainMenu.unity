@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Level
-  timeToLoadScene: 4
+  timeToLoadScene: 2.5
   bloodAnimation: {fileID: 1331608272399376360, guid: c23416639685e6c48b31eda71784c411, type: 3}
 --- !u!1 &1670912287
 GameObject:
