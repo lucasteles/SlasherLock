@@ -2868,7 +2868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1002047075}
-  eachSeconds: 60
+  eachSeconds: 30
   percentOf: 0.4
 --- !u!82 &1002047075
 AudioSource:
