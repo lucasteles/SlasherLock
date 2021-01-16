@@ -2,6 +2,14 @@
 
 namespace Assets.Scripts.Physics
 {
+    public enum WalkSide
+    {
+        Left,
+        Right,
+        Up,
+        Down
+    }
+
     public class Mover : MonoBehaviour
     {
         Vector2 currentVelocity;
@@ -11,8 +19,10 @@ namespace Assets.Scripts.Physics
 
         [SerializeField] float moveSpeed;
         Rigidbody2D rb;
+        public WalkSide Side { get; private set; } = WalkSide.Down;
 
         public void AllowMovement() => canMove = true;
+
         public void PreventMovement()
         {
             StopInput();
@@ -40,8 +50,22 @@ namespace Assets.Scripts.Physics
             currentVelocity.x = xInput * moveSpeed;
             currentVelocity.y = yInput * moveSpeed;
 
+            UpdateSide();
             var velocity = currentVelocity * Time.fixedDeltaTime;
             rb.MovePosition(rb.position + velocity);
+        }
+
+        void UpdateSide()
+        {
+            var diff = currentVelocity.normalized;
+            Side = (diff.x, diff.y) switch
+            {
+                (-1, 0) => WalkSide.Left,
+                (1, 0) => WalkSide.Right,
+                (0, 1) => WalkSide.Up,
+                (0, -1) => WalkSide.Down,
+                _ => Side
+            };
         }
     }
 }

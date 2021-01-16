@@ -23,7 +23,7 @@ public class CharacterSoundFx : MonoBehaviour
             passedTime += Time.deltaTime;
             runAudioSource.PlayIfNotPlaying();
         }
-        else if (checkWalking.IsStopped())
+        else if (checkWalking.IsStoppedAndReset())
         {
             passedTime = 0;
             runAudioSource.Stop();
