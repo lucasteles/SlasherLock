@@ -64,6 +64,12 @@ namespace Assets.Scripts.Physics
                 (1, 0) => WalkSide.Right,
                 (0, 1) => WalkSide.Up,
                 (0, -1) => WalkSide.Down,
+
+                (-1, 1) => WalkSide.Up,
+                (1, 1) => WalkSide.Up,
+
+                (1, -1) => WalkSide.Down,
+                (-1, -1) => WalkSide.Down,
                 _ => Side
             };
         }

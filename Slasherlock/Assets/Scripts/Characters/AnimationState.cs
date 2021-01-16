@@ -29,7 +29,6 @@ public class AnimationState : MonoBehaviour
         var newName = GetAnimName();
         if (string.IsNullOrEmpty(animName) || newName != animName)
         {
-            print(newName);
             animName = newName;
             anim.Play(animName);
         }
