@@ -28,6 +28,5 @@ namespace Assets.Scripts.Characters.Enemy
 
             SetFirstState(stoppedState);
         }
-
     }
 }
