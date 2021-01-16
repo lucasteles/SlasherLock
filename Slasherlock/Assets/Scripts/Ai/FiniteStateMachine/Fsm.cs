@@ -1,5 +1,4 @@
 ﻿using System;
-using Assets.Scripts.Ai.Awareness;
 using Assets.Scripts.Ai.PathFinding;
 using Assets.Scripts.Physics;
 using Assets.Scripts.Systems.Observables;
