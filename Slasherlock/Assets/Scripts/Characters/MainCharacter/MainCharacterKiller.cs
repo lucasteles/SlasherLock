@@ -29,9 +29,9 @@ namespace Assets.Scripts.Characters.MainCharacter
 
         IEnumerator DestroyAfterTime()
         {
+            yield return new WaitForSeconds(timeToKill);
             audioSource.PlayOneShot(deathSound);
             Destroy(Instantiate(bloodSplash, transform.position, Quaternion.identity),5);
-            yield return new WaitForSeconds(timeToKill);
             SceneLoader.Instance.LoadScene(gameOverScene);
             spriteRenderer.enabled = false;
         }
