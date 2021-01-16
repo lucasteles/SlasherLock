@@ -7,7 +7,11 @@ namespace Assets.Scripts.Characters.Enemy.States
 {
     public class KillingTargetState : State
     {
-        public KillingTargetState(Fsm fsm) : base(fsm) { }
+        readonly AudioClip macheteSound;
+        public KillingTargetState(Fsm fsm, AudioClip macheteSound) : base(fsm)
+        {
+            this.macheteSound = macheteSound;
+        }
 
         public override void Execute() { }
 
@@ -17,6 +21,7 @@ namespace Assets.Scripts.Characters.Enemy.States
 
             var characterKiller = fsm.Awareness.LastTargetFound.GetComponent<MainCharacterKiller>();
             characterKiller.Kill();
+            fsm.gameObject.GetComponent<AudioSource>().PlayOneShot(macheteSound);
         }
 
         public override void OnExit() { }

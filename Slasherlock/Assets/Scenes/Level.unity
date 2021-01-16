@@ -382,6 +382,7 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: 82e0aebcc26cd48218f7677dc20dadcd, type: 3}
   timeToKill: 0.5
   gameOverScene: GameOver
+  bloodSplash: {fileID: 3694067143328040525, guid: 8a3839be1f99740fd8cb3d4444ccbb01, type: 3}
 --- !u!82 &113535491
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1512,6 +1513,7 @@ MonoBehaviour:
   distanceToKillTarget: 2
   tryingToOpenDoorSound: {fileID: 8300000, guid: 4d129d29dc4644691bf52fa1553a009c, type: 3}
   seeYou: {fileID: 8300000, guid: d6407b8f133ce4d32ae74f11c3996f1a, type: 3}
+  macheteSound: {fileID: 8300000, guid: 9cd768b3d4cc145beaf03a3a59f4bf0e, type: 3}
   brokeDoorPercentage: 0.5
 --- !u!50 &416435326
 Rigidbody2D:
@@ -3152,7 +3154,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 18ea1aa59e8ec23469a00734443622ae, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.77254903}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.40392157}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
