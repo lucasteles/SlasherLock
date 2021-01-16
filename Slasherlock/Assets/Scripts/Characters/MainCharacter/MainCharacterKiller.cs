@@ -13,6 +13,7 @@ namespace Assets.Scripts.Characters.MainCharacter
         [SerializeField] AudioClip deathSound;
         [SerializeField] float timeToKill;
         [SerializeField] string gameOverScene = "GameOver";
+        [SerializeField] GameObject bloodSplash;
 
         void Awake()
         {
@@ -29,6 +30,7 @@ namespace Assets.Scripts.Characters.MainCharacter
         IEnumerator DestroyAfterTime()
         {
             audioSource.PlayOneShot(deathSound);
+            Destroy(Instantiate(bloodSplash, transform.position, Quaternion.identity),5);
             yield return new WaitForSeconds(timeToKill);
             SceneLoader.Instance.LoadScene(gameOverScene);
             spriteRenderer.enabled = false;
