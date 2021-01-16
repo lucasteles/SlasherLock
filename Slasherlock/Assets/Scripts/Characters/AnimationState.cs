@@ -1,6 +1,4 @@
-using System;
 using Assets.Scripts.Physics;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class AnimationState : MonoBehaviour
