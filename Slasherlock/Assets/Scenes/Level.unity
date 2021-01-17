@@ -3959,6 +3959,9 @@ MonoBehaviour:
   player: {fileID: 113535485}
   minDistance: 20
   minMaxVolumeDistance: 4
+  minGrain: 0.3
+  maxGrain: 0.5
+  currentGrain: 0
 --- !u!82 &1537641517
 AudioSource:
   m_ObjectHideFlags: 0
