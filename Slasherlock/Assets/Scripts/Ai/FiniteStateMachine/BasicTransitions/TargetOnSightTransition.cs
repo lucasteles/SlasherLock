@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Ui.Character;
+using UnityEngine;
 
 namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
 {
@@ -19,6 +20,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
         {
             var audio = fsm.gameObject.GetComponent<AudioSource>();
             audio.PlayOneShot(seeYou);
+            SawEnemyThought.Instance.PlaySawEnemyThought();
         }
     }
 }
