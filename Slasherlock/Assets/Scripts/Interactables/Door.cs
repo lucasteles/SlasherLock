@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Ui.Character;
+using System;
 using UnityEngine;
 
 namespace Assets.Interactables.Physics
@@ -44,6 +45,9 @@ namespace Assets.Interactables.Physics
         SpriteRenderer lockKeySimbol;
         CharacterInventary inventary;
 
+        const string dontHaveLocksThought = "I don't have any locks...";
+        const string dontHaveKeyThought = "I don't have the key...";
+
         void Awake()
         {
             door = transform.GetChild(0).gameObject;
@@ -67,7 +71,7 @@ namespace Assets.Interactables.Physics
         {
             if (collision.gameObject == door) return;
             hasSomeoneClose = true;
-            // print("Entrou: " + collision.gameObject.name);
+
             if (LayerMask.LayerToName(collision.gameObject.layer) == "Player")
                 canInteract = true;
         }
@@ -92,7 +96,6 @@ namespace Assets.Interactables.Physics
             if (other.gameObject == door) return;
             hasSomeoneClose = false;
 
-            // print("Saiu: " + other.gameObject.name);
             if (LayerMask.LayerToName(other.gameObject.layer) == "Player")
                 canInteract = false;
             Invoke(nameof(AutoCloseDoor), timeToAutoClose);
@@ -137,8 +140,12 @@ namespace Assets.Interactables.Physics
 
             if (!inventary.HasLocks())
             {
+                ThoughtBubble.Instance.ShowThought(dontHaveLocksThought);
+
                 if (!audioSource.isPlaying)
+                {
                     audioSource.PlayOneShot(needLockPad);
+                }
 
                 return;
             }
@@ -211,7 +218,7 @@ namespace Assets.Interactables.Physics
                 else
                     CloseDoor();
 
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Q))
                 if (CurrentState == State.Closed)
                     LockDoor();
                 else if (IsDoorLocked())
