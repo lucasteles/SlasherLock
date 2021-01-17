@@ -10,6 +10,9 @@ namespace Assets.Scripts.Ui.MainMenu
         [SerializeField] float timeToLoadScene;
         [SerializeField] GameObject bloodAnimation;
 
+
+        [SerializeField] AudioSource enter;
+
         bool canStartGame = false;
 
         void Update()
@@ -20,6 +23,7 @@ namespace Assets.Scripts.Ui.MainMenu
 
         IEnumerator ShowBloodAndLoadScene()
         {
+            enter.Play();
             Instantiate(bloodAnimation, transform.parent);
 
             yield return new WaitForSeconds(timeToLoadScene);

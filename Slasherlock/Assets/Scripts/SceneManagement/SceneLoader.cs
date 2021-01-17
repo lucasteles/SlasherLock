@@ -10,6 +10,7 @@ namespace Assets.Scripts.SceneManagement
 
         [SerializeField] GameObject objectWithTransition;
         [SerializeField] float transitionTime;
+
         Animator transition;
 
         private void Awake()
@@ -35,9 +36,7 @@ namespace Assets.Scripts.SceneManagement
         IEnumerator LoadSceneWithTransition(string level)
         {
             transition.SetTrigger("start");
-
             yield return new WaitForSeconds(transitionTime);
-
             SceneManager.LoadScene(level);
         }
     }
