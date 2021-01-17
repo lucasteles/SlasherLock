@@ -35,10 +35,10 @@ namespace Assets.Scripts.Characters.MainCharacter
             yield return new WaitForSeconds(timeToKill);
             audioSource.PlayOneShot(deathSound);
             Instantiate(flashEffect, effectsCanvas);
-            Destroy(Instantiate(bloodSplash, transform.position, Quaternion.identity),5);
 
             yield return new WaitForSeconds(timeToLoadGameOverScene);
             Instantiate(gameOverCanvas);
+            Destroy(Instantiate(bloodSplash, transform.position, Quaternion.identity),5);
             spriteRenderer.enabled = false;
         }
     }
