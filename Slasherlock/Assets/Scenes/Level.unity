@@ -286,7 +286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113535483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0.61, z: 0}
+  m_LocalPosition: {x: 3.71, y: 0.83, z: -1.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1100952378}
@@ -1959,7 +1959,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 49.4
+  field of view: 7.8
   orthographic: 1
   orthographic size: 10
   m_Depth: -1
@@ -3255,8 +3255,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 611579151
-  m_SortingLayer: 3
+  m_SortingLayerID: 474222197
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3243051633354422942, guid: 650f1bec0280e2d4bb4643f865f7074c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4571,6 +4571,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1002047071}
     m_Modifications:
+    - target: {fileID: 5687170477225662782, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9100645
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687170477225662782, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1881344
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881861921174167399, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881861921174167399, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881861921174167399, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -898565139
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881861921174167399, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9209769732971255095, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
       propertyPath: m_RootOrder
       value: 3
