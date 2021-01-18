@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Ui.Character;
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.Interactables.Physics
@@ -66,6 +67,7 @@ namespace Assets.Interactables.Physics
             door = transform.GetChild(0).gameObject;
             doorCollider = door.GetComponent<Collider2D>();
             animator = door.GetComponent<Animator>();
+
             lockSimbol = transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>();
             lockKeySimbol = transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>();
             audioSource = GetComponent<AudioSource>();
@@ -148,8 +150,15 @@ namespace Assets.Interactables.Physics
         void CloseDoor()
         {
             if (CurrentState == State.Closed || IsDoorLocked()) return;
-            door.SetActive(true);
-            audioSource.PlayOneShot(close);
+            AnimCloseDoor();
+
+            IEnumerator wait()
+            {
+                yield return new WaitForSeconds(0.2f);
+                audioSource.PlayOneShot(close);
+            }
+
+            StartCoroutine(wait());
             CurrentState = State.Closed;
         }
 
@@ -164,7 +173,7 @@ namespace Assets.Interactables.Physics
                 return;
             }
 
-            door.SetActive(false);
+            AnimOpenDoor();
             audioSource.PlayOneShot(open);
             door.gameObject.layer = playerObstableLayer;
             CurrentState = State.Open;
@@ -191,7 +200,7 @@ namespace Assets.Interactables.Physics
             hasLockIn = true;
             audioSource.PlayOneShot(lockDoor);
 
-            door.SetActive(true);
+            AnimCloseDoor();
             CurrentState = State.Locked;
         }
 
@@ -199,7 +208,7 @@ namespace Assets.Interactables.Physics
         {
             if (CurrentState == State.Locked) return;
             lockKeySimbol.enabled = true;
-            door.SetActive(true);
+            AnimCloseDoor();
             hasLockIn = false;
             CurrentState = State.Locked;
             ConfirmLockDoor();
@@ -228,7 +237,7 @@ namespace Assets.Interactables.Physics
                 needsKey = false;
             }
 
-            door.SetActive(true);
+            AnimCloseDoor();
             if (hasLockIn) inventary.AddLock();
             lockSimbol.enabled = lockKeySimbol.enabled = false;
             door.gameObject.layer = playerObstableLayer;
@@ -264,7 +273,7 @@ namespace Assets.Interactables.Physics
         public void ForceOpen()
         {
             hasLockIn = false;
-            door.SetActive(true);
+            AnimOpenDoor();
             lockSimbol.enabled = lockKeySimbol.enabled = false;
             door.gameObject.layer = playerObstableLayer;
             audioSource.PlayOneShot(openForced);
