@@ -235,6 +235,7 @@ namespace Assets.Interactables.Physics
                     return;
                 }
 
+                inventary.AddLock();
                 needsKey = false;
             }
 
