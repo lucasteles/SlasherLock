@@ -6,14 +6,14 @@ using UnityEngine;
 
 public class CharacterInventary : MonoBehaviour
 {
-    ICollection<KeyNames> keys = new HashSet<KeyNames>();
+    ICollection<KeyColors> keys = new HashSet<KeyColors>();
 
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip pickSound;
 
     int numberOfLocks = 0;
 
-    public bool HasKey(KeyNames keyName) => keys.Contains(keyName);
+    public bool HasKey(KeyColors keyName) => keys.Contains(keyName);
 
     public bool HasLocks() => numberOfLocks > 0;
     public void AddLock() => numberOfLocks++;
@@ -29,9 +29,6 @@ public class CharacterInventary : MonoBehaviour
     {
         if (other.gameObject.GetComponent<KeyData>() is {} key)
         {
-            if (key.KeyName == KeyNames.NoKey)
-                return;
-
             keys.Add(key.KeyName);
             print($"Get key:{key.KeyName}");
             Destroy(key.gameObject);

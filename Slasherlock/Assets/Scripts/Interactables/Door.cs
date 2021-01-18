@@ -1,13 +1,16 @@
 ﻿using Assets.Scripts.Ui.Character;
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.Interactables.Physics
 {
-    public enum KeyNames
+    public enum KeyColors
     {
-        NoKey,
-        LeftDoor,
+        Golden,
+        Blue,
+        Green,
+        Red,
     }
 
     public class Door : MonoBehaviour
@@ -22,13 +25,24 @@ namespace Assets.Interactables.Physics
 
         public State GetState() => CurrentState;
 
-        [SerializeField] KeyNames keyName = KeyNames.NoKey;
+        [SerializeField] bool needsKey;
+        [SerializeField] KeyColors keyName = KeyColors.Golden;
         [SerializeField] AudioClip open;
         [SerializeField] AudioClip openForced;
         [SerializeField] AudioClip close;
         [SerializeField] AudioClip lockDoor;
         [SerializeField] AudioClip needLockPad;
         [SerializeField] AudioClip locked;
+
+
+        [SerializeField] Sprite golden;
+        [SerializeField] Sprite blue;
+        [SerializeField] Sprite green;
+        [SerializeField] Sprite red;
+        [SerializeField] SpriteRenderer keyLockRenderer;
+
+        Collider2D doorCollider;
+        Animator animator;
 
         int obstableLayer;
         int playerObstableLayer;
@@ -41,27 +55,50 @@ namespace Assets.Interactables.Physics
         float timeToAutoClose = 0.8f;
         bool hasLockIn = false;
         bool enemyPlayLockSound = true;
-        SpriteRenderer lockSimbol;
-        SpriteRenderer lockKeySimbol;
+        GameObject lockSimbol;
         CharacterInventary inventary;
 
         const string dontHaveLocksThought = "I don't have any locks...";
         const string dontHaveKeyThought = "I don't have the key...";
 
+        public void Shake() => animator.SetTrigger("Shake");
+
         void Awake()
         {
             door = transform.GetChild(0).gameObject;
-            lockSimbol = transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>();
-            lockKeySimbol = transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>();
+            doorCollider = door.GetComponent<Collider2D>();
+            animator = door.GetComponent<Animator>();
+
+            lockSimbol = transform.GetChild(1).gameObject;
             audioSource = GetComponent<AudioSource>();
 
             obstableLayer = LayerMask.NameToLayer("Obstacle");
             playerObstableLayer = LayerMask.NameToLayer("PlayerObstacle");
         }
 
+        void AnimOpenDoor()
+        {
+            animator.SetBool("Closed", false);
+            doorCollider.enabled = false;
+        }
+
+        void AnimCloseDoor()
+        {
+            animator.SetBool("Closed", true);
+            doorCollider.enabled = true;
+        }
         void Start()
         {
-            if (keyName != KeyNames.NoKey)
+            keyLockRenderer.sprite = keyName switch
+            {
+                KeyColors.Golden => golden,
+                KeyColors.Blue => blue,
+                KeyColors.Green => green,
+                KeyColors.Red => red,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+
+            if (needsKey)
                 LockDoorKey();
 
             inventary = FindObjectOfType<CharacterInventary>();
@@ -75,6 +112,7 @@ namespace Assets.Interactables.Physics
             if (LayerMask.LayerToName(collision.gameObject.layer) == "Player")
                 canInteract = true;
         }
+
 
         void EnableEnemyToPlayLockedSound() => enemyPlayLockSound = true;
 
@@ -112,8 +150,15 @@ namespace Assets.Interactables.Physics
         void CloseDoor()
         {
             if (CurrentState == State.Closed || IsDoorLocked()) return;
-            door.SetActive(true);
-            audioSource.PlayOneShot(close);
+            AnimCloseDoor();
+
+            IEnumerator wait()
+            {
+                yield return new WaitForSeconds(0.2f);
+                audioSource.PlayOneShot(close);
+            }
+
+            StartCoroutine(wait());
             CurrentState = State.Closed;
         }
 
@@ -128,7 +173,7 @@ namespace Assets.Interactables.Physics
                 return;
             }
 
-            door.SetActive(false);
+            AnimOpenDoor();
             audioSource.PlayOneShot(open);
             door.gameObject.layer = playerObstableLayer;
             CurrentState = State.Open;
@@ -150,20 +195,20 @@ namespace Assets.Interactables.Physics
                 return;
             }
 
-            lockSimbol.enabled = true;
+            lockSimbol.SetActive(true);
             inventary.UseLock();
             hasLockIn = true;
             audioSource.PlayOneShot(lockDoor);
 
-            door.SetActive(true);
+            AnimCloseDoor();
             CurrentState = State.Locked;
         }
 
         void LockDoorKey()
         {
             if (CurrentState == State.Locked) return;
-            lockKeySimbol.enabled = true;
-            door.SetActive(true);
+            keyLockRenderer.enabled = true;
+            AnimCloseDoor();
             hasLockIn = false;
             CurrentState = State.Locked;
             ConfirmLockDoor();
@@ -181,7 +226,7 @@ namespace Assets.Interactables.Physics
         {
             if (!IsDoorLocked()) return;
 
-            if (keyName != KeyNames.NoKey)
+            if (needsKey)
             {
                 if (!inventary.HasKey(keyName))
                 {
@@ -189,19 +234,21 @@ namespace Assets.Interactables.Physics
                     return;
                 }
 
-                keyName = KeyNames.NoKey;
+                needsKey = false;
             }
 
-            door.SetActive(true);
+            AnimCloseDoor();
             if (hasLockIn) inventary.AddLock();
-            lockSimbol.enabled = lockKeySimbol.enabled = false;
+            lockSimbol.SetActive(false);
+            keyLockRenderer.enabled = false;
             door.gameObject.layer = playerObstableLayer;
             audioSource.PlayOneShot(lockDoor);
             UpdatePath();
             CurrentState = State.Closed;
         }
 
-        void UpdatePath() => AstarPath.active.UpdateGraphs(door.GetComponent<BoxCollider2D>().bounds);
+        void UpdatePath() => //AstarPath.active.Scan();
+            AstarPath.active.UpdateGraphs(GetComponent<BoxCollider2D>().bounds);
 
         void Update()
         {
@@ -228,8 +275,9 @@ namespace Assets.Interactables.Physics
         public void ForceOpen()
         {
             hasLockIn = false;
-            door.SetActive(true);
-            lockSimbol.enabled = lockKeySimbol.enabled = false;
+            AnimOpenDoor();
+            lockSimbol.SetActive(false);
+            keyLockRenderer.enabled = false;
             door.gameObject.layer = playerObstableLayer;
             audioSource.PlayOneShot(openForced);
             UpdatePath();
