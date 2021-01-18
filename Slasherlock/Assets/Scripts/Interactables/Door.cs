@@ -87,6 +87,7 @@ namespace Assets.Interactables.Physics
             animator.SetBool("Closed", true);
             doorCollider.enabled = true;
         }
+
         void Start()
         {
             keyLockRenderer.sprite = keyName switch
@@ -276,8 +277,19 @@ namespace Assets.Interactables.Physics
         {
             hasLockIn = false;
             AnimOpenDoor();
-            lockSimbol.SetActive(false);
-            keyLockRenderer.enabled = false;
+
+            var anim = lockSimbol.GetComponent<Animator>();
+            anim.Play("DropPadlock");
+
+            IEnumerator wait()
+            {
+                var animationClip = anim.runtimeAnimatorController.animationClips[0];
+                yield return new WaitForSeconds(animationClip.length);
+                lockSimbol.SetActive(false);
+                keyLockRenderer.enabled = false;
+            }
+
+            StartCoroutine(wait());
             door.gameObject.layer = playerObstableLayer;
             audioSource.PlayOneShot(openForced);
             UpdatePath();

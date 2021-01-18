@@ -4578,6 +4578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PadLock_Item
       objectReference: {fileID: 0}
+    - target: {fileID: 306607110585053216, guid: 620da185b92a249f0864b19f19db9e7e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2459213003800566651, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 620da185b92a249f0864b19f19db9e7e, type: 3}
 --- !u!1001 &2049056639313862991
@@ -4644,9 +4648,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1002047071}
     m_Modifications:
+    - target: {fileID: 2811263951297236071, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7881861921174167399, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245527455290082392, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9209769732971255095, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
       propertyPath: m_RootOrder
@@ -4696,5 +4708,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2811263951297236071, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
