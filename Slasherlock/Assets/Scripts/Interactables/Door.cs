@@ -40,6 +40,9 @@ namespace Assets.Interactables.Physics
         [SerializeField] Sprite red;
         [SerializeField] SpriteRenderer keyLockRenderer;
 
+        Collider2D doorCollider;
+        Animator animator;
+
         int obstableLayer;
         int playerObstableLayer;
 
@@ -61,6 +64,8 @@ namespace Assets.Interactables.Physics
         void Awake()
         {
             door = transform.GetChild(0).gameObject;
+            doorCollider = door.GetComponent<Collider2D>();
+            animator = door.GetComponent<Animator>();
             lockSimbol = transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>();
             lockKeySimbol = transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>();
             audioSource = GetComponent<AudioSource>();
@@ -69,6 +74,17 @@ namespace Assets.Interactables.Physics
             playerObstableLayer = LayerMask.NameToLayer("PlayerObstacle");
         }
 
+        void AnimOpenDoor()
+        {
+            animator.SetBool("Closed", false);
+            doorCollider.enabled = false;
+        }
+
+        void AnimCloseDoor()
+        {
+            animator.SetBool("Closed", true);
+            doorCollider.enabled = true;
+        }
         void Start()
         {
             keyLockRenderer.sprite = keyName switch
@@ -94,6 +110,7 @@ namespace Assets.Interactables.Physics
             if (LayerMask.LayerToName(collision.gameObject.layer) == "Player")
                 canInteract = true;
         }
+
 
         void EnableEnemyToPlayLockedSound() => enemyPlayLockSound = true;
 
