@@ -56,6 +56,7 @@ public class FollowingTarget : State
 
                 waiting = true;
                 audio.PlayOneShot(tryingToOpenDoorSound);
+                onDoor.Shake();
                 fsm.PathFinder.StopFollowing();
                 fsm.StartCoroutine(waitSound(onDoor));
                 onDoor = null;

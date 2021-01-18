@@ -61,6 +61,8 @@ namespace Assets.Interactables.Physics
         const string dontHaveLocksThought = "I don't have any locks...";
         const string dontHaveKeyThought = "I don't have the key...";
 
+        public void Shake() => animator.SetTrigger("Shake");
+
         void Awake()
         {
             door = transform.GetChild(0).gameObject;
@@ -245,7 +247,8 @@ namespace Assets.Interactables.Physics
             CurrentState = State.Closed;
         }
 
-        void UpdatePath() => AstarPath.active.UpdateGraphs(door.GetComponent<BoxCollider2D>().bounds);
+        void UpdatePath() => //AstarPath.active.Scan();
+            AstarPath.active.UpdateGraphs(GetComponent<BoxCollider2D>().bounds);
 
         void Update()
         {
