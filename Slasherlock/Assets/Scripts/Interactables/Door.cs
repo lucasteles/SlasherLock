@@ -4,10 +4,12 @@ using UnityEngine;
 
 namespace Assets.Interactables.Physics
 {
-    public enum KeyNames
+    public enum KeyColors
     {
-        NoKey,
-        LeftDoor,
+        Golden,
+        Blue,
+        Green,
+        Red,
     }
 
     public class Door : MonoBehaviour
@@ -22,13 +24,21 @@ namespace Assets.Interactables.Physics
 
         public State GetState() => CurrentState;
 
-        [SerializeField] KeyNames keyName = KeyNames.NoKey;
+        [SerializeField] bool needsKey;
+        [SerializeField] KeyColors keyName = KeyColors.Golden;
         [SerializeField] AudioClip open;
         [SerializeField] AudioClip openForced;
         [SerializeField] AudioClip close;
         [SerializeField] AudioClip lockDoor;
         [SerializeField] AudioClip needLockPad;
         [SerializeField] AudioClip locked;
+
+
+        [SerializeField] Sprite golden;
+        [SerializeField] Sprite blue;
+        [SerializeField] Sprite green;
+        [SerializeField] Sprite red;
+        [SerializeField] SpriteRenderer keyLockRenderer;
 
         int obstableLayer;
         int playerObstableLayer;
@@ -61,7 +71,16 @@ namespace Assets.Interactables.Physics
 
         void Start()
         {
-            if (keyName != KeyNames.NoKey)
+            keyLockRenderer.sprite = keyName switch
+            {
+                KeyColors.Golden => golden,
+                KeyColors.Blue => blue,
+                KeyColors.Green => green,
+                KeyColors.Red => red,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+
+            if (needsKey)
                 LockDoorKey();
 
             inventary = FindObjectOfType<CharacterInventary>();
@@ -181,7 +200,7 @@ namespace Assets.Interactables.Physics
         {
             if (!IsDoorLocked()) return;
 
-            if (keyName != KeyNames.NoKey)
+            if (needsKey)
             {
                 if (!inventary.HasKey(keyName))
                 {
@@ -189,7 +208,7 @@ namespace Assets.Interactables.Physics
                     return;
                 }
 
-                keyName = KeyNames.NoKey;
+                needsKey = false;
             }
 
             door.SetActive(true);
