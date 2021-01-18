@@ -55,8 +55,7 @@ namespace Assets.Interactables.Physics
         float timeToAutoClose = 0.8f;
         bool hasLockIn = false;
         bool enemyPlayLockSound = true;
-        SpriteRenderer lockSimbol;
-        SpriteRenderer lockKeySimbol;
+        GameObject lockSimbol;
         CharacterInventary inventary;
 
         const string dontHaveLocksThought = "I don't have any locks...";
@@ -68,8 +67,7 @@ namespace Assets.Interactables.Physics
             doorCollider = door.GetComponent<Collider2D>();
             animator = door.GetComponent<Animator>();
 
-            lockSimbol = transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>();
-            lockKeySimbol = transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>();
+            lockSimbol = transform.GetChild(1).gameObject;
             audioSource = GetComponent<AudioSource>();
 
             obstableLayer = LayerMask.NameToLayer("Obstacle");
@@ -195,7 +193,7 @@ namespace Assets.Interactables.Physics
                 return;
             }
 
-            lockSimbol.enabled = true;
+            lockSimbol.SetActive(true);
             inventary.UseLock();
             hasLockIn = true;
             audioSource.PlayOneShot(lockDoor);
@@ -207,7 +205,7 @@ namespace Assets.Interactables.Physics
         void LockDoorKey()
         {
             if (CurrentState == State.Locked) return;
-            lockKeySimbol.enabled = true;
+            keyLockRenderer.enabled = true;
             AnimCloseDoor();
             hasLockIn = false;
             CurrentState = State.Locked;
@@ -239,7 +237,8 @@ namespace Assets.Interactables.Physics
 
             AnimCloseDoor();
             if (hasLockIn) inventary.AddLock();
-            lockSimbol.enabled = lockKeySimbol.enabled = false;
+            lockSimbol.SetActive(false);
+            keyLockRenderer.enabled = false;
             door.gameObject.layer = playerObstableLayer;
             audioSource.PlayOneShot(lockDoor);
             UpdatePath();
@@ -274,7 +273,8 @@ namespace Assets.Interactables.Physics
         {
             hasLockIn = false;
             AnimOpenDoor();
-            lockSimbol.enabled = lockKeySimbol.enabled = false;
+            lockSimbol.SetActive(false);
+            keyLockRenderer.enabled = false;
             door.gameObject.layer = playerObstableLayer;
             audioSource.PlayOneShot(openForced);
             UpdatePath();
