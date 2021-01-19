@@ -1,13 +1,14 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using Assets.Interactables.Physics;
+using Assets.Scripts.Ui.Character;
 using UnityEngine;
 
 public class CharacterInventary : MonoBehaviour
 {
     ICollection<KeyColors> keys = new HashSet<KeyColors>();
 
+    [SerializeField] LockInventoryUi lockInventoryUi;
+    [SerializeField] KeysInventoryUi keysInventoryUi;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip pickSound;
 
@@ -16,8 +17,18 @@ public class CharacterInventary : MonoBehaviour
     public bool HasKey(KeyColors keyName) => keys.Contains(keyName);
 
     public bool HasLocks() => numberOfLocks > 0;
-    public void AddLock() => numberOfLocks++;
-    public void UseLock() => numberOfLocks--;
+
+    public void AddLock()
+    {
+        lockInventoryUi.AddLock();
+        numberOfLocks++;
+    }
+
+    public void UseLock()
+    {
+        lockInventoryUi.RemoveLock();
+        numberOfLocks--;
+    }
 
     void DoSound()
     {
@@ -30,18 +41,17 @@ public class CharacterInventary : MonoBehaviour
         if (other.gameObject.GetComponent<KeyData>() is {} key)
         {
             keys.Add(key.KeyName);
+            keysInventoryUi.AddKeyOfColor(key.KeyName);
             print($"Get key:{key.KeyName}");
             Destroy(key.gameObject);
             DoSound();
         }
         else if (other.gameObject.GetComponent<LockItem>() is { } item)
         {
-            numberOfLocks++;
+            AddLock();
             print("Get lock");
             Destroy(item.gameObject);
             DoSound();
         }
-
     }
-
 }
