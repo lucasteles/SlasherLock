@@ -14,6 +14,8 @@ public class CharacterInventary : MonoBehaviour
 
     int numberOfLocks = 0;
 
+    public int Level => keys.Count;
+
     public bool HasKey(KeyColors keyName) => keys.Contains(keyName);
 
     public bool HasLocks() => numberOfLocks > 0;
@@ -40,6 +42,9 @@ public class CharacterInventary : MonoBehaviour
     {
         if (other.gameObject.GetComponent<KeyData>() is {} key)
         {
+            if (keys.Contains(key.KeyName))
+                return;
+
             keys.Add(key.KeyName);
             keysInventoryUi.AddKeyOfColor(key.KeyName);
             print($"Get key:{key.KeyName}");

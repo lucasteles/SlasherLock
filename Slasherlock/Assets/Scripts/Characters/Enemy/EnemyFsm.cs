@@ -14,10 +14,12 @@ namespace Assets.Scripts.Characters.Enemy
         [SerializeField] AudioClip seeYou;
         [SerializeField] AudioClip macheteSound;
         [SerializeField] float brokeDoorPercentage;
+
+        public void SetBrokeDoorPercentage(float v) => brokeDoorPercentage = v;
         protected override void SetupStates()
         {
             var stoppedState = new StoppedState(this);
-            var followingState = new FollowingTarget(this, tryingToOpenDoorSound, brokeDoorPercentage);
+            var followingState = new FollowingTarget(this, tryingToOpenDoorSound, () => brokeDoorPercentage);
             var killingTargetState = new KillingTargetState(this, macheteSound);
 
             var seenTargetTransition = new TargetOnSightTransition(this, followingState, seeYou);

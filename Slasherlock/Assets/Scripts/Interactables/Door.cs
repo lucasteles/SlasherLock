@@ -57,6 +57,7 @@ namespace Assets.Interactables.Physics
         bool enemyPlayLockSound = true;
         GameObject lockSimbol;
         CharacterInventary inventary;
+        Animator lockAnimator;
 
         const string dontHaveLocksThought = "I don't have any locks...";
         const string dontHaveKeyThought = "I don't have the key...";
@@ -74,6 +75,9 @@ namespace Assets.Interactables.Physics
 
             obstableLayer = LayerMask.NameToLayer("Obstacle");
             playerObstableLayer = LayerMask.NameToLayer("PlayerObstacle");
+
+
+            lockAnimator = lockSimbol.GetComponent<Animator>();
         }
 
         void AnimOpenDoor()
@@ -184,6 +188,7 @@ namespace Assets.Interactables.Physics
         {
             if (CurrentState == State.Locked) return;
 
+
             if (!inventary.HasLocks())
             {
                 ThoughtBubble.Instance.ShowThought(dontHaveLocksThought);
@@ -196,6 +201,7 @@ namespace Assets.Interactables.Physics
                 return;
             }
 
+            lockAnimator.Play("DropPadlock",-1, 0);
             lockSimbol.SetActive(true);
             inventary.UseLock();
             hasLockIn = true;
@@ -231,6 +237,7 @@ namespace Assets.Interactables.Physics
             {
                 if (!inventary.HasKey(keyName))
                 {
+                    ThoughtBubble.Instance.ShowThought(dontHaveKeyThought);
                     audioSource.PlayOneShot(locked);
                     return;
                 }
@@ -279,12 +286,11 @@ namespace Assets.Interactables.Physics
             hasLockIn = false;
             AnimOpenDoor();
 
-            var anim = lockSimbol.GetComponent<Animator>();
-            anim.Play("DropPadlock");
+            lockAnimator.Play("DropPadlock");
 
             IEnumerator wait()
             {
-                var animationClip = anim.runtimeAnimatorController.animationClips[0];
+                var animationClip = lockAnimator.runtimeAnimatorController.animationClips[0];
                 yield return new WaitForSeconds(animationClip.length);
                 lockSimbol.SetActive(false);
                 keyLockRenderer.enabled = false;

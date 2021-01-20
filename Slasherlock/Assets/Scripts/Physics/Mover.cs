@@ -29,6 +29,7 @@ namespace Assets.Scripts.Physics
             canMove = false;
         }
 
+        public void SetMoveSeed(float v) => moveSpeed = v;
         public void SetXInput(float xInput) => this.xInput = xInput;
         public void SetYInput(float yInput) => this.yInput = yInput;
 

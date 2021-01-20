@@ -1,16 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Assets.Interactables.Physics;
 using Assets.Scripts.Ai.FiniteStateMachine;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FollowingTarget : State
 {
     readonly AudioClip tryingToOpenDoorSound;
     Door onDoor;
     bool waiting = false;
-    float brokeDoorPercentage;
+    Func<float> brokeDoorPercentage;
 
-    public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, float brokeDoorPercentage) : base(fsm)
+    public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage) : base(fsm)
     {
         this.tryingToOpenDoorSound = tryingToOpenDoorSound;
         this.brokeDoorPercentage = brokeDoorPercentage;
@@ -48,7 +50,7 @@ public class FollowingTarget : State
                     yield return new WaitForSeconds(tryingToOpenDoorSound.length);
                     waiting = false;
 
-                    if (Random.value <= brokeDoorPercentage)
+                    if (Random.value <= brokeDoorPercentage())
                         door.ForceOpen();
 
                     OnEnter();
