@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Assets.Scripts.Characters.Enemy;
 using Assets.Scripts.Physics;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 [Serializable]
 public struct Difficult
@@ -23,15 +25,24 @@ public class DificultManager : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] AudioSource jsonWalkAudio;
 
+    [SerializeField] AudioSource musicNormal;
+    [SerializeField] AudioSource hardMusic;
     Mover mover;
     EnemyFsm fsm;
     CharacterInventary inventary;
     Difficult[] difficulties;
+    Animator animator;
+    ShadowsMidtonesHighlights shadowsMidtonesHighlights;
+
     void Awake()
     {
+        var volume = FindObjectOfType<Volume>();
+        volume.profile.TryGet(out shadowsMidtonesHighlights);
+        shadowsMidtonesHighlights.active = false;
         mover = GetComponent<Mover>();
         fsm = GetComponent<EnemyFsm>();
         inventary = player.GetComponent<CharacterInventary>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Start()
@@ -47,7 +58,13 @@ public class DificultManager : MonoBehaviour
         var newBrokeDoorPercentage = difficulties[inventary.Level].jasonBrokeDoorPercentage;
         fsm.SetBrokeDoorPercentage(newBrokeDoorPercentage);
 
-        jsonWalkAudio.pitch = difficulties[inventary.Level].jasonWalkSoundSpeed;
+        jsonWalkAudio.pitch = animator.speed = difficulties[inventary.Level].jasonWalkSoundSpeed;
 
+        if (inventary.Level == 4 && !shadowsMidtonesHighlights.active)
+        {
+            shadowsMidtonesHighlights.active = true;
+            musicNormal.Pause();
+            hardMusic.Play();
+        }
     }
 }

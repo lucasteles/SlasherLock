@@ -41,7 +41,7 @@ public class PlayWhenWalk : MonoBehaviour
             {
                 var newGrain = (playerDistance * (maxGrain - minGrain)) / (minDistance );
                 grain.intensity.value = maxGrain - newGrain ;// Mathf.Clamp(newGrain, minGrain, maxGrain);
-                currentGrain = (grain.intensity.value);
+                currentGrain = grain.intensity.value;
             }
             else
                 grain.intensity.value = minGrain;

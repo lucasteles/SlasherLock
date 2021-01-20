@@ -727,6 +727,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77acfd4d84af4b7a9b92d29d86431f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  side: 3
+  isWalking: 0
+  animName: 
 --- !u!1 &119228784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +1128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACon+v1edC9bgIAABAFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzoWRDTamt9YhpId8TEgnF1+EtcYaZMkjyQGS4b9Xkm3s0ukJ8Xb3ad/blb8QE7qG3Ei1UYw+Sgro+wS5M/o2GYIPcCJ7KbbsE/qcd0ZN6ZKIz3klhkmLB65MywqMYvkPsecuGVuwEayQqlrTPaRSG23hgnANNqSkcdXCQl8TdLI/05UrOdtTuHSnT3ta4cnFHnMQBtQoFc+SaJnMcdRV4FmEA7yYr7q6ZLaKVvN4uZ7ixDM0IuekqoE6OQNRmHQEwcqnCSu0y3Cicsk5012XyJxr70JKat1YjTaBMmJV+9aC2dwCJbB9aRzzuPy5KDSYzhRFzndMWftaXvRTtp5WRB/azj4Ib9xN8cI31XI+/hOeBj5cKFk99NcG2F1hSpYfXsk5J9qMPB/Dd6POvT9Hwg9kx+G9BPEkN0o2gtqgUY0rbTSEd8Pfq7K0hPww4G2rN2BTD4b3I+4H7DRcvPhTylm187NctMCWS2+43wtQdjS/bMN+a3RHYVHXxW8Nb2Q/Xq8ucM+UNjbUqRSuvZ1slEtFa++ZU9OYVCoBasxQgyDcnF8sj7kd4U3s/1X3xL2k7vYu1j+QmxIPD/kY34Re5PE6LV3K4yPo8rkxnAkYrHaBJ2tUKoVoN2wsqS/bNqog+ahs3zD6926hII53yzDGCQ4XUZGH0yimQRQuKE7mEMRzivzyMWF1Ev7SNtrZY8cmBnJhF63/wEw2itR+26kixw37rKQeMpko5DZXAOK5Zbg2DspeYt8lXVNmDdqCMUz4gaOvDHGZH4BmV6LMK12fjCLZwJKhmn1I45AMpf6LkqELuvwBUEsDBBQAAAgIAACon+uhx1qTbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSoZlZkrmRmYGFgZGJaVqyka6pWYqhqZFJioGFcaqhmXGKUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACon+v1edC9bgIAABAFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACon+uhx1qTbQAAAHgAAAAJACQAAAAAAAAAAAAAALsCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAcwMAAAAA
+    dataString: UEsDBBQAAAgIAACon+uLlKVcbQIAAA8FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzoWRDTamt9YhpId8TEgnF1+EJWMNsuSR5ADJ8N+7km3s0ukJ8Xb3ad/blb8Ql6ZmuVV6ozl9VJSh7xPkzujbZAg+sBPZK7nln6zPeefUli6J+JxXYrkCPHBlRlXMap7/kHvhkjGAjeSF0tWa7lmqjDUAF0QYBiGtrKuWAH1N0Al+pitXcoZTuHSnTzit8OQCx5xJy/QoFc+SaJnMcdRV4FmEA7yYr7q6ZLaKVvN4uZ7ixDM0Mhekqhl1cgaiMOkIgpVPkyC0y3CiciUEN12XyJ5r70JKatOARkignIBq31owmwNQMr4vrWMelz8XhWG2M0WT8x3XYF/Li36q1tOKmEPb2QcRjbspXvimWs7Hf8LTwIcLraqH/toAuytsyfPDKznnxNiR52P4btS59+dIxIHsBHsvmXxSG60aSSFodeNKG8PCu+HvVVlasvww4G2rN2BTD4b3I+4H7DRcvPhTKni187NctMBWKG+43wumYTS/oGG/NaajANR18duwN7Ifr1cXuOfaWAh1KqVrb6ca7VLR2nvm1DQ2VVoyPWaomSTCnl+Ax96O8Cb2/6p74l5Sd3sX6x9I584YHdIxvgm9qON1WKZUx0dmyufGCi5HXC7wBD6lSsp2wcaK+rJtowuSj8r2Dad/rxYK4ni3DGOc4HARFXk4jWIaROGC4mTOgnhOkd89LkEmES9to507MDU5kEvYs/77MtloUvtlp5ocN/yzUmbI5LJQ21wzJp9bhmvjTMMl8CzpmnIwaMus5dLPG31lSKj8wGh2Jcq80vXJapINLBmq+YeyDslQ6j8oGbqgyx9QSwMEFAAACAgAAKif66HHWpNtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJKhmVmSuZGZgYWBkYlpWrKRrqlZiqGpkUmKgYVxqqGZcYpSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAKif64uUpVxtAgAADwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAKif66HHWpNtAAAAeAAAAAkAJAAAAAAAAAAAAAAAugIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAByAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -1515,6 +1518,7 @@ GameObject:
   - component: {fileID: 416435328}
   - component: {fileID: 416435329}
   - component: {fileID: 416435330}
+  - component: {fileID: 416435331}
   m_Layer: 9
   m_Name: Jason
   m_TagString: Untagged
@@ -1803,7 +1807,7 @@ MonoBehaviour:
   level0:
     jasonSpeed: 1
     jasonBrokeDoorPercentage: 0
-    jasonWalkSoundSpeed: 1
+    jasonWalkSoundSpeed: 0.9
   level1:
     jasonSpeed: 2
     jasonBrokeDoorPercentage: 0
@@ -1822,6 +1826,23 @@ MonoBehaviour:
     jasonWalkSoundSpeed: 1.5
   player: {fileID: 113535483}
   jsonWalkAudio: {fileID: 1537641517}
+  musicNormal: {fileID: 1002047073}
+  hardMusic: {fileID: 1002047076}
+--- !u!114 &416435331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416435319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77acfd4d84af4b7a9b92d29d86431f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  side: 3
+  isWalking: 0
+  animName: 
 --- !u!1 &496323967
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,6 +2843,7 @@ GameObject:
   - component: {fileID: 1002047073}
   - component: {fileID: 1002047075}
   - component: {fileID: 1002047074}
+  - component: {fileID: 1002047076}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -3069,6 +3091,102 @@ AudioSource:
   m_Volume: 0.083
   m_Pitch: 1
   Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1002047076
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002047070}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8151336c275854465b4dab22b9db4425, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.663
+  m_Pitch: 1
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5309,6 +5427,7 @@ GameObject:
   - component: {fileID: 1906526276}
   - component: {fileID: 1906526277}
   - component: {fileID: 1906526278}
+  - component: {fileID: 1906526279}
   m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
@@ -5395,6 +5514,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SortingOrderBase: 5000
   Offset: 10
+--- !u!95 &1906526279
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906526275}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf40c9eca968e42619a683995765acdf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &2022038420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9209769732971255095, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}

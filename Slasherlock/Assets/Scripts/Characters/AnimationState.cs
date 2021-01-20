@@ -6,10 +6,10 @@ public class AnimationState : MonoBehaviour
     Animator anim;
     Mover mover;
     CheckWalking check;
-    WalkSide side = WalkSide.Down;
-    bool isWalking;
+    [SerializeField]WalkSide side = WalkSide.Down;
+    [SerializeField]bool isWalking;
+    [SerializeField]string animName;
 
-    string animName;
     void Awake()
     {
         anim = GetComponentInChildren<Animator>();

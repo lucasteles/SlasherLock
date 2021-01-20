@@ -26,9 +26,9 @@ namespace Assets.Scripts.Ai.PathFinding
             mover = GetComponent<Mover>();
         }
 
-        public void FollowTarget(Transform target) 
-        { 
-            this.target = target; 
+        public void FollowTarget(Transform target)
+        {
+            this.target = target;
             InvokeRepeating(nameof(UpdatePath), 0f, .5f);
         }
 
@@ -48,41 +48,53 @@ namespace Assets.Scripts.Ai.PathFinding
         {
             if (!p.error)
             {
-                path = p;
-                currentWaypoint = 0;
-                
-                MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
+                if (path != null)
+                {
+                    var distance = Vector2.Distance(transform.position, p.vectorPath[0]);
+                    if (distance < nextWaypointDistance)
+                    {
+                        path = p;
+                        currentWaypoint = 0;
+                        MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
+                    }
+                }
+                else
+                {
+                    path = p;
+                    currentWaypoint = 0;
+                    MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
+                }
             }
         }
 
         bool HasAnotherWayPoint() => currentWaypoint < path.vectorPath.Count;
 
-        void Update()
-        {
-            if (path == null) return;
 
-            if (!HasAnotherWayPoint())
+            void FixedUpdate()
             {
-                mover.StopInput();
-                return;
+                if (path == null) return;
+
+                if (!HasAnotherWayPoint())
+                {
+                    mover.StopInput();
+                    return;
+                }
+
+                var distance = Vector2.Distance(transform.position, path.vectorPath[currentWaypoint]);
+                if (distance < nextWaypointDistance)
+                {
+                    currentWaypoint++;
+
+                    if (HasAnotherWayPoint())
+                        MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
+                }
             }
 
-            var distance = Vector2.Distance(transform.position, path.vectorPath[currentWaypoint]);
-            if (distance < nextWaypointDistance)
+            void MoveToNextWayPoint(Vector2 nextWaypoint)
             {
-                currentWaypoint++;
-
-                if (HasAnotherWayPoint())
-                    MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
+                var direction = (nextWaypoint - (Vector2) transform.position).normalized;
+                mover.SetInput(direction);
             }
         }
 
-        void MoveToNextWayPoint(Vector2 nextWaypoint)
-        {
-            var direction = (nextWaypoint - (Vector2)transform.position).normalized;
-
-            mover.SetXInput(direction.x);
-            mover.SetYInput(direction.y);
-        }
-    }
 }
