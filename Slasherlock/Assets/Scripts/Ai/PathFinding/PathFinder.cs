@@ -18,6 +18,7 @@ namespace Assets.Scripts.Ai.PathFinding
 
         [SerializeField] float speed;
         [SerializeField] float nextWaypointDistance = 3f;
+        bool shouldMove;
 
 
         void Awake()
@@ -48,22 +49,9 @@ namespace Assets.Scripts.Ai.PathFinding
         {
             if (!p.error)
             {
-                if (path != null)
-                {
-                    var distance = Vector2.Distance(transform.position, p.vectorPath[0]);
-                    if (distance < nextWaypointDistance)
-                    {
-                        path = p;
-                        currentWaypoint = 0;
-                        MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
-                    }
-                }
-                else
-                {
-                    path = p;
-                    currentWaypoint = 0;
-                    MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
-                }
+                path = p;
+                currentWaypoint = 0;
+                shouldMove = true;
             }
         }
 
@@ -81,10 +69,10 @@ namespace Assets.Scripts.Ai.PathFinding
                 }
 
                 var distance = Vector2.Distance(transform.position, path.vectorPath[currentWaypoint]);
-                if (distance < nextWaypointDistance)
+                if (distance < nextWaypointDistance || shouldMove)
                 {
                     currentWaypoint++;
-
+                    shouldMove = false;
                     if (HasAnotherWayPoint())
                         MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
                 }
