@@ -10,6 +10,7 @@ public struct Difficult
 {
     public float jasonSpeed;
     public float jasonBrokeDoorPercentage;
+    public float jasonWalkSoundSpeed;
 }
 
 public class DificultManager : MonoBehaviour
@@ -20,6 +21,7 @@ public class DificultManager : MonoBehaviour
     [SerializeField] Difficult level3;
     [SerializeField] Difficult level4;
     [SerializeField] GameObject player;
+    [SerializeField] AudioSource jsonWalkAudio;
 
     Mover mover;
     EnemyFsm fsm;
@@ -44,6 +46,8 @@ public class DificultManager : MonoBehaviour
 
         var newBrokeDoorPercentage = difficulties[inventary.Level].jasonBrokeDoorPercentage;
         fsm.SetBrokeDoorPercentage(newBrokeDoorPercentage);
+
+        jsonWalkAudio.pitch = difficulties[inventary.Level].jasonWalkSoundSpeed;
 
     }
 }
