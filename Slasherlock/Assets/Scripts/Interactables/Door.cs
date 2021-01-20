@@ -118,7 +118,6 @@ namespace Assets.Interactables.Physics
                 canInteract = true;
         }
 
-
         void EnableEnemyToPlayLockedSound() => enemyPlayLockSound = true;
 
         void OnTriggerStay2D(Collider2D other)
@@ -131,6 +130,7 @@ namespace Assets.Interactables.Physics
                 if (enemyPlayLockSound)
                     Invoke(nameof(EnableEnemyToPlayLockedSound), 1f);
                 enemyPlayLockSound = false;
+                if (CurrentState == State.Locked) ConfirmLockDoor();
             }
         }
 
@@ -173,8 +173,10 @@ namespace Assets.Interactables.Physics
 
             if (IsDoorLocked())
             {
+                if (needsKey && !inventary.HasKey(keyName))
+                    ThoughtBubble.Instance.ShowThought(dontHaveKeyThought);
+
                 if (playLockedSound) audioSource.PlayOneShot(locked);
-                if (CurrentState == State.Locked) ConfirmLockDoor();
                 return;
             }
 
