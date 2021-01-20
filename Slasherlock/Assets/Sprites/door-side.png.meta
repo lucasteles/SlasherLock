@@ -118,12 +118,12 @@ TextureImporter:
       name: door-side_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 10
-        width: 67.5
-        height: 76
+        x: 0
+        y: 0
+        width: 80
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,12 +139,12 @@ TextureImporter:
       name: door-side_1
       rect:
         serializedVersion: 2
-        x: 87
-        y: 10
-        width: 67.5
-        height: 76
+        x: 80
+        y: 0
+        width: 80
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: door-side_2
       rect:
         serializedVersion: 2
-        x: 164
-        y: 10
-        width: 67.5
-        height: 76
+        x: 160
+        y: 0
+        width: 80
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: door-side_3
       rect:
         serializedVersion: 2
-        x: 241
-        y: 10
-        width: 67.5
-        height: 76
+        x: 240
+        y: 0
+        width: 80
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

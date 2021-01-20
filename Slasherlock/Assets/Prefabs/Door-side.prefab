@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 369968387200321037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.883646, y: 4.883646, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 0}
   m_Children: []
   m_Father: {fileID: 9209769732971255095}
   m_RootOrder: 0
@@ -118,18 +118,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1221385, y: -0.0071048588}
+  m_Offset: {x: -0.08004767, y: -0.003302157}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.675, y: 0.76}
+    oldSize: {x: 0.8, y: 0.96}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.10336253, y: 0.6289309}
+  m_Size: {x: 0.03766641, y: 0.69738007}
   m_EdgeRadius: 0
 --- !u!50 &571045383415751204
 Rigidbody2D:
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SortingOrderBase: 5000
-  Offset: 10
+  Offset: 1
 --- !u!1 &8245527455290082392
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8429094039595383902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.61, y: -0.2, z: 0}
+  m_LocalPosition: {x: -0.41, y: -0.2, z: 0}
   m_LocalScale: {x: 2.5896, y: 2.5896, z: 2.5896}
   m_Children: []
   m_Father: {fileID: 9209769732971255095}
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SortingOrderBase: 5000
-  Offset: 5
+  Offset: -683
 --- !u!1 &9209769731614485857
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9209769731614485857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.501, y: -0.582, z: -0}
+  m_LocalPosition: {x: -0.415, y: -0.582, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6992111578444967617}
@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SortingOrderBase: 5000
-  Offset: 5
+  Offset: 0
 --- !u!1 &9209769732889932718
 GameObject:
   m_ObjectHideFlags: 0
