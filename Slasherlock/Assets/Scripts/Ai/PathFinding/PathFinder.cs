@@ -19,7 +19,7 @@ namespace Assets.Scripts.Ai.PathFinding
 
         [SerializeField] float nextWaypointDistance = 3f;
         bool shouldMove;
-        bool notPossible;
+        int notPossiblePathCount;
 
         void Awake()
         {
@@ -29,14 +29,14 @@ namespace Assets.Scripts.Ai.PathFinding
 
         public void FollowTarget(Transform target)
         {
-            notPossible = false;
+            notPossiblePathCount = 0;
             this.target = target;
             InvokeRepeating(nameof(UpdatePath), 0f, .5f);
         }
 
         public void StopFollowing()
         {
-            notPossible = false;
+            notPossiblePathCount = 0;
             target = null;
             CancelInvoke(nameof(UpdatePath));
         }
@@ -50,7 +50,7 @@ namespace Assets.Scripts.Ai.PathFinding
             }
         }
 
-        public bool IsNotPossible() => notPossible;
+        public bool IsNotPossible() => notPossiblePathCount > 3;
 
         void OnPathComplete(Path p)
         {
@@ -58,9 +58,9 @@ namespace Assets.Scripts.Ai.PathFinding
             {
                 var targetNode = AstarPath.active.GetNearest(target.position).node;
                 if (!PathUtilities.IsPathPossible(targetNode, p.path[0]))
-                {
-                    notPossible = true;
-                }
+                    notPossiblePathCount++;
+                else
+                    notPossiblePathCount = 0;
 
                 path = p;
                 currentWaypoint = 0;
