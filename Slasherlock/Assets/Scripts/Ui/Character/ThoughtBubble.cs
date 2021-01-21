@@ -37,6 +37,9 @@ namespace Assets.Scripts.Ui.Character
 
         public void ShowThought(string thought)
         {
+            if (thoughtQueue.Contains(thought) || thoughtToShow == thought)
+                return;
+
             if (thoughtToShow == string.Empty)
             {
                 thoughtToShow = thought;

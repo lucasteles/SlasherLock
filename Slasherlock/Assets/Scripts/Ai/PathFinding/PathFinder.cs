@@ -16,7 +16,6 @@ namespace Assets.Scripts.Ai.PathFinding
 
         int currentWaypoint = 0;
 
-        [SerializeField] float speed;
         [SerializeField] float nextWaypointDistance = 3f;
         bool shouldMove;
 
@@ -57,32 +56,30 @@ namespace Assets.Scripts.Ai.PathFinding
 
         bool HasAnotherWayPoint() => currentWaypoint < path.vectorPath.Count;
 
+        void FixedUpdate()
+        {
+            if (path == null) return;
 
-            void FixedUpdate()
+            if (!HasAnotherWayPoint())
             {
-                if (path == null) return;
-
-                if (!HasAnotherWayPoint())
-                {
-                    mover.StopInput();
-                    return;
-                }
-
-                var distance = Vector2.Distance(transform.position, path.vectorPath[currentWaypoint]);
-                if (distance < nextWaypointDistance || shouldMove)
-                {
-                    currentWaypoint++;
-                    shouldMove = false;
-                    if (HasAnotherWayPoint())
-                        MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
-                }
+                mover.StopInput();
+                return;
             }
 
-            void MoveToNextWayPoint(Vector2 nextWaypoint)
+            var distance = Vector2.Distance(transform.position, path.vectorPath[currentWaypoint]);
+            if (distance < nextWaypointDistance || shouldMove)
             {
-                var direction = (nextWaypoint - (Vector2) transform.position).normalized;
-                mover.SetInput(direction);
+                currentWaypoint++;
+                shouldMove = false;
+                if (HasAnotherWayPoint())
+                    MoveToNextWayPoint(path.vectorPath[currentWaypoint]);
             }
         }
 
+        void MoveToNextWayPoint(Vector2 nextWaypoint)
+        {
+            var direction = (nextWaypoint - (Vector2) transform.position).normalized;
+            mover.SetInput(direction);
+        }
+    }
 }
