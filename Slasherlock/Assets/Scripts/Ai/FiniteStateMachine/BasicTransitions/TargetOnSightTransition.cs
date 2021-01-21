@@ -6,6 +6,8 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
     public class TargetOnSightTransition : Transition
     {
         readonly AudioClip seeYou;
+        float lastTimeSee;
+        float minTimeToSeeAgain = 1f;
 
         public TargetOnSightTransition(Fsm fsm, IState nextState, AudioClip seeYou) : base(fsm, nextState)
         {
@@ -14,13 +16,21 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
 
         public TargetOnSightTransition(Fsm fsm, IState nextState) : base(fsm, nextState) {}
 
-        public override bool IsValid() => fsm.Awareness.HasTargetOnSight() && !fsm.PathFinder.IsNotPossible();
+        public override bool IsValid()
+        {
+            lastTimeSee += Time.deltaTime;
+            return fsm.Awareness.HasTargetOnSight() && !fsm.PathFinder.IsNotPossible();
+        }
 
         public override void OnTransition()
         {
-            var audio = fsm.gameObject.GetComponent<AudioSource>();
-            audio.PlayOneShot(seeYou);
-            SawEnemyThought.Instance.PlaySawEnemyThought();
+            if (lastTimeSee >= minTimeToSeeAgain)
+            {
+                var audio = fsm.gameObject.GetComponent<AudioSource>();
+                audio.PlayOneShot(seeYou);
+                SawEnemyThought.Instance.PlaySawEnemyThought();
+                lastTimeSee = 0;
+            }
         }
     }
 }
