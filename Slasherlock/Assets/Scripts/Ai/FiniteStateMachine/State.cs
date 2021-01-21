@@ -44,6 +44,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
                 {
                     transition.OnTransition();
                     fsm.ChangeState(transition.NextState);
+                    break;
                 }
             }
         }

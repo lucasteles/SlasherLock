@@ -3,23 +3,19 @@ using UnityEngine;
 
 namespace Assets.Scripts.Systems.Observables
 {
-    public interface IEventSender<Event>
-    {
-        void SubscribeToEvent(IEventListener<Event> listener);
-    }
 
-    public abstract class EventSender<Event> : MonoBehaviour, IEventSender<Event>
+    public abstract class EventSender<TEvent> : MonoBehaviour
     {
-        protected List<IEventListener<Event>> Listeners { get; set; }
-            = new List<IEventListener<Event>>();
+        protected List<IEventListener<TEvent>> Listeners { get; set; }
+            = new List<IEventListener<TEvent>>();
 
-        public void SubscribeToEvent(IEventListener<Event> listener)
+        public void SubscribeToEvent(IEventListener<TEvent> listener)
            => Listeners.Add(listener);
 
-        public void UnsubscribeFromEvent(IEventListener<Event> listener)
+        public void UnsubscribeFromEvent(IEventListener<TEvent> listener)
             => Listeners.Remove(listener);
 
-        public void NotifyListeners(Event e)
+        public void NotifyListeners(TEvent e)
         {
             foreach (var listener in Listeners)
                 listener.Notify(e);

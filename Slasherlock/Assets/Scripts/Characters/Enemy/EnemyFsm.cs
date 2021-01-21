@@ -14,8 +14,10 @@ namespace Assets.Scripts.Characters.Enemy
         [SerializeField] AudioClip seeYou;
         [SerializeField] AudioClip macheteSound;
         [SerializeField] float brokeDoorPercentage;
+        [SerializeField] float timeToGiveUp;
 
         public void SetBrokeDoorPercentage(float v) => brokeDoorPercentage = v;
+        public void SetTimeToGiveUp(float v) => timeToGiveUp = v;
         protected override void SetupStates()
         {
             var stoppedState = new StoppedState(this);
@@ -25,9 +27,13 @@ namespace Assets.Scripts.Characters.Enemy
             var seenTargetTransition = new TargetOnSightTransition(this, followingState, seeYou);
             var targetIsCloseToKill = new TargetIsClose(this, killingTargetState, distanceToKillTarget);
             var targetUnreachable = new TargetUnreachable(this, stoppedState);
+            var targetGiveUp = new TargetGiveUp(this, stoppedState, () => timeToGiveUp);
 
             stoppedState.SetTransitions(seenTargetTransition);
-            followingState.SetTransitions(targetIsCloseToKill, targetUnreachable);
+            followingState.SetTransitions(
+                targetIsCloseToKill,
+                targetUnreachable,
+                targetGiveUp);
             SetFirstState(stoppedState);
         }
 

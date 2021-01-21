@@ -1631,11 +1631,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4ef946e72b5654aad09c6f6bbb68c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStateName: 
   distanceToKillTarget: 2
   tryingToOpenDoorSound: {fileID: 8300000, guid: 4d129d29dc4644691bf52fa1553a009c, type: 3}
   seeYou: {fileID: 8300000, guid: d6407b8f133ce4d32ae74f11c3996f1a, type: 3}
   macheteSound: {fileID: 8300000, guid: 9cd768b3d4cc145beaf03a3a59f4bf0e, type: 3}
   brokeDoorPercentage: 0.5
+  timeToGiveUp: 6
 --- !u!50 &416435326
 Rigidbody2D:
   serializedVersion: 4
@@ -2488,7 +2490,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741780210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3106,7 +3108,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.06
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
