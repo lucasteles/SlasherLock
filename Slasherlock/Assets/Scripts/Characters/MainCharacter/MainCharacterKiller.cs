@@ -38,7 +38,8 @@ namespace Assets.Scripts.Characters.MainCharacter
 
             yield return new WaitForSeconds(timeToLoadGameOverScene);
             Instantiate(gameOverCanvas);
-            Destroy(Instantiate(bloodSplash, transform.position, Quaternion.identity),5);
+            Destroy(Instantiate(bloodSplash, transform.position, Quaternion.identity), 5);
+
             spriteRenderer.enabled = false;
         }
     }

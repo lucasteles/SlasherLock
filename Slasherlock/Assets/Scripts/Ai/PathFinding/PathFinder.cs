@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Physics;
+﻿using System;
+using Assets.Scripts.Physics;
 using Pathfinding;
 using UnityEngine;
 
@@ -18,7 +19,7 @@ namespace Assets.Scripts.Ai.PathFinding
 
         [SerializeField] float nextWaypointDistance = 3f;
         bool shouldMove;
-
+        bool notPossible;
 
         void Awake()
         {
@@ -28,12 +29,14 @@ namespace Assets.Scripts.Ai.PathFinding
 
         public void FollowTarget(Transform target)
         {
+            notPossible = false;
             this.target = target;
             InvokeRepeating(nameof(UpdatePath), 0f, .5f);
         }
 
         public void StopFollowing()
         {
+            notPossible = false;
             target = null;
             CancelInvoke(nameof(UpdatePath));
         }
@@ -41,13 +44,24 @@ namespace Assets.Scripts.Ai.PathFinding
         void UpdatePath()
         {
             if (seeker.IsDone())
-                seeker.StartPath(transform.position, target.position, OnPathComplete);
+            {
+                seeker.StartPath(transform.position, target.position, OnPathComplete,
+                    GraphMask.FromGraphName("Grid Graph"));
+            }
         }
+
+        public bool IsNotPossible() => notPossible;
 
         void OnPathComplete(Path p)
         {
             if (!p.error)
             {
+                var targetNode = AstarPath.active.GetNearest(target.position).node;
+                if (!PathUtilities.IsPathPossible(targetNode, p.path[0]))
+                {
+                    notPossible = true;
+                }
+
                 path = p;
                 currentWaypoint = 0;
                 shouldMove = true;
@@ -55,6 +69,7 @@ namespace Assets.Scripts.Ai.PathFinding
         }
 
         bool HasAnotherWayPoint() => currentWaypoint < path.vectorPath.Count;
+
 
         void FixedUpdate()
         {

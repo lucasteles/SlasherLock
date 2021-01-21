@@ -24,11 +24,12 @@ namespace Assets.Scripts.Characters.Enemy
 
             var seenTargetTransition = new TargetOnSightTransition(this, followingState, seeYou);
             var targetIsCloseToKill = new TargetIsClose(this, killingTargetState, distanceToKillTarget);
+            var targetUnreachable = new TargetUnreachable(this, stoppedState);
 
             stoppedState.SetTransitions(seenTargetTransition);
-            followingState.SetTransitions(targetIsCloseToKill);
-
+            followingState.SetTransitions(targetIsCloseToKill, targetUnreachable);
             SetFirstState(stoppedState);
         }
+
     }
 }

@@ -58,7 +58,6 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
 
         void OnTriggerStay2D(Collider2D other) => currentState.OnTriggerStay(other);
 
-
         void Update()
         {
             UpdateFsm();    

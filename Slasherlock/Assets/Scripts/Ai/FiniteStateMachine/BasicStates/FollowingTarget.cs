@@ -11,7 +11,6 @@ public class FollowingTarget : State
     Door onDoor;
     bool waiting = false;
     Func<float> brokeDoorPercentage;
-
     public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage) : base(fsm)
     {
         this.tryingToOpenDoorSound = tryingToOpenDoorSound;
@@ -22,10 +21,10 @@ public class FollowingTarget : State
     {
     }
 
-    public override void OnEnter()
-        => fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
+    public override void OnEnter() => fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
 
     public override void OnExit() => fsm.PathFinder.StopFollowing();
+
 
     public override string ToString()
         => typeof(FollowingTarget).Name;
