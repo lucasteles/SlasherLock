@@ -203,7 +203,6 @@ namespace Assets.Interactables.Physics
                 return;
             }
 
-            lockAnimator.Play("DropPadlock",-1, 0);
             lockSimbol.SetActive(true);
             inventary.UseLock();
             hasLockIn = true;
@@ -293,9 +292,16 @@ namespace Assets.Interactables.Physics
             IEnumerator wait()
             {
                 var animationClip = lockAnimator.runtimeAnimatorController.animationClips[0];
+                var oldPos = lockSimbol.transform.position;
+                var oldScale = lockSimbol.transform.localScale;
+                var oldRot = lockSimbol.transform.rotation;
+
                 yield return new WaitForSeconds(animationClip.length);
                 lockSimbol.SetActive(false);
                 keyLockRenderer.enabled = false;
+                lockSimbol.transform.position = oldPos;
+                lockSimbol.transform.localScale = oldScale;
+                lockSimbol.transform.rotation = oldRot;
             }
 
             StartCoroutine(wait());
