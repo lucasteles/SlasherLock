@@ -17,14 +17,13 @@ public class FollowingTarget : State
         this.brokeDoorPercentage = brokeDoorPercentage;
     }
 
-    public override void Execute()
+    public override void UpdateState()
     {
     }
 
     public override void OnEnter() => fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
 
     public override void OnExit() => fsm.PathFinder.StopFollowing();
-
 
     public override string ToString()
         => typeof(FollowingTarget).Name;

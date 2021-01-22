@@ -13,5 +13,6 @@
 
         public abstract bool IsValid();
         public abstract void OnTransition();
+
     }
 }

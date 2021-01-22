@@ -24,4 +24,5 @@ public class SurroundingAwareness : MonoBehaviour
         LastTargetFound = hit.collider.transform;
         return hit.collider == hitFromRay.collider;
     }
+
 }

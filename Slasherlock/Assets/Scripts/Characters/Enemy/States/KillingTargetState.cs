@@ -13,7 +13,7 @@ namespace Assets.Scripts.Characters.Enemy.States
             this.macheteSound = macheteSound;
         }
 
-        public override void Execute() { }
+        public override void UpdateState() { }
 
         public override void OnEnter()
         {

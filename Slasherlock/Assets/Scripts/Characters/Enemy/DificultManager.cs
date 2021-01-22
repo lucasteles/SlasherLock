@@ -63,6 +63,7 @@ public class DificultManager : MonoBehaviour
         if (inventary.Level == 4 && !shadowsMidtonesHighlights.active)
         {
             shadowsMidtonesHighlights.active = true;
+            fsm.SetTimeToGiveUp(float.MaxValue);
             musicNormal.Pause();
             hardMusic.Play();
         }

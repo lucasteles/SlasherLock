@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace Assets.Scripts.Ai.FiniteStateMachine
 {
@@ -8,7 +9,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
         void OnEnter();
         void OnExit();
         void OnTriggerEnter(Collider2D other);
-        void Execute();
+        void UpdateState();
         void OnTriggerStay(Collider2D other);
     }
 
@@ -25,13 +26,20 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
 
         public abstract void OnEnter();
         public abstract void OnExit();
-        public virtual void OnTriggerStay(Collider2D other) { }
-        public virtual void OnTriggerEnter(Collider2D other) { }
-        public abstract void Execute();
+
+        public virtual void OnTriggerStay(Collider2D other)
+        {
+        }
+
+        public virtual void OnTriggerEnter(Collider2D other)
+        {
+        }
+
+        public abstract void UpdateState();
 
         public void Update()
         {
-            Execute();
+            UpdateState();
             CheckTransitions();
         }
 

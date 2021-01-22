@@ -29,7 +29,7 @@ namespace Assets.Scripts.Ai.PathFinding
 
         public void FollowTarget(Transform target)
         {
-            notPossiblePathCount = 0;
+            StopFollowing();
             this.target = target;
             InvokeRepeating(nameof(UpdatePath), 0f, .5f);
         }
@@ -56,16 +56,24 @@ namespace Assets.Scripts.Ai.PathFinding
         {
             if (!p.error)
             {
-                var targetNode = AstarPath.active.GetNearest(target.position).node;
-                if (!PathUtilities.IsPathPossible(targetNode, p.path[0]))
-                    notPossiblePathCount++;
-                else
-                    notPossiblePathCount = 0;
+                CheckPossiblePath(p);
 
                 path = p;
                 currentWaypoint = 0;
                 shouldMove = true;
             }
+        }
+
+        void CheckPossiblePath(Path p)
+        {
+            if (!target)
+                return;
+
+            var targetNode = AstarPath.active.GetNearest(target.position).node;
+            if (targetNode == null || !PathUtilities.IsPathPossible(targetNode, p.path[0]))
+                notPossiblePathCount++;
+            else
+                notPossiblePathCount = 0;
         }
 
         bool HasAnotherWayPoint() => currentWaypoint < path.vectorPath.Count;

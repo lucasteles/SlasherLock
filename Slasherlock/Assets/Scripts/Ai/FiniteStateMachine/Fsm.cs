@@ -10,7 +10,6 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
     [RequireComponent(typeof(SurroundingAwareness))]
     public abstract class Fsm : EventSender<IState>
     {
-
         [SerializeField] string currentStateName;
         protected IState currentState;
         public Mover Mover { private set; get; }
@@ -35,6 +34,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
 
         protected void SetFirstState(IState firstState)
         {
+            currentState?.OnExit();
             currentState = firstState;
             currentState.OnEnter();
             NotifyListeners(currentState);
@@ -42,6 +42,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
         }
 
         void UpdateStateName() => currentStateName = currentState.GetType().Name;
+
         public void ChangeState(IState newState)
         {
             currentState.OnExit();
@@ -63,7 +64,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
 
         void Update()
         {
-            UpdateFsm();    
+            UpdateFsm();
         }
     }
 }

@@ -29,6 +29,8 @@ namespace Assets.Scripts.Physics
             StopInput();
             canMove = false;
         }
+        
+        public void Move(Vector2 position) => rb.MovePosition(position);
 
         public void SetMoveSeed(float v) => moveSpeed = v;
         public void SetXInput(float xInput) => this.xInput = xInput;

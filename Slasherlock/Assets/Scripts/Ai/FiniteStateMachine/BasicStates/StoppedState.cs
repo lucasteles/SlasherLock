@@ -4,7 +4,7 @@
     {
         public StoppedState(Fsm fsm) : base(fsm) { }
 
-        public override void Execute() { }
+        public override void UpdateState() { }
 
         public override void OnEnter() => fsm.Mover.StopInput();
 
