@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Assets.Interactables.Physics;
 using Assets.Scripts.Ui.Character;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Safe : MonoBehaviour
 {
@@ -16,10 +15,20 @@ public class Safe : MonoBehaviour
 
     AudioSource source;
 
+    string password;
+    public string Password => password;
+
     void Awake()
     {
+        GeneratePassword();
         source = GetComponent<AudioSource>();
     }
+
+    void GeneratePassword()
+    {
+        password = Random.Range(0, 9999).ToString("D4");
+    }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -62,6 +71,7 @@ public class Safe : MonoBehaviour
     void OpenSafe()
     {
         source.Play();
+
         IEnumerator wait()
         {
             yield return new WaitForSeconds(1);
@@ -71,6 +81,7 @@ public class Safe : MonoBehaviour
             yield return new WaitUntil(() => !source.isPlaying);
             Destroy(gameObject);
         }
+
         StartCoroutine(wait());
     }
 }
