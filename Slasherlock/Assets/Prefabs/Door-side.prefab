@@ -604,6 +604,7 @@ MonoBehaviour:
   green: {fileID: -5935585244881266814, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
   red: {fileID: 2253416029611518402, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
   keyLockRenderer: {fileID: 5145058264577375365}
+  timeToUncorfimLock: 180
 --- !u!61 &9209769732971255093
 BoxCollider2D:
   m_ObjectHideFlags: 0

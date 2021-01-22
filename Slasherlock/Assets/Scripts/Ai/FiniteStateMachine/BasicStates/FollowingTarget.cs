@@ -11,6 +11,7 @@ public class FollowingTarget : State
     Door onDoor;
     bool waiting = false;
     Func<float> brokeDoorPercentage;
+
     public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage) : base(fsm)
     {
         this.tryingToOpenDoorSound = tryingToOpenDoorSound;
@@ -50,6 +51,9 @@ public class FollowingTarget : State
 
                     if (Random.value <= brokeDoorPercentage())
                         door.ForceOpen();
+                    else
+                        // nao deixa o jason preso fora da grid da porta
+                        fsm.transform.position = AstarPath.active.GetNearest(fsm.transform.position).position;
 
                     OnEnter();
                 }

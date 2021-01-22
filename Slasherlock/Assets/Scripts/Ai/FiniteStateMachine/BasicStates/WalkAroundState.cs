@@ -150,6 +150,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
 
         public override void OnExit()
         {
+            if (lastFlag) lastFlag.Hide();
             startWalking = false;
             elapsedTime = 0;
         }

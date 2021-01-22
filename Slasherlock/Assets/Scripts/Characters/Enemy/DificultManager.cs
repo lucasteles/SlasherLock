@@ -13,6 +13,7 @@ public struct Difficult
     public float jasonSpeed;
     public float jasonBrokeDoorPercentage;
     public float jasonWalkSoundSpeed;
+    public float jasonTimeToGiveUp;
 }
 
 public class DificultManager : MonoBehaviour
@@ -57,13 +58,13 @@ public class DificultManager : MonoBehaviour
 
         var newBrokeDoorPercentage = difficulties[inventary.Level].jasonBrokeDoorPercentage;
         fsm.SetBrokeDoorPercentage(newBrokeDoorPercentage);
+        fsm.SetTimeToGiveUp(difficulties[inventary.Level].jasonTimeToGiveUp);
 
         jsonWalkAudio.pitch = animator.speed = difficulties[inventary.Level].jasonWalkSoundSpeed;
 
         if (inventary.Level == 4 && !shadowsMidtonesHighlights.active)
         {
             shadowsMidtonesHighlights.active = true;
-            fsm.SetTimeToGiveUp(float.MaxValue);
             musicNormal.Pause();
             hardMusic.Play();
         }

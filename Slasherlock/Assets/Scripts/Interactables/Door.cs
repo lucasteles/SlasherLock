@@ -41,6 +41,7 @@ namespace Assets.Interactables.Physics
         [SerializeField] Sprite red;
         [SerializeField] SpriteRenderer keyLockRenderer;
 
+        [SerializeField] float timeToUncorfimLock;
         Collider2D doorCollider;
         Animator animator;
 
@@ -59,6 +60,7 @@ namespace Assets.Interactables.Physics
         CharacterInventary inventary;
         Animator lockAnimator;
 
+        float confirmLockedWhen;
         const string dontHaveLocksThought = "I don't have any locks...";
         const string dontHaveKeyThought = "I don't have the key...";
 
@@ -226,10 +228,19 @@ namespace Assets.Interactables.Physics
         {
             if (CurrentState == State.ConfirmedLock) return;
             door.gameObject.layer = obstableLayer;
+            confirmLockedWhen = Time.time;
             UpdatePath();
             CurrentState = State.ConfirmedLock;
         }
 
+        void UnconfirmLockDoor()
+        {
+            if (CurrentState != State.ConfirmedLock) return;
+            door.gameObject.layer = playerObstableLayer;
+            confirmLockedWhen = 0;
+            UpdatePath();
+            CurrentState = State.Locked;
+        }
         void UnlockDoor()
         {
             if (!IsDoorLocked()) return;
@@ -263,6 +274,23 @@ namespace Assets.Interactables.Physics
         void Update()
         {
             HandleInput();
+
+            if (CurrentState == State.ConfirmedLock
+                && confirmLockedWhen > 0
+                && (Time.time - confirmLockedWhen) > timeToUncorfimLock)
+                UnconfirmLockDoor();
+
+
+            audioSource.volume = Vector2.Distance(
+                    transform.position,
+                    inventary.transform.position) switch
+                {
+                    var dist when dist <= 15 => 1f,
+                    var dist when dist <= 30 => .6f,
+                    var dist when dist <= 50 => .4f,
+                    _ => .2f,
+                };
+
         }
 
         void HandleInput()

@@ -9,17 +9,24 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
         float lastTimeSee;
         float minTimeToSeeAgain = 1f;
 
+        float timetofocus = 0.4f;
+        float focusingTime;
+
         public TargetOnSightTransition(Fsm fsm, IState nextState, AudioClip seeYou) : base(fsm, nextState)
         {
             this.seeYou = seeYou;
         }
 
-        public TargetOnSightTransition(Fsm fsm, IState nextState) : base(fsm, nextState) {}
-
         public override bool IsValid()
         {
             lastTimeSee += Time.deltaTime;
-            return fsm.Awareness.HasTargetOnSight() && !fsm.PathFinder.IsNotPossible();
+
+            if (fsm.Awareness.HasTargetOnSight())
+                focusingTime += Time.deltaTime;
+            else
+                focusingTime = 0;
+
+            return focusingTime >  timetofocus && !fsm.PathFinder.IsNotPossible();
         }
 
         public override void OnTransition()

@@ -1637,7 +1637,7 @@ MonoBehaviour:
   seeYou: {fileID: 8300000, guid: d6407b8f133ce4d32ae74f11c3996f1a, type: 3}
   macheteSound: {fileID: 8300000, guid: 9cd768b3d4cc145beaf03a3a59f4bf0e, type: 3}
   brokeDoorPercentage: 0.5
-  timeToGiveUp: 5
+  timeToGiveUp: 10
   numberOfFlagsToLookAt: 5
 --- !u!50 &416435326
 Rigidbody2D:
@@ -1810,22 +1810,27 @@ MonoBehaviour:
     jasonSpeed: 1
     jasonBrokeDoorPercentage: 0
     jasonWalkSoundSpeed: 0.9
+    jasonTimeToGiveUp: 5
   level1:
     jasonSpeed: 2
     jasonBrokeDoorPercentage: 0
     jasonWalkSoundSpeed: 1
+    jasonTimeToGiveUp: 10
   level2:
     jasonSpeed: 2.5
     jasonBrokeDoorPercentage: 0.3
     jasonWalkSoundSpeed: 1.1
+    jasonTimeToGiveUp: 10
   level3:
     jasonSpeed: 3
     jasonBrokeDoorPercentage: 0.5
     jasonWalkSoundSpeed: 1.3
+    jasonTimeToGiveUp: 20
   level4:
     jasonSpeed: 3.8
     jasonBrokeDoorPercentage: 1
     jasonWalkSoundSpeed: 1.5
+    jasonTimeToGiveUp: 1e+17
   player: {fileID: 113535483}
   jsonWalkAudio: {fileID: 1537641517}
   musicNormal: {fileID: 1002047073}

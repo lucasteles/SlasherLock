@@ -36,7 +36,7 @@ namespace Assets.Scripts.Fov
             for (var i = 0; i <= rayCount; i++)
             {
                 Vector3 vertex;
-                Vector3 vectorForCurrentAngle = GetVectorFromAngle(angle);
+                var vectorForCurrentAngle = GetVectorFromAngle(angle);
                 var raycastHit2D = Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance, layerMask1 | layerMask2 );
                 var flags = Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance,  layerMask1 | layerMask2 | flagsLayer);
 
