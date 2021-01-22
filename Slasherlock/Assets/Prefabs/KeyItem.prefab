@@ -134,6 +134,8 @@ MonoBehaviour:
   blue: {fileID: -5562723966478369305, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
   green: {fileID: -7655041434687370038, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
   red: {fileID: -3929896549483155036, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
+  cyan: {fileID: -3663039992638975831, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
+  brown: {fileID: -7185614261291759193, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
   keyRenderer: {fileID: 2049056638740020686}
 --- !u!61 &2049056638911741054
 BoxCollider2D:

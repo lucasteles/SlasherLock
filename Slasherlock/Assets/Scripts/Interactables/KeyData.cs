@@ -10,6 +10,8 @@ public class KeyData : MonoBehaviour
     [SerializeField] Sprite blue;
     [SerializeField] Sprite green;
     [SerializeField] Sprite red;
+    [SerializeField] Sprite cyan;
+    [SerializeField] Sprite brown;
 
     [SerializeField] SpriteRenderer keyRenderer;
     void Start()
@@ -20,6 +22,8 @@ public class KeyData : MonoBehaviour
             KeyColors.Blue => blue,
             KeyColors.Green => green,
             KeyColors.Red => red,
+            KeyColors.Cyan => cyan,
+            KeyColors.Brown => brown,
             _ => throw new ArgumentOutOfRangeException()
         };
     }

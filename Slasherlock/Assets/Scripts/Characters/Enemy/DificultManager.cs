@@ -23,6 +23,9 @@ public class DificultManager : MonoBehaviour
     [SerializeField] Difficult level2;
     [SerializeField] Difficult level3;
     [SerializeField] Difficult level4;
+    [SerializeField] Difficult level5;
+    [SerializeField] Difficult level6;
+
     [SerializeField] GameObject player;
     [SerializeField] AudioSource jsonWalkAudio;
 
@@ -48,21 +51,21 @@ public class DificultManager : MonoBehaviour
 
     void Start()
     {
-        difficulties = new[] {level0, level1, level2, level3, level4};
+        difficulties = new[] {level0, level1, level2, level3, level4, level5, level6};
     }
 
     void Update()
     {
-        var newSpeed = difficulties[inventary.Level].jasonSpeed;
+        var newSpeed = difficulties[inventary.NumberOfKeys].jasonSpeed;
         mover.SetMoveSeed(newSpeed);
 
-        var newBrokeDoorPercentage = difficulties[inventary.Level].jasonBrokeDoorPercentage;
+        var newBrokeDoorPercentage = difficulties[inventary.NumberOfKeys].jasonBrokeDoorPercentage;
         fsm.SetBrokeDoorPercentage(newBrokeDoorPercentage);
-        fsm.SetTimeToGiveUp(difficulties[inventary.Level].jasonTimeToGiveUp);
+        fsm.SetTimeToGiveUp(difficulties[inventary.NumberOfKeys].jasonTimeToGiveUp);
 
-        jsonWalkAudio.pitch = animator.speed = difficulties[inventary.Level].jasonWalkSoundSpeed;
+        jsonWalkAudio.pitch = animator.speed = difficulties[inventary.NumberOfKeys].jasonWalkSoundSpeed;
 
-        if (inventary.Level == 4 && !shadowsMidtonesHighlights.active)
+        if (inventary.NumberOfKeys == difficulties.Length-1 && !shadowsMidtonesHighlights.active)
         {
             shadowsMidtonesHighlights.active = true;
             musicNormal.Pause();

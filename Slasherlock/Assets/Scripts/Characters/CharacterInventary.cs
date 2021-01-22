@@ -14,7 +14,7 @@ public class CharacterInventary : MonoBehaviour
 
     int numberOfLocks = 0;
 
-    public int Level => keys.Count;
+    public int NumberOfKeys => keys.Count;
 
     public bool HasKey(KeyColors keyName) => keys.Contains(keyName);
 

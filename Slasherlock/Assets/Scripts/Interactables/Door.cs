@@ -11,6 +11,8 @@ namespace Assets.Interactables.Physics
         Blue,
         Green,
         Red,
+        Cyan,
+        Brown
     }
 
     public class Door : MonoBehaviour
@@ -39,6 +41,8 @@ namespace Assets.Interactables.Physics
         [SerializeField] Sprite blue;
         [SerializeField] Sprite green;
         [SerializeField] Sprite red;
+        [SerializeField] Sprite cyan;
+        [SerializeField] Sprite brown;
         [SerializeField] SpriteRenderer keyLockRenderer;
 
         [SerializeField] float timeToUncorfimLock;
@@ -102,6 +106,8 @@ namespace Assets.Interactables.Physics
                 KeyColors.Blue => blue,
                 KeyColors.Green => green,
                 KeyColors.Red => red,
+                KeyColors.Cyan => cyan,
+                KeyColors.Brown => brown,
                 _ => throw new ArgumentOutOfRangeException()
             };
 
@@ -241,6 +247,7 @@ namespace Assets.Interactables.Physics
             UpdatePath();
             CurrentState = State.Locked;
         }
+
         void UnlockDoor()
         {
             if (!IsDoorLocked()) return;
@@ -290,7 +297,6 @@ namespace Assets.Interactables.Physics
                     var dist when dist <= 50 => .4f,
                     _ => .2f,
                 };
-
         }
 
         void HandleInput()
