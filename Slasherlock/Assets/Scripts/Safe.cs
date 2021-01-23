@@ -1,5 +1,6 @@
 using System.Collections;
 using Assets.Interactables.Physics;
+using Assets.Scripts.Ui;
 using Assets.Scripts.Ui.Character;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -12,14 +13,16 @@ public class Safe : MonoBehaviour
     [SerializeField] GameObject keyPefab;
     [SerializeField] KeyColors keyColor;
     [SerializeField] AudioClip beep;
+    [SerializeField] SafePasswordUi safePasswordUi;
 
     AudioSource source;
 
-    string password;
+    [SerializeField] string password;
     public string Password => password;
 
     void Awake()
     {
+        safePasswordUi.gameObject.SetActive(false);
         GeneratePassword();
         source = GetComponent<AudioSource>();
     }
@@ -28,7 +31,6 @@ public class Safe : MonoBehaviour
     {
         password = Random.Range(0, 9999).ToString("D4");
     }
-
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -48,11 +50,11 @@ public class Safe : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         if (LayerMask.LayerToName(other.gameObject.layer) == "Player")
+        {
             canInteract = false;
-    }
-
-    void Start()
-    {
+            safePasswordUi.ResetPassword();
+            safePasswordUi.gameObject.SetActive(false);
+        }
     }
 
     void Update()
@@ -61,11 +63,27 @@ public class Safe : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
             TryOpenSafe();
+
+        if (canInteract && Input.GetKeyDown(KeyCode.Escape))
+        {
+            safePasswordUi.gameObject.SetActive(false);
+            safePasswordUi.ResetPassword();
+        }
     }
 
     void TryOpenSafe()
     {
-        OpenSafe();
+        safePasswordUi.gameObject.SetActive(true);
+    }
+
+    public void TestPassword(string password)
+    {
+        if (Password == password)
+        {
+            OpenSafe();
+            safePasswordUi.gameObject.SetActive(false);
+            safePasswordUi.ResetPassword();
+        }
     }
 
     void OpenSafe()
