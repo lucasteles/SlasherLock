@@ -50,7 +50,7 @@ namespace Assets.Scripts.Ai.PathFinding
             }
         }
 
-        public bool IsNotPossible() => notPossiblePathCount > 3;
+        public bool IsNotPossible() => notPossiblePathCount > 5;
 
         void OnPathComplete(Path p)
         {
