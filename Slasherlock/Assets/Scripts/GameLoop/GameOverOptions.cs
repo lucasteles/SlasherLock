@@ -5,7 +5,7 @@ namespace Assets.Scripts.GameLoop
 {
     public class GameOverOptions : MonoBehaviour
     {
-        [SerializeField] string gameScene = "Level";
+        [SerializeField] string gameScene = "Mansion";
         [SerializeField] string mainMenuScene = "MainMenu";
 
         public void TryAgain() => SceneLoader.Instance.LoadScene(gameScene);
