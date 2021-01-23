@@ -5,7 +5,6 @@ using Assets.Scripts.Ai.FiniteStateMachine.BasicStates;
 using Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions;
 using Assets.Scripts.Characters.Enemy.States;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Assets.Scripts.Characters.Enemy
 {
