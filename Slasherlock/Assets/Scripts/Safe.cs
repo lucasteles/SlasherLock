@@ -8,7 +8,7 @@ public class Safe : MonoBehaviour
 {
     bool canInteract;
 
-    [SerializeField] string message;
+    [SerializeField] public string message;
     [SerializeField] GameObject keyPefab;
     [SerializeField] KeyColors keyColor;
     [SerializeField] AudioClip beep;
