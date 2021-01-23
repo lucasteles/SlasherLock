@@ -3040,7 +3040,7 @@ GameObject:
   - component: {fileID: 365661722}
   - component: {fileID: 365661721}
   - component: {fileID: 365661723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3066,7 +3066,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3106,7 +3106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365661720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1, y: -0.40848315, z: 0.8292441}
+  m_LocalPosition: {x: -1.4, y: -0.40848315, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4266031}
@@ -7015,7 +7015,7 @@ GameObject:
   - component: {fileID: 922188692}
   - component: {fileID: 922188693}
   - component: {fileID: 922188694}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: small table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7030,7 +7030,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922188691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2699997, y: 2.98, z: 0.8292441}
+  m_LocalPosition: {x: 1.04, y: 2.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4266031}
@@ -7055,7 +7055,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7073,8 +7073,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -898565139
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0b99c8bd13977b84e8fbba015178aac4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8231,6 +8231,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 510947667}
     m_Modifications:
+    - target: {fileID: 9172801530477515154, guid: 9728f6b3fbd378948b90f156b09bd70c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 9172801530477515156, guid: 9728f6b3fbd378948b90f156b09bd70c, type: 3}
       propertyPath: m_Name
       value: plant (1)
@@ -13641,7 +13645,7 @@ GameObject:
   - component: {fileID: 1843001049}
   - component: {fileID: 1843001050}
   - component: {fileID: 1843001051}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: small table (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13656,7 +13660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843001048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2699997, y: -4.02, z: 0.8292441}
+  m_LocalPosition: {x: 1.08, y: -4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4266031}
@@ -13681,7 +13685,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13699,8 +13703,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -898565139
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0b99c8bd13977b84e8fbba015178aac4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15086,7 +15090,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15536,6 +15540,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 510947667}
     m_Modifications:
+    - target: {fileID: 9172801530477515154, guid: 9728f6b3fbd378948b90f156b09bd70c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 9172801530477515156, guid: 9728f6b3fbd378948b90f156b09bd70c, type: 3}
       propertyPath: m_Name
       value: plant

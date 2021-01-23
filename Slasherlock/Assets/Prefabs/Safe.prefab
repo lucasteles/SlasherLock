@@ -885,9 +885,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04fea8138e1741fa9c003c1831f6d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  safeName: A1
+  safeName: S1
   keyPefab: {fileID: 2049056638911741026, guid: 149fc098333b046a09c853528897e91d, type: 3}
-  keyColor: 4
+  colliderToDisble: {fileID: 2097166462548080923}
+  keyColor: 1
   safePasswordUi: {fileID: 2097166461881290523}
   dropKeySound: {fileID: 8300000, guid: cf8027720de964ae6bc67600024fec79, type: 3}
   unlockSound: {fileID: 8300000, guid: bcaf6faa2095f4c14a3e96522eff40d9, type: 3}
@@ -905,7 +906,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06423378, y: -0.34258068}
+  m_Offset: {x: -0.3216324, y: 0.3618784}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -916,7 +917,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9849205, y: 1.9849198}
+  m_Size: {x: 2.9332314, y: 2.093298}
   m_EdgeRadius: 0
 --- !u!82 &2097166461626070711
 AudioSource:
