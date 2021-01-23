@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33076eb393638740bcd2a3c95f50af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameScene: Level
+  gameScene: Mansion
   mainMenuScene: MainMenu
 --- !u!1 &1106799275547586343
 GameObject:

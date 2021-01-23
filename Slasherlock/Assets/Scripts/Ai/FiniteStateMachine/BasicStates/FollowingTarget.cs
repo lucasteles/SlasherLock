@@ -81,7 +81,7 @@ public class FollowingTarget : State
                     yield return new WaitForSeconds(tryingToOpenDoorSound.length);
                     waiting = false;
 
-                    if (Random.value <= brokeDoorPercentage())
+                    if (!door.NeedsKey && Random.value <= brokeDoorPercentage())
                         door.ForceOpen();
                     else
                         // nao deixa o jason preso fora da grid da porta

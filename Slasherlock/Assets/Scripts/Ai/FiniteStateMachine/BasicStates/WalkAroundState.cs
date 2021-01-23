@@ -10,7 +10,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
 {
     public class WalkAroundState : FollowingTarget
     {
-        bool debug = true;
+        bool debug = false;
 
         readonly Func<int> numberOfFlagsToLookAt;
         float timeToFindNextFlag = 5;
@@ -132,6 +132,8 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
             flags = Object.FindObjectsOfType<WalkFlag>();
             player = Object.FindObjectOfType<CharacterInventary>().gameObject;
 
+            UnityEngine.Debug.Log("Walking around...");
+
             IEnumerator wait()
             {
                 yield return new WaitForSeconds(1);
@@ -145,12 +147,13 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
         void StopTeleport()
         {
             if (teleport == null) return;
-            fsm.StopCoroutine(teleport);
             waitingTeleport = false;
+            fsm.StopCoroutine(teleport);
         }
 
         public override void OnExit()
         {
+            StopTeleport();
             if (lastFlag) lastFlag.Hide();
             startWalking = false;
             elapsedTime = 0;

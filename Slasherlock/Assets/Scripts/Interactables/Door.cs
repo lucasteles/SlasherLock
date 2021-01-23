@@ -65,6 +65,7 @@ namespace Assets.Interactables.Physics
         Animator lockAnimator;
 
         float confirmLockedWhen;
+        public bool NeedsKey => needsKey;
         const string dontHaveLocksThought = "I don't have any locks...";
         const string dontHaveKeyThought = "I don't have the key...";
 

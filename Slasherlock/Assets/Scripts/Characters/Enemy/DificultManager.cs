@@ -68,6 +68,7 @@ public class DificultManager : MonoBehaviour
         if (inventary.NumberOfKeys == difficulties.Length-1 && !shadowsMidtonesHighlights.active)
         {
             shadowsMidtonesHighlights.active = true;
+            fsm.MoveAndSetState<FollowingTarget>(GameObject.Find("LastApearEvent").transform.position);
             musicNormal.Pause();
             hardMusic.Play();
         }
