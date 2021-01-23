@@ -4074,27 +4074,27 @@ MonoBehaviour:
     jasonTimeToGiveUp: 10
   level1:
     jasonSpeed: 1.8
-    jasonBrokeDoorPercentage: 0
+    jasonBrokeDoorPercentage: 0.2
     jasonWalkSoundSpeed: 0.9
     jasonTimeToGiveUp: 20
   level2:
     jasonSpeed: 2.3
-    jasonBrokeDoorPercentage: 0.2
+    jasonBrokeDoorPercentage: 0.35
     jasonWalkSoundSpeed: 1
     jasonTimeToGiveUp: 15
   level3:
     jasonSpeed: 2.8
-    jasonBrokeDoorPercentage: 0.3
+    jasonBrokeDoorPercentage: 0.5
     jasonWalkSoundSpeed: 1
     jasonTimeToGiveUp: 12
   level4:
     jasonSpeed: 3
-    jasonBrokeDoorPercentage: 0.4
+    jasonBrokeDoorPercentage: 0.6
     jasonWalkSoundSpeed: 1.1
     jasonTimeToGiveUp: 10
   level5:
     jasonSpeed: 3.5
-    jasonBrokeDoorPercentage: 0.6
+    jasonBrokeDoorPercentage: 0.7
     jasonWalkSoundSpeed: 1.3
     jasonTimeToGiveUp: 6
   level6:
