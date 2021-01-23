@@ -22,6 +22,9 @@ public class Drawer : MonoBehaviour
     [SerializeField] Sprite brown;
     [SerializeField] SpriteRenderer keyLockRenderer;
 
+
+    [SerializeField] Renderer openDrawerSprite;
+
     AudioSource source;
     CharacterInventary inventary;
     bool canInteract;
@@ -39,6 +42,7 @@ public class Drawer : MonoBehaviour
             KeyColors.Brown => brown,
             _ => throw new ArgumentOutOfRangeException()
         };
+        openDrawerSprite.enabled = false;
     }
 
     void Awake()
@@ -51,7 +55,7 @@ public class Drawer : MonoBehaviour
         canInteract = true;
 
         if (LayerMask.LayerToName(other.gameObject.layer) == "Player")
-           inventary = other.gameObject.GetComponent<CharacterInventary>();
+            inventary = other.gameObject.GetComponent<CharacterInventary>();
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -81,10 +85,11 @@ public class Drawer : MonoBehaviour
 
             Instantiate(keyItemPrefab, transform.position, Quaternion.identity).GetComponent<KeyData>()
                 .SetKeyColor(keyDropColor);
+            openDrawerSprite.enabled = true;
             foreach (var c in GetComponentsInChildren<Renderer>())
                 c.enabled = false;
             yield return new WaitUntil(() => !source.isPlaying);
-            Destroy(gameObject);
+
         }
 
         isOpen = true;
