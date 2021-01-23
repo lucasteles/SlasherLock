@@ -17,6 +17,7 @@ namespace Assets.Scripts.Characters.Enemy
         [SerializeField] AudioClip macheteSound;
         [SerializeField] float brokeDoorPercentage;
         [SerializeField] float timeToGiveUp;
+        [SerializeField] float timeToWaitWhenWalkingAndSeePlayer;
         [SerializeField] int numberOfFlagsToLookAt;
 
         State[] allStates;
@@ -25,8 +26,10 @@ namespace Assets.Scripts.Characters.Enemy
         protected override void SetupStates()
         {
             var stoppedState = new StoppedState(this);
-            var followingState = new FollowingTarget(this, tryingToOpenDoorSound, () => brokeDoorPercentage);
-            var walkAroundState = new WalkAroundState(this, tryingToOpenDoorSound, () => brokeDoorPercentage, () => numberOfFlagsToLookAt);
+            var followingState = new FollowingTarget(this, tryingToOpenDoorSound,
+                () => brokeDoorPercentage, timeToWaitWhenWalkingAndSeePlayer);
+            var walkAroundState = new WalkAroundState(this, tryingToOpenDoorSound,
+                () => brokeDoorPercentage,timeToWaitWhenWalkingAndSeePlayer, () => numberOfFlagsToLookAt);
             var killingTargetState = new KillingTargetState(this, macheteSound);
 
             var seenTargetTransition = new TargetOnSightTransition(this, followingState, seeYou);

@@ -2,6 +2,7 @@
 using System.Collections;
 using Assets.Interactables.Physics;
 using Assets.Scripts.Ai.FiniteStateMachine;
+using Assets.Scripts.Ai.FiniteStateMachine.BasicStates;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -14,11 +15,13 @@ public class FollowingTarget : State
     bool waiting = false;
     MotionBlur blur;
     Func<float> brokeDoorPercentage;
+    readonly float waitWhenWaking;
 
-    public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage) : base(fsm)
+    public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage, float waitWhenWaking) : base(fsm)
     {
         this.tryingToOpenDoorSound = tryingToOpenDoorSound;
         this.brokeDoorPercentage = brokeDoorPercentage;
+        this.waitWhenWaking = waitWhenWaking;
     }
 
     public override void UpdateState()
@@ -27,12 +30,22 @@ public class FollowingTarget : State
 
     public override void OnEnter()
     {
-
         var volume = GameObject.FindObjectOfType<Volume>();
         volume.profile.TryGet(out blur);
         blur.active = true;
 
-        fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
+        if (string.IsNullOrEmpty(fsm.LastState) || !fsm.LastState.Contains(nameof(WalkAroundState)))
+            fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
+        else
+        {
+            IEnumerator wait()
+            {
+                yield return new WaitForSeconds(waitWhenWaking);
+                fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
+            }
+
+            fsm.StartCoroutine(wait());
+        }
     }
 
     public override void OnExit()

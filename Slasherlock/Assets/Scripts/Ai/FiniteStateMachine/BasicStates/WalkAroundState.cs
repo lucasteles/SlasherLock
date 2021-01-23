@@ -26,8 +26,9 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
             Fsm fsm,
             AudioClip tryingToOpenDoorSound,
             Func<float> brokeDoorPercentage,
+            float timeWaitWhenWalking,
             Func<int> numberOfFlagsToLookAt
-        ) : base(fsm, tryingToOpenDoorSound, brokeDoorPercentage)
+        ) : base(fsm, tryingToOpenDoorSound, brokeDoorPercentage, timeWaitWhenWalking)
         {
             this.numberOfFlagsToLookAt = numberOfFlagsToLookAt;
         }

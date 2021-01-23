@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Linq;
 using Assets.Interactables.Physics;
+using Assets.Scripts.Characters.Enemy;
+using Assets.Scripts.Physics;
 using Assets.Scripts.Ui;
 using Assets.Scripts.Ui.Character;
 using UnityEngine;
@@ -72,6 +74,7 @@ public class Safe : MonoBehaviour
 
     void TryOpenSafe()
     {
+        FindObjectOfType<EnemyFsm>().gameObject.GetComponent<Mover>().Wait();
         safePasswordUi.gameObject.SetActive(true);
     }
 

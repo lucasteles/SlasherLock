@@ -12,6 +12,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
     {
         [SerializeField] string currentStateName;
         protected IState currentState;
+        public string LastState { get; private set; }
         public Mover Mover { private set; get; }
         public PathFinder PathFinder { private set; get; }
         public SurroundingAwareness Awareness { private set; get; }
@@ -48,6 +49,8 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
             currentState.OnExit();
             newState.OnEnter();
 
+
+            LastState = currentState.ToString();
             currentState = newState;
             UpdateStateName();
             NotifyListeners(currentState);
