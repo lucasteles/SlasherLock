@@ -10,7 +10,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
 {
     public class WalkAroundState : FollowingTarget
     {
-        bool debug = true;
+        bool debug = false;
 
         readonly Func<int> numberOfFlagsToLookAt;
         float timeToFindNextFlag = 5;

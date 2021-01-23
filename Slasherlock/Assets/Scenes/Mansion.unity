@@ -3661,7 +3661,7 @@ MonoBehaviour:
   macheteSound: {fileID: 8300000, guid: 9cd768b3d4cc145beaf03a3a59f4bf0e, type: 3}
   brokeDoorPercentage: 0.5
   timeToGiveUp: 10
-  timeToWaitWhenWalkingAndSeePlayer: 2
+  timeToWaitWhenWalkingAndSeePlayer: 1
   numberOfFlagsToLookAt: 10
 --- !u!50 &416435326
 Rigidbody2D:
