@@ -147,12 +147,13 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
         void StopTeleport()
         {
             if (teleport == null) return;
-            fsm.StopCoroutine(teleport);
             waitingTeleport = false;
+            fsm.StopCoroutine(teleport);
         }
 
         public override void OnExit()
         {
+            StopTeleport();
             if (lastFlag) lastFlag.Hide();
             startWalking = false;
             elapsedTime = 0;
