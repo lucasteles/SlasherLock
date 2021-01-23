@@ -1,10 +1,12 @@
 using System;
+using System.Linq;
 using Assets.Scripts.Ui.Character;
 using UnityEngine;
 
 public class Notepad : MonoBehaviour
 {
     [SerializeField] Safe safe;
+    [SerializeField] string mask = "****";
     AudioSource source;
     bool isActive;
     void Awake()
@@ -16,8 +18,11 @@ public class Notepad : MonoBehaviour
     {
         if (LayerMask.LayerToName(other.layer) == "Player")
         {
+            var maskedPassword = safe.Password
+                .Zip(mask, (p, m) => m == '_' ? m.ToString() : p.ToString())
+                .Aggregate(string.Concat);
             source.PlayIfNotPlaying();
-            ThoughtBubble.Instance.ShowThoughtUntil($"{safe.name} password: {safe.Password}", () => !isActive);
+            ThoughtBubble.Instance.ShowThoughtUntil($"{safe.name} password: {maskedPassword}", () => !isActive);
         }
 
     }
