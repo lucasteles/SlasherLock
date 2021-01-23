@@ -35,14 +35,16 @@ public class FollowingTarget : State
         volume.profile.TryGet(out blur);
         blur.active = true;
 
-        Debug.Log(fsm.LastState);
         if (string.IsNullOrEmpty(fsm.LastState) || !fsm.LastState.Contains(nameof(WalkAroundState)))
             fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
         else
         {
             IEnumerator wait()
             {
+                fsm.Mover.PreventMovement();
+                fsm.PathFinder.StopFollowing();
                 yield return new WaitForSeconds(waitWhenWaking);
+                fsm.Mover.AllowMovement();
                 fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
             }
 
