@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.Scripts.Physics
@@ -19,6 +20,7 @@ namespace Assets.Scripts.Physics
         float yInput;
 
         [SerializeField] float moveSpeed;
+        [SerializeField] float waitFor;
         Rigidbody2D rb;
         public WalkSide Side { get; private set; } = WalkSide.Down;
 
@@ -96,6 +98,19 @@ namespace Assets.Scripts.Physics
                 (1, -1) => WalkSide.Down,
                 _ => Side
             };
+        }
+
+        public void Wait()
+        {
+            PreventMovement();
+
+            IEnumerator wait()
+            {
+                yield return new WaitForSeconds(waitFor);
+                AllowMovement();
+            }
+
+            StartCoroutine(wait());
         }
     }
 }

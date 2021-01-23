@@ -2,7 +2,10 @@
 using System.Collections;
 using Assets.Interactables.Physics;
 using Assets.Scripts.Ai.FiniteStateMachine;
+using Assets.Scripts.Ai.FiniteStateMachine.BasicStates;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 public class FollowingTarget : State
@@ -10,21 +13,50 @@ public class FollowingTarget : State
     readonly AudioClip tryingToOpenDoorSound;
     Door onDoor;
     bool waiting = false;
+    MotionBlur blur;
     Func<float> brokeDoorPercentage;
+    readonly float waitWhenWaking;
 
-    public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage) : base(fsm)
+    public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage,
+        float waitWhenWaking) : base(fsm)
     {
         this.tryingToOpenDoorSound = tryingToOpenDoorSound;
         this.brokeDoorPercentage = brokeDoorPercentage;
+        this.waitWhenWaking = waitWhenWaking;
     }
 
     public override void UpdateState()
     {
     }
 
-    public override void OnEnter() => fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
+    public override void OnEnter()
+    {
+        var volume = GameObject.FindObjectOfType<Volume>();
+        volume.profile.TryGet(out blur);
+        blur.active = true;
 
-    public override void OnExit() => fsm.PathFinder.StopFollowing();
+        if (string.IsNullOrEmpty(fsm.LastState) || !fsm.LastState.Contains(nameof(WalkAroundState)))
+            fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
+        else
+        {
+            IEnumerator wait()
+            {
+                fsm.Mover.PreventMovement();
+                fsm.PathFinder.StopFollowing();
+                yield return new WaitForSeconds(waitWhenWaking);
+                fsm.Mover.AllowMovement();
+                fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
+            }
+
+            fsm.StartCoroutine(wait());
+        }
+    }
+
+    public override void OnExit()
+    {
+        blur.active = false;
+        fsm.PathFinder.StopFollowing();
+    }
 
     public override string ToString()
         => typeof(FollowingTarget).Name;

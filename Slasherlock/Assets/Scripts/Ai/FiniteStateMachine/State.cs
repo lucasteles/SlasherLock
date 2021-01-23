@@ -37,6 +37,8 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
 
         public abstract void UpdateState();
 
+        public override string ToString() => GetType().Name;
+
         public void Update()
         {
             UpdateState();
