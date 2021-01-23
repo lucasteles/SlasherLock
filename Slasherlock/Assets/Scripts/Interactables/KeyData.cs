@@ -14,8 +14,15 @@ public class KeyData : MonoBehaviour
     [SerializeField] Sprite brown;
 
     [SerializeField] SpriteRenderer keyRenderer;
-    void Start()
+    void Start() => UpdateSprite();
+
+    public void SetKeyColor(KeyColors color)
     {
+        keyName = color;
+        UpdateSprite();
+    }
+
+    void UpdateSprite() =>
         keyRenderer.sprite = keyName switch
         {
             KeyColors.Golden => golden,
@@ -26,7 +33,6 @@ public class KeyData : MonoBehaviour
             KeyColors.Brown => brown,
             _ => throw new ArgumentOutOfRangeException()
         };
-    }
 
     public KeyColors KeyName => keyName;
 }
