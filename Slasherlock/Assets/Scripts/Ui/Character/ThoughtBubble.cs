@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -14,10 +15,11 @@ namespace Assets.Scripts.Ui.Character
         [SerializeField] TextMeshProUGUI thought;
         [SerializeField] float timePerLetter;
         [SerializeField] float timePerThought;
-
+        bool continueToShowCurrentLetter;
         Queue<string> thoughtQueue = new Queue<string>();
         string thoughtToShow = string.Empty;
         int currentLetter = 0;
+
 
         private void Awake()
         {
@@ -37,7 +39,7 @@ namespace Assets.Scripts.Ui.Character
 
         public void ShowThought(string thought)
         {
-            if (thoughtQueue.Contains(thought) || thoughtToShow == thought)
+            if (thoughtQueue.Contains(thought) && thoughtToShow == thought)
                 return;
 
             if (thoughtToShow == string.Empty)
@@ -46,8 +48,16 @@ namespace Assets.Scripts.Ui.Character
                 SetBackgroundSize();
                 StartCoroutine(ShowThought());
             }
-
             else thoughtQueue.Enqueue(thought);
+        }
+
+        public void ShowThoughtUntil(string thoughtText, Func<bool> when)
+        {
+            if (string.IsNullOrWhiteSpace(thoughtText))
+                return;
+
+            thoughtQueue.Clear();
+            StartCoroutine(ShowThought(when));
         }
 
         void SetBackgroundSize()
@@ -56,7 +66,7 @@ namespace Assets.Scripts.Ui.Character
             background.localScale = new Vector3(widthByLetter * thoughtToShow.Length, background.localScale.y, 1);
         }
 
-        IEnumerator ShowThought()
+        IEnumerator ShowThought(Func<bool> until = null)
         {
             while (thoughtToShow != string.Empty && currentLetter < thoughtToShow.Length)
             {
@@ -67,7 +77,10 @@ namespace Assets.Scripts.Ui.Character
 
                 if (currentLetter >= thoughtToShow.Length)
                 {
-                    yield return new WaitForSeconds(timePerThought);
+                    if (until != null)
+                        yield return new WaitUntil(until);
+                    else
+                        yield return new WaitForSeconds(timePerThought);
 
                     currentLetter = 0;
                     thought.text = thoughtToShow = string.Empty;
