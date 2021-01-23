@@ -10,15 +10,13 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        var position = target.position;
-        transform.position = new Vector3(position.x, position.y, transform.position.z);
+        // var position = target.position;
+        // transform.position = new Vector3(position.x, position.y, transform.position.z);
     }
 
     void LateUpdate()
     {
-        var position = target.position;
-        var newPosition = new Vector3(position.x, position.y, transform.position.z);
-        // transform.position = new Vector3(position.x, position.y, transform.position.z);
+        var newPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, newPosition, smoothSpeed);
     }
 }
