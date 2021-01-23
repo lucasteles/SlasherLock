@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   safe: {fileID: 0}
-  mask: '*_*_'
+  mask: '****'
 --- !u!58 &3221204536421028422
 CircleCollider2D:
   m_ObjectHideFlags: 0
