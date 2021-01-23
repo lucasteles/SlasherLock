@@ -17,7 +17,8 @@ public class FollowingTarget : State
     Func<float> brokeDoorPercentage;
     readonly float waitWhenWaking;
 
-    public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage, float waitWhenWaking) : base(fsm)
+    public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage,
+        float waitWhenWaking) : base(fsm)
     {
         this.tryingToOpenDoorSound = tryingToOpenDoorSound;
         this.brokeDoorPercentage = brokeDoorPercentage;
@@ -34,6 +35,7 @@ public class FollowingTarget : State
         volume.profile.TryGet(out blur);
         blur.active = true;
 
+        Debug.Log(fsm.LastState);
         if (string.IsNullOrEmpty(fsm.LastState) || !fsm.LastState.Contains(nameof(WalkAroundState)))
             fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
         else

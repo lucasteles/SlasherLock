@@ -47,10 +47,8 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
         public void ChangeState(IState newState)
         {
             currentState.OnExit();
+            LastState = currentStateName;
             newState.OnEnter();
-
-
-            LastState = currentState.ToString();
             currentState = newState;
             UpdateStateName();
             NotifyListeners(currentState);
