@@ -43,7 +43,8 @@ namespace Assets.Scripts.Characters.Enemy
                 targetUnreachable,
                 targetGiveUp);
             walkAroundState.SetTransitions(seenTargetTransition);
-            SetFirstState(stoppedState);
+            // SetFirstState(stoppedState);
+            SetFirstState(walkAroundState);
 
             allStates = new State[] {stoppedState, followingState, walkAroundState, killingTargetState};
         }
