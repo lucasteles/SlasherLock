@@ -57,6 +57,8 @@ namespace Assets.Scripts.Ui.Character
                 return;
 
             thoughtQueue.Clear();
+            thoughtToShow = thoughtText;
+            SetBackgroundSize();
             StartCoroutine(ShowThought(when));
         }
 
