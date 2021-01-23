@@ -8,7 +8,10 @@ namespace Assets.Scripts.Ui
     {
         [SerializeField] TextMeshProUGUI passwordInScreen;
         [SerializeField] float timeToBlinkPassword;
+        [SerializeField] AudioClip beep;
+        [SerializeField] AudioClip denied;
         Safe safe;
+        AudioSource source;
         string currentPassword;
         const float blinkTime = 0.05f;
 
@@ -16,6 +19,7 @@ namespace Assets.Scripts.Ui
         {
             safe = GetComponentInParent<Safe>();
             passwordInScreen.text = string.Empty;
+            source = GetComponent<AudioSource>();
         }
 
         public void ResetPassword()
@@ -25,6 +29,7 @@ namespace Assets.Scripts.Ui
 
         public void EnterNumber(int number)
         {
+            source.PlayOneShot(beep);
             passwordInScreen.text += "*";
             currentPassword += number;
 
@@ -36,21 +41,20 @@ namespace Assets.Scripts.Ui
         {
             var timeToBlinkPassword = this.timeToBlinkPassword;
 
-            while (timeToBlinkPassword > 0)
+            if (!safe.TestPassword(currentPassword))
+                source.PlayOneShot(denied);
+            else
             {
-                passwordInScreen.gameObject.SetActive(false);
-                yield return new WaitForSeconds(blinkTime);
-                passwordInScreen.gameObject.SetActive(true);
-                yield return new WaitForSeconds(blinkTime);
-                timeToBlinkPassword -= blinkTime;
+                while (timeToBlinkPassword > 0)
+                {
+                    passwordInScreen.gameObject.SetActive(false);
+                    yield return new WaitForSeconds(blinkTime);
+                    passwordInScreen.gameObject.SetActive(true);
+                    yield return new WaitForSeconds(blinkTime);
+                    timeToBlinkPassword -= blinkTime;
+                }
             }
 
-            TryPassword();
-        }
-
-        void TryPassword()
-        {
-            safe.TestPassword(currentPassword);
             ResetPassword();
         }
     }

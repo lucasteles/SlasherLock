@@ -1,4 +1,3 @@
-using System;
 using Assets.Scripts.Ui.Character;
 using UnityEngine;
 
@@ -16,7 +15,7 @@ public class Notepad : MonoBehaviour
         if (LayerMask.LayerToName(other.layer) == "Player")
         {
             source.PlayIfNotPlaying();
-            ThoughtBubble.Instance.ShowThought($"{safe.message} password: {safe.Password}");
+            ThoughtBubble.Instance.ShowThought($"{safe.name} password: {safe.Password}");
         }
 
     }

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using Assets.Interactables.Physics;
 using Assets.Scripts.Ui;
 using Assets.Scripts.Ui.Character;
@@ -9,16 +10,16 @@ public class Safe : MonoBehaviour
 {
     bool canInteract;
 
-    [SerializeField] public string message;
+    [SerializeField] public string name;
     [SerializeField] GameObject keyPefab;
     [SerializeField] KeyColors keyColor;
-    [SerializeField] AudioClip beep;
     [SerializeField] SafePasswordUi safePasswordUi;
 
     AudioSource source;
 
     [SerializeField] string password;
     public string Password => password;
+    string message => $"Safe: {name}";
 
     void Awake()
     {
@@ -29,7 +30,11 @@ public class Safe : MonoBehaviour
 
     void GeneratePassword()
     {
-        password = Random.Range(0, 9999).ToString("D4");
+        var opcoes = "123456789";
+        password = Enumerable
+            .Range(0, 4)
+            .Select(_ => opcoes[Random.Range(0, opcoes.Length)].ToString())
+            .Aggregate(string.Concat);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -61,10 +66,9 @@ public class Safe : MonoBehaviour
     {
         if (!canInteract) return;
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && !safePasswordUi.gameObject.activeSelf)
             TryOpenSafe();
-
-        if (canInteract && Input.GetKeyDown(KeyCode.Escape))
+        else if (canInteract && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Q)))
         {
             safePasswordUi.gameObject.SetActive(false);
             safePasswordUi.ResetPassword();
@@ -76,14 +80,17 @@ public class Safe : MonoBehaviour
         safePasswordUi.gameObject.SetActive(true);
     }
 
-    public void TestPassword(string password)
+    public bool TestPassword(string password)
     {
         if (Password == password)
         {
             OpenSafe();
             safePasswordUi.gameObject.SetActive(false);
             safePasswordUi.ResetPassword();
+            return true;
         }
+
+        return false;
     }
 
     void OpenSafe()
