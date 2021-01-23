@@ -3,6 +3,8 @@ using System.Collections;
 using Assets.Interactables.Physics;
 using Assets.Scripts.Ai.FiniteStateMachine;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 public class FollowingTarget : State
@@ -10,6 +12,7 @@ public class FollowingTarget : State
     readonly AudioClip tryingToOpenDoorSound;
     Door onDoor;
     bool waiting = false;
+    MotionBlur blur;
     Func<float> brokeDoorPercentage;
 
     public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage) : base(fsm)
@@ -22,9 +25,21 @@ public class FollowingTarget : State
     {
     }
 
-    public override void OnEnter() => fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
+    public override void OnEnter()
+    {
 
-    public override void OnExit() => fsm.PathFinder.StopFollowing();
+        var volume = GameObject.FindObjectOfType<Volume>();
+        volume.profile.TryGet(out blur);
+        blur.active = true;
+
+        fsm.PathFinder.FollowTarget(fsm.Awareness.LastTargetFound);
+    }
+
+    public override void OnExit()
+    {
+        blur.active = false;
+        fsm.PathFinder.StopFollowing();
+    }
 
     public override string ToString()
         => typeof(FollowingTarget).Name;
