@@ -9,7 +9,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
         float lastTimeSee;
         float minTimeToSeeAgain = 1f;
 
-        float timetofocus = 0.3f;
+        float timetofocus = 0.2f;
         float focusingTime;
 
         public TargetOnSightTransition(Fsm fsm, IState nextState, AudioClip seeYou) : base(fsm, nextState)
