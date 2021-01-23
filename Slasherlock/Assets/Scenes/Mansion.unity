@@ -2246,7 +2246,7 @@ GameObject:
   - component: {fileID: 279303547}
   - component: {fileID: 279303548}
   - component: {fileID: 279303549}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2261,7 +2261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279303546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.94, z: 0.00000071526}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.2834, y: 4.2834, z: 4.2834}
   m_Children: []
   m_Father: {fileID: 1323399737}
@@ -2304,9 +2304,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 611579151
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3283267078752028349, guid: 9fc74179e6af6467ba54245770e4681f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3930,6 +3930,14 @@ PrefabInstance:
     - target: {fileID: 306607109921716749, guid: 620da185b92a249f0864b19f19db9e7e, type: 3}
       propertyPath: m_Name
       value: PadlockItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 306607110585053219, guid: 620da185b92a249f0864b19f19db9e7e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 306607110585053219, guid: 620da185b92a249f0864b19f19db9e7e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 620da185b92a249f0864b19f19db9e7e, type: 3}
@@ -8936,7 +8944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323399736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.92, y: -29.32, z: -3.9278853}
+  m_LocalPosition: {x: -3.92, y: -27.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 279303547}
@@ -8969,7 +8977,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.43632317, y: 0.05525875}
+  m_Offset: {x: -1.0742912, y: -0.081448555}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8980,7 +8988,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7797432, y: 1.8841305}
+  m_Size: {x: 9.615112, y: 4.253725}
   m_EdgeRadius: 0
 --- !u!4 &1324688715 stripped
 Transform:
