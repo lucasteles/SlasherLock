@@ -6695,6 +6695,14 @@ PrefabInstance:
       propertyPath: message
       value: A1
       objectReference: {fileID: 0}
+    - target: {fileID: 2097166461626070708, guid: 5c64c7982e9e44052a73cdf156cf75cc, type: 3}
+      propertyPath: unlockSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bcaf6faa2095f4c14a3e96522eff40d9, type: 3}
+    - target: {fileID: 2097166461626070708, guid: 5c64c7982e9e44052a73cdf156cf75cc, type: 3}
+      propertyPath: dropKeySound
+      value: 
+      objectReference: {fileID: 8300000, guid: cf8027720de964ae6bc67600024fec79, type: 3}
     - target: {fileID: 2097166461626070710, guid: 5c64c7982e9e44052a73cdf156cf75cc, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -6756,6 +6764,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1002047071}
     m_Modifications:
+    - target: {fileID: 9209769732971255092, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
+      propertyPath: needLockPad
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f4455b7507a94feaa9b07cfe263b45e, type: 3}
     - target: {fileID: 9209769732971255095, guid: 6ac0f2c19b9cc4c3a9f4156cdbaad2a1, type: 3}
       propertyPath: m_RootOrder
       value: 4

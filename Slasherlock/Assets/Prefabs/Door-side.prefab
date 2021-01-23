@@ -597,12 +597,14 @@ MonoBehaviour:
   openForced: {fileID: 8300000, guid: 9550792eb7ded46329b3284b0436b513, type: 3}
   close: {fileID: 8300000, guid: 00effa9775d724fe6a7d5b4b24409e03, type: 3}
   lockDoor: {fileID: 8300000, guid: 5b607d0676b75481ab60ee27010ed765, type: 3}
-  needLockPad: {fileID: 8300000, guid: a94390b729f6d4ecb8bbcd107390069e, type: 3}
+  needLockPad: {fileID: 8300000, guid: 2f4455b7507a94feaa9b07cfe263b45e, type: 3}
   locked: {fileID: 8300000, guid: 13484e7bbfa8e42ada3f13f1e69edcbb, type: 3}
   golden: {fileID: 994426438576646862, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
   blue: {fileID: -4935958863989712871, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
   green: {fileID: -5935585244881266814, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
   red: {fileID: 2253416029611518402, guid: c83b681cd443e473aaa4f9827c1b3125, type: 3}
+  cyan: {fileID: 0}
+  brown: {fileID: 0}
   keyLockRenderer: {fileID: 5145058264577375365}
   timeToUncorfimLock: 180
 --- !u!61 &9209769732971255093

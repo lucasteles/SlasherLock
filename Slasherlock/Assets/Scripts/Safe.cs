@@ -10,16 +10,17 @@ public class Safe : MonoBehaviour
 {
     bool canInteract;
 
-    [SerializeField] public string name;
+    [SerializeField] public string safeName;
     [SerializeField] GameObject keyPefab;
     [SerializeField] KeyColors keyColor;
     [SerializeField] SafePasswordUi safePasswordUi;
-
+    [SerializeField] AudioClip dropKeySound;
+    [SerializeField] AudioClip unlockSound;
     AudioSource source;
 
     [SerializeField] string password;
     public string Password => password;
-    string message => $"Safe: {name}";
+    string message => $"Safe: {safeName}";
 
     void Awake()
     {
@@ -41,15 +42,9 @@ public class Safe : MonoBehaviour
     {
         if (LayerMask.LayerToName(other.gameObject.layer) == "Player")
         {
-            ThoughtBubble.Instance.ShowThought(message);
+            ThoughtBubble.Instance.ShowThoughtUntil(message, () => !canInteract);
             canInteract = true;
         }
-    }
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (LayerMask.LayerToName(other.gameObject.layer) == "Player")
-            ThoughtBubble.Instance.ShowThought(message);
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -95,7 +90,7 @@ public class Safe : MonoBehaviour
 
     void OpenSafe()
     {
-        source.Play();
+        source.PlayOneShot(unlockSound);
 
         IEnumerator wait()
         {
@@ -103,6 +98,7 @@ public class Safe : MonoBehaviour
             Instantiate(keyPefab, transform.position, Quaternion.identity).GetComponent<KeyData>()
                 .SetKeyColor(keyColor);
             GetComponentInChildren<Renderer>().enabled = false;
+            source.PlayOneShot(dropKeySound);
             yield return new WaitUntil(() => !source.isPlaying);
             Destroy(gameObject);
         }

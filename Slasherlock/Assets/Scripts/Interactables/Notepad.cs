@@ -22,7 +22,7 @@ public class Notepad : MonoBehaviour
                 .Zip(mask, (p, m) => m == '_' ? m.ToString() : p.ToString())
                 .Aggregate(string.Concat);
             source.PlayIfNotPlaying();
-            ThoughtBubble.Instance.ShowThoughtUntil($"{safe.name} password: {maskedPassword}", () => !isActive);
+            ThoughtBubble.Instance.ShowThoughtUntil($"{safe.safeName} password: {maskedPassword}", () => !isActive);
         }
 
     }

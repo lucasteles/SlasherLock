@@ -15,13 +15,13 @@ namespace Assets.Scripts.Ui.Character
         [SerializeField] TextMeshProUGUI thought;
         [SerializeField] float timePerLetter;
         [SerializeField] float timePerThought;
-        bool continueToShowCurrentLetter;
         Queue<string> thoughtQueue = new Queue<string>();
         string thoughtToShow = string.Empty;
         int currentLetter = 0;
 
+        Coroutine coroutine;
 
-        private void Awake()
+        void Awake()
         {
             if (Instance == null)
             {
@@ -46,7 +46,7 @@ namespace Assets.Scripts.Ui.Character
             {
                 thoughtToShow = thought;
                 SetBackgroundSize();
-                StartCoroutine(ShowThought());
+                coroutine = StartCoroutine(ShowThought());
             }
             else thoughtQueue.Enqueue(thought);
         }
@@ -56,10 +56,19 @@ namespace Assets.Scripts.Ui.Character
             if (string.IsNullOrWhiteSpace(thoughtText))
                 return;
 
+            if (coroutine != null)
+            {
+                StopCoroutine(coroutine);
+                coroutine = null;
+            }
+
             thoughtQueue.Clear();
+            background.gameObject.SetActive(false);
+            currentLetter = 0;
+            thought.text = thoughtToShow = string.Empty;
             thoughtToShow = thoughtText;
             SetBackgroundSize();
-            StartCoroutine(ShowThought(when));
+            coroutine = StartCoroutine(ShowThought(when));
         }
 
         void SetBackgroundSize()
