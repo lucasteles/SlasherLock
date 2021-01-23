@@ -35,7 +35,7 @@ namespace Assets.Scripts.SceneManagement
 
         IEnumerator LoadSceneWithTransition(string level)
         {
-            transition.SetTrigger("start");
+            transition.Play("crossfade-start");
             yield return new WaitForSeconds(transitionTime);
             SceneManager.LoadScene(level);
         }
