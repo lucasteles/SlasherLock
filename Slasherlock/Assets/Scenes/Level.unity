@@ -6057,7 +6057,7 @@ MonoBehaviour:
   keyPefab: {fileID: 2049056638911741026, guid: 149fc098333b046a09c853528897e91d, type: 3}
   keyColor: 4
   beep: {fileID: 8300000, guid: 6a734ef52616740f18b9f6b0235718c8, type: 3}
-  safePasswordUi: {fileID: 2040498294}
+  safePasswordUi: {fileID: 2040498299}
   password: 
 --- !u!61 &1321611733
 BoxCollider2D:
@@ -8759,7 +8759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2040498295
 RectTransform:
   m_ObjectHideFlags: 0
