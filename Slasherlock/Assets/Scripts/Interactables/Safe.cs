@@ -101,6 +101,7 @@ public class Safe : MonoBehaviour
             Instantiate(keyPefab, transform.position, Quaternion.identity).GetComponent<KeyData>()
                 .SetKeyColor(keyColor);
             GetComponentInChildren<Renderer>().enabled = false;
+            GetComponentInChildren<BoxCollider2D>().enabled = false;
             source.PlayOneShot(dropKeySound);
             yield return new WaitUntil(() => !source.isPlaying);
             Destroy(gameObject);

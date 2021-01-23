@@ -94,7 +94,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
 
             IEnumerator wait()
             {
-                yield return new WaitForSeconds(3);
+                yield return new WaitForSeconds(1);
 
                 UnityEngine.Debug.Log("doing teleport");
                 var possibleFlags =
