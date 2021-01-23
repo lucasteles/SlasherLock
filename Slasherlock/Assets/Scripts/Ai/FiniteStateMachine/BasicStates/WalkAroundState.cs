@@ -132,6 +132,8 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
             flags = Object.FindObjectsOfType<WalkFlag>();
             player = Object.FindObjectOfType<CharacterInventary>().gameObject;
 
+            UnityEngine.Debug.Log("Walking around...");
+
             IEnumerator wait()
             {
                 yield return new WaitForSeconds(1);
