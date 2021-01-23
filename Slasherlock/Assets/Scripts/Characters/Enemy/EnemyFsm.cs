@@ -34,9 +34,10 @@ namespace Assets.Scripts.Characters.Enemy
             var targetUnreachable = new TargetUnreachable(this, walkAroundState);
             var targetGiveUp = new TargetGiveUp(this, walkAroundState, () => timeToGiveUp);
 
+            //TODO: voltar killing state
             stoppedState.SetTransitions(seenTargetTransition);
             followingState.SetTransitions(
-                targetIsCloseToKill,
+                // targetIsCloseToKill,
                 targetUnreachable,
                 targetGiveUp);
             walkAroundState.SetTransitions(seenTargetTransition);
