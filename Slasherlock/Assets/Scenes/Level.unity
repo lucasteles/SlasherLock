@@ -5073,6 +5073,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3221204536421028423, guid: 1ed695b0866a547279a5dfd14ceec108, type: 3}
+      propertyPath: mask
+      value: '*_*_'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221204536421028423, guid: 1ed695b0866a547279a5dfd14ceec108, type: 3}
       propertyPath: safe
       value: 
       objectReference: {fileID: 1321611732}
