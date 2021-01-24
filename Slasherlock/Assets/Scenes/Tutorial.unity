@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427cadd1cc8804543bd93d1a3593ba7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Level
+  sceneToLoad: Mansion
 --- !u!1 &540010284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Open Door
+  m_text: Open/Close Door
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e79ffe15303087746982bc287cbfd3be, type: 2}
   m_sharedMaterial: {fileID: 4786431160585863819, guid: e79ffe15303087746982bc287cbfd3be, type: 2}
