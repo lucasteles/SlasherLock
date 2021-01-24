@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427cadd1cc8804543bd93d1a3593ba7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Level
+  sceneToLoad: Mansion
 --- !u!1 &540010284
 GameObject:
   m_ObjectHideFlags: 0
