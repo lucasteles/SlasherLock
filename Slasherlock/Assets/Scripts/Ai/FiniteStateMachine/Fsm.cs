@@ -17,6 +17,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
         public PathFinder PathFinder { private set; get; }
         public SurroundingAwareness Awareness { private set; get; }
 
+        public string CurrentState => currentStateName;
         protected abstract void SetupStates();
 
         private void Awake()

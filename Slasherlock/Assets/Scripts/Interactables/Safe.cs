@@ -14,6 +14,7 @@ public class Safe : MonoBehaviour
 
     [SerializeField] public string safeName;
     [SerializeField] GameObject keyPefab;
+    [SerializeField] Collider2D colliderToDisble;
     [SerializeField] KeyColors keyColor;
     [SerializeField] SafePasswordUi safePasswordUi;
     [SerializeField] AudioClip dropKeySound;
@@ -101,6 +102,7 @@ public class Safe : MonoBehaviour
             Instantiate(keyPefab, transform.position, Quaternion.identity).GetComponent<KeyData>()
                 .SetKeyColor(keyColor);
             GetComponentInChildren<Renderer>().enabled = false;
+            colliderToDisble.enabled = false;
             source.PlayOneShot(dropKeySound);
             yield return new WaitUntil(() => !source.isPlaying);
             Destroy(gameObject);

@@ -182,7 +182,7 @@ namespace Assets.Interactables.Physics
 
             if (IsDoorLocked())
             {
-                if (needsKey && !inventary.HasKey(keyName))
+                if (needsKey && !inventary.HasKey(keyName) && canInteract)
                     ThoughtBubble.Instance.ShowThought(dontHaveKeyThought);
 
                 if (playLockedSound) audioSource.PlayOneShot(locked);
