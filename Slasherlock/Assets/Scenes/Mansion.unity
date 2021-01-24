@@ -220,6 +220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &11203534 stripped
@@ -423,6 +427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &71636264
@@ -487,6 +495,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -741,6 +753,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -1300,6 +1316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &119465103
@@ -1364,6 +1384,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -1499,6 +1523,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -2411,7 +2439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACon+ueJ0EpYgIAAAkFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzg0jG3CS3lqHkB7yMaGdXLgIa401yJJHHwGS4b93JRvs0vaEePt29d7uyp9EKNtA4bRZGMEfNQfydUTCmXwZ9cEH2LONVkvxASfOm+CuCiQWOa/MCY14EtKsrsEZUXxTGxnIFEGvRKlNPecbyLV1FuGSSQsYMtqFbIXQ54js8efqNqQc8JReh9MHnm7p6IjHApQD01NPRDqeziilkyS57hJavleFZHUDPIjv07LJOEM6TSddfnYb6QrtdUw6zsJ9WkphO3XEHZroPmeN9egNCVwwdBslJeNQrQKxqVzQPkx/LksLrhNs2OFOGGxbW5d8120va2a3rcZ3Jn24KZtGWW3Nx7/CV0kMl0bXD6drExqucJUotq/sUDDrBr0ewncD5bFTOya3bC3hrQL1pBdGe8Ux6IwPqd5Cetf/PTvLKyi2Pd5KvQB984+JdXMKHo7R/D6Xol63w2yBpdSx4XEfwOBwfqDguC22K4FoUPHLwk+2Ga5VF7gXxjoMdS5VkLfW3gQqmceeBTfe5dooMMMKDSgm3eEF67jLEV7E/p91z8IL6m7vYqeH0XVniPZ0Si9CL3oXhzUd07BnttK7R7DVs3dSqEG5EHjCVuVaqXbHhqZOaUtvSlYM0jZe8D+3iyRZtr5OM3pD0+msLNKrWcaTWTrl9GYCSTbhJK6fUOiUyZdWa9cgHJzqiytctdOnZbQwrIn7zg3bLcRHrW3PFKrUy8IAqOe2wlk4GLwE3yafc4E9WoJzQsWRk88VkbrYAl+dC62i0/neGTYEG/GuXQBWJI+fkhU5kuNvUEsDBBQAAAgIAACon+uhx1qTbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSoZlZkrmRmYGFgZGJaVqyka6pWYqhqZFJioGFcaqhmXGKUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACon+ueJ0EpYgIAAAkFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACon+uhx1qTbQAAAHgAAAAJACQAAAAAAAAAAAAAAK8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZwMAAAAA
+    dataString: UEsDBBQAAAgIAACon+tCM0zkZQIAAAoFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMFy2jAQ/RVG54aRDZikt9YhpAeSTGgnF1+EtcYaZMkjyQGS4d+7kg12aXti2X27+97uyp9EKFtD7rRZGsFXmgP5OiLeJl9GffARDmyr1Vp8wBnzJrgrPYgFzCtzQqM/8mlWV+CMyL+prfRgis5GiUKbasG3kGrrLLoLJi1gyGjnsxW6PkfkgD83dz7liFY899YHWnd0dEIzB+XA9NAzkI6nM0rpJIrmXUKLb1QuWVUD9+T7tGQyThBO40mXn9wFuEJ5HZKOE99PSylsx464Yx3Up6y2DWpDABcM1QZK0dhXK0FsS+e5D9Ofi8KC6wgbdrwXBsfW1iXfdTvLitldy/GdycZ3SqaBVltz9Vf4Jgrhwujq8dw2or6FK0W+e2XHnFk3mPXQfT9gHia1Z3LHNhLeSlBPeml0ozgGnWl8amMhvu//XpSlJeS73t9SvXI29T821u3JazgF8YdUimrTLrN1rKUOAw/3AAaX8wMJh2uxXQn0eha/LPxk2+FZdYEHYazDUKdSeXob3RgPJYswM6+mcak2CsywQg2KSXd8wTrueoVXsf9nPTD/grruXez8MLrpDL09nNKr0Iveh2VNx9TfmS31fgW2fG6cFGpQzgeecFSpVqq9saGoc9q6MQXLB2nbRvA/r4tESbKZxwm9pfF0VuTxzSzh0Syecno7gSiZcBLOTyhUyuRLy7UbEC5O9cUVntr50zJaGlaHe+eG7Zfio9K2RwpV6HVuANRzW+FCHAw2wbfJF1zgjNbgnFBh5eQzI1LnO+DZpVAWlC4OzrCsr5KRWrxr5z0ZScO3JCMncvoNUEsDBBQAAAgIAACon+uhx1qTbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSoZlZkrmRmYGFgZGJaVqyka6pWYqhqZFJioGFcaqhmXGKUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACon+tCM0zkZQIAAAoFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACon+uhx1qTbQAAAHgAAAAJACQAAAAAAAAAAAAAALICAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAagMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -2424,7 +2452,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 0
+  logPathResults: 2
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -2441,7 +2469,7 @@ MonoBehaviour:
     - {r: 0, g: 0, b: 0, a: 0}
   tagNames:
   - Basic Ground
-  - 1
+  - Wall
   - 2
   - 3
   - 4
@@ -2843,6 +2871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &296585227
@@ -2907,6 +2939,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -3114,6 +3150,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -3477,6 +3517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &354056224 stripped
@@ -3655,6 +3699,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -3835,6 +3883,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &392722335
@@ -3899,6 +3951,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -4166,6 +4222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &411431259
@@ -4230,6 +4290,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -4381,7 +4445,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: -1
+    value: 1
 --- !u!4 &416435323
 Transform:
   m_ObjectHideFlags: 0
@@ -4850,6 +4914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &451428881 stripped
@@ -5158,6 +5226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &502329316 stripped
@@ -5446,6 +5518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &537862132 stripped
@@ -5520,6 +5596,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -5596,6 +5676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &583918051
@@ -5660,6 +5744,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -5788,6 +5876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &609732449 stripped
@@ -5872,6 +5964,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -6194,6 +6290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &702547474 stripped
@@ -6478,6 +6578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1 &741780210
@@ -6666,6 +6770,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -6951,6 +7059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1 &769486621
@@ -7116,6 +7228,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -7606,6 +7722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &856336353 stripped
@@ -7675,6 +7795,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -8063,6 +8187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &931534164 stripped
@@ -8298,6 +8426,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -9058,6 +9190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &1050124487
@@ -9201,6 +9337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!114 &1060573165 stripped
@@ -9281,6 +9421,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -9948,6 +10092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &1174544432
@@ -10012,6 +10160,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -10082,6 +10234,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -10276,6 +10432,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -10978,6 +11138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &1280203698
@@ -11042,6 +11206,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -11401,6 +11569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &1338607183 stripped
@@ -11558,6 +11730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!114 &1355236663 stripped
@@ -11638,6 +11814,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -11941,6 +12121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1 &1430697194
@@ -12097,6 +12281,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -12271,6 +12459,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -12938,6 +13130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &1550515714
@@ -13002,6 +13198,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -13073,6 +13273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &1556558559 stripped
@@ -13142,6 +13346,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -13217,6 +13425,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -13406,6 +13618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &1620899105 stripped
@@ -13477,6 +13693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &1628442109
@@ -13541,6 +13761,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -13633,6 +13857,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -13863,6 +14091,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -14204,6 +14436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!4 &1699184147 stripped
@@ -14269,6 +14505,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -14476,6 +14716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1 &1723524685
@@ -14679,6 +14923,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -14964,6 +15212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1 &1793978597
@@ -15162,6 +15414,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -15478,6 +15734,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -15853,6 +16113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &1881372290
@@ -16084,6 +16348,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -16489,6 +16757,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -17178,6 +17450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCollider (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
 --- !u!1001 &2060174094
@@ -17242,6 +17518,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -17393,6 +17673,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
@@ -17928,6 +18212,10 @@ PrefabInstance:
     - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
       propertyPath: m_Name
       value: WallCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523902558459378074, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043f7f91aaedf4042b1693401dbf1444, type: 3}
