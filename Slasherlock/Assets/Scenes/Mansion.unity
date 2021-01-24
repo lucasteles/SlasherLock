@@ -2439,7 +2439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACwn+ueJ0EpYgIAAAkFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzg0jG3CS3lqHkB7yMaGdXLgIa401yJJHHwGS4b93JRvs0vaEePt29d7uyp9EKNtA4bRZGMEfNQfydUTCmXwZ9cEH2LONVkvxASfOm+CuCiQWOa/MCY14EtKsrsEZUXxTGxnIFEGvRKlNPecbyLV1FuGSSQsYMtqFbIXQ54js8efqNqQc8JReh9MHnm7p6IjHApQD01NPRDqeziilkyS57hJavleFZHUDPIjv07LJOEM6TSddfnYb6QrtdUw6zsJ9WkphO3XEHZroPmeN9egNCVwwdBslJeNQrQKxqVzQPkx/LksLrhNs2OFOGGxbW5d8120va2a3rcZ3Jn24KZtGWW3Nx7/CV0kMl0bXD6drExqucJUotq/sUDDrBr0ewncD5bFTOya3bC3hrQL1pBdGe8Ux6IwPqd5Cetf/PTvLKyi2Pd5KvQB984+JdXMKHo7R/D6Xol63w2yBpdSx4XEfwOBwfqDguC22K4FoUPHLwk+2Ga5VF7gXxjoMdS5VkLfW3gQqmceeBTfe5dooMMMKDSgm3eEF67jLEV7E/p91z8IL6m7vYqeH0XVniPZ0Si9CL3oXhzUd07BnttK7R7DVs3dSqEG5EHjCVuVaqXbHhqZOaUtvSlYM0jZe8D+3iyRZtr5OM3pD0+msLNKrWcaTWTrl9GYCSTbhJK6fUOiUyZdWa9cgHJzqiytctdOnZbQwrIn7zg3bLcRHrW3PFKrUy8IAqOe2wlk4GLwE3yafc4E9WoJzQsWRk88VkbrYAl+dC62i0/neGTYEG/GuXQBWJI+fkhU5kuNvUEsDBBQAAAgIAACwn+uhx1qTbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSoZlZkrmRmYGFgZGJaVqyka6pWYqhqZFJioGFcaqhmXGKUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACwn+ueJ0EpYgIAAAkFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACwn+uhx1qTbQAAAHgAAAAJACQAAAAAAAAAAAAAAK8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZwMAAAAA
+    dataString: UEsDBBQAAAgIAACon+se83p4ZQIAAA0FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzg0jG3CS3lpDSA/5mNBOLlyEtcYaZMkjyQGS4b93JYvYpe0J8fbt6r3dlT+IULaBwmmzNII/aA7k64j4M/ky6oP3cGBbrVbiHc6cV8Fd5UkscF6YExrxxKdZXYMzovimttKTKYKtEqU29YJvIdfWWYRLJi1gyGjnsxVCHyNywJ+rW59yxFN67U/veLqloxMeC1AOTE89E+l4OqOUTpLkOiZ0/FYVktUNcC++T8sm4wzpNJ3E/Ow20BXai0w6zvx9Wkphozrijk1wn7PGtugNCVwwdBskJWNfrQKxrZzXPkx/KksLLgo27DgXBtvW1SXfddfLmtldp/GNydbflKChSRakdXUf/qJcJSFcGl3fn69OqL/GVaLYvbBjwawb9HsIzwfqQ7f2TO7YRsJrBepRL41uFcegM61PbS2k8/7vp7u8gmLX453UC7Bt/jG1OCvv4RQacMilqDfdQDtgJXVoetgJMDigHyg4bIyNJRD1Kn5Z+Mm2w9WKgTthrMNQdKm8vI1ujaeSReiZd9O6XBsFZlihAcWkOz5jHXc5xovY/7PumH9F8fYYOz+O2J0h2tMpvQg9630YVjpOZhiyld4/gK2eWieFGpTzgUdsVa6V6vZsaOqctmpNyYpB2rYV/M/tIkmWba7TjN7QdDori/RqlvFklk45vZlAkk04CesnFDpl8rnTGhuEg1N9cYWrdv68jJaGNWHnuWH7pXivte2ZQpV6VRgA9dRV+BQOBi/B98kXXGCPVuCcUGHk5GNNpC52wNefhdbB6eLgDBuCjXjTzgNrkofPyZqcyOk3UEsDBBQAAAgIAACon+uhx1qTbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSoZlZkrmRmYGFgZGJaVqyka6pWYqhqZFJioGFcaqhmXGKUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACon+se83p4ZQIAAA0FAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACon+uhx1qTbQAAAHgAAAAJACQAAAAAAAAAAAAAALICAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAagMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -2452,7 +2452,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -3515,9 +3515,9 @@ GameObject:
   - component: {fileID: 365661722}
   - component: {fileID: 365661721}
   - component: {fileID: 365661723}
-  m_Layer: 6
+  m_Layer: 17
   m_Name: bed
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4411,15 +4411,15 @@ MonoBehaviour:
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
+    exactStartPoint: 1
+    exactEndPoint: 1
     useRaycasting: 0
     mask:
       serializedVersion: 2
       m_Bits: 4294967295
     useGraphRaycasting: 0
   traversableTags: -1
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  tagPenalties: 000000000a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: 1
 --- !u!4 &416435323
@@ -4516,7 +4516,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0098365545, y: -0.09756017}
+  m_Offset: {x: 0.023129702, y: -0.011155367}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4527,7 +4527,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4349048, y: 0.5237603}
+  m_Size: {x: 0.2886815, y: 0.35095072}
   m_EdgeRadius: 0
 --- !u!114 &416435328
 MonoBehaviour:
@@ -8016,9 +8016,9 @@ GameObject:
   - component: {fileID: 922188692}
   - component: {fileID: 922188693}
   - component: {fileID: 922188694}
-  m_Layer: 6
+  m_Layer: 17
   m_Name: small table
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14188,9 +14188,9 @@ GameObject:
   - component: {fileID: 1675035716}
   - component: {fileID: 1675035718}
   - component: {fileID: 1675035717}
-  m_Layer: 6
+  m_Layer: 17
   m_Name: dinning table
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15752,9 +15752,9 @@ GameObject:
   - component: {fileID: 1843001049}
   - component: {fileID: 1843001050}
   - component: {fileID: 1843001051}
-  m_Layer: 6
+  m_Layer: 17
   m_Name: small table (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
