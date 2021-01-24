@@ -7,6 +7,7 @@ namespace Assets.Scripts.Fov
         [SerializeField] LayerMask layerMask1;
         [SerializeField] LayerMask layerMask2;
         [SerializeField] LayerMask flagsLayer;
+        [SerializeField] LayerMask enemyLayer;
         [SerializeField] float fov;
         [SerializeField] float viewDistance;
         [SerializeField] int rayCount = 50;
@@ -37,11 +38,16 @@ namespace Assets.Scripts.Fov
             {
                 Vector3 vertex;
                 var vectorForCurrentAngle = GetVectorFromAngle(angle);
-                var raycastHit2D = Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance, layerMask1 | layerMask2 );
-                var flags = Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance,  layerMask1 | layerMask2 | flagsLayer);
+                var raycastHit2D =
+                    Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance, layerMask1 | layerMask2);
+                var flags = Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance,
+                    layerMask1 | layerMask2 | flagsLayer | enemyLayer);
 
                 if (flags.collider != null)
+                {
                     MarkWalkPointAsVisible(flags.collider.gameObject);
+                    MarkWalkEnemyAsVisible(flags.collider.gameObject);
+                }
 
                 if (raycastHit2D.collider == null)
                     vertex = origin + vectorForCurrentAngle * viewDistance;
@@ -78,6 +84,13 @@ namespace Assets.Scripts.Fov
             {
                 flag.SetVisibleByPlayer();
             }
+        }
+
+        void MarkWalkEnemyAsVisible(GameObject gameObject)
+        {
+            if (!gameObject.CompareTag("Enemy")) return;
+            if (gameObject.GetComponentInChildren<ChangeLayerWheenSaw>() is { } saw)
+                saw.Saw();
         }
 
         public void SetOrigin(Vector3 origin) => this.origin = origin;
