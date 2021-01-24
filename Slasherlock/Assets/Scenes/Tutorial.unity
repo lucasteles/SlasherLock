@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Open Door
+  m_text: Open/Close Door
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e79ffe15303087746982bc287cbfd3be, type: 2}
   m_sharedMaterial: {fileID: 4786431160585863819, guid: e79ffe15303087746982bc287cbfd3be, type: 2}
