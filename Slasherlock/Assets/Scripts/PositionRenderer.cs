@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PositionRenderer : MonoBehaviour
 {
-    int SortingOrderBase = 50000;
+    int SortingOrderBase = 100000;
     [SerializeField] int Offset;
     Renderer myRenderer;
 
