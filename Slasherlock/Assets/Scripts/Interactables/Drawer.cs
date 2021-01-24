@@ -23,7 +23,7 @@ public class Drawer : MonoBehaviour
     [SerializeField] SpriteRenderer keyLockRenderer;
 
 
-    [SerializeField] Renderer openDrawerSprite;
+    [SerializeField] GameObject openDrawerSprite;
 
     AudioSource source;
     CharacterInventary inventary;
@@ -42,7 +42,7 @@ public class Drawer : MonoBehaviour
             KeyColors.Brown => brown,
             _ => throw new ArgumentOutOfRangeException()
         };
-        openDrawerSprite.enabled = false;
+        openDrawerSprite.SetActive(false);
     }
 
     void Awake()
@@ -83,11 +83,9 @@ public class Drawer : MonoBehaviour
             yield return new WaitUntil(() => !source.isPlaying);
             source.PlayOneShot(dropKeySound);
 
+            openDrawerSprite.SetActive(true);
             Instantiate(keyItemPrefab, transform.position, Quaternion.identity).GetComponent<KeyData>()
                 .SetKeyColor(keyDropColor);
-            openDrawerSprite.enabled = true;
-            foreach (var c in GetComponentsInChildren<Renderer>())
-                c.enabled = false;
             yield return new WaitUntil(() => !source.isPlaying);
 
         }
