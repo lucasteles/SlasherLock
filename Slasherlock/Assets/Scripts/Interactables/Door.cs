@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Ui.Character;
+﻿using Assets.Scripts.Cameras;
+using Assets.Scripts.Ui.Character;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -35,8 +36,6 @@ namespace Assets.Interactables.Physics
         [SerializeField] AudioClip lockDoor;
         [SerializeField] AudioClip needLockPad;
         [SerializeField] AudioClip locked;
-
-
         [SerializeField] Sprite golden;
         [SerializeField] Sprite blue;
         [SerializeField] Sprite green;
@@ -323,6 +322,7 @@ namespace Assets.Interactables.Physics
             AnimOpenDoor();
 
             lockAnimator.Play("DropPadlock");
+            CameraShaker.Instance.ShakeOnOpenDoor();
 
             IEnumerator wait()
             {
