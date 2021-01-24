@@ -21,8 +21,6 @@ public class Drawer : MonoBehaviour
     [SerializeField] Sprite cyan;
     [SerializeField] Sprite brown;
     [SerializeField] SpriteRenderer keyLockRenderer;
-    [SerializeField] SpriteRenderer hide;
-
 
     [SerializeField] GameObject openDrawerSprite;
 
@@ -83,13 +81,13 @@ public class Drawer : MonoBehaviour
             source.PlayOneShot(unlockSound);
             yield return new WaitUntil(() => !source.isPlaying);
             source.PlayOneShot(dropKeySound);
-
             openDrawerSprite.SetActive(true);
+
             Instantiate(keyItemPrefab, transform.position, Quaternion.identity).GetComponent<KeyData>()
                 .SetKeyColor(keyDropColor);
             yield return new WaitUntil(() => !source.isPlaying);
             keyLockRenderer.enabled = false;
-
+            openDrawerSprite.SetActive(true);
         }
 
         isOpen = true;
