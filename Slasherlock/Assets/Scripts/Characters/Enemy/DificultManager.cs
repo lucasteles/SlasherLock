@@ -70,8 +70,8 @@ public class DificultManager : MonoBehaviour
             shadowsMidtonesHighlights.active = true;
             fsm.MoveAndSetState<FollowingTarget>(
                 fsm.Awareness.HasTargetOnSight()
-                ? GameObject.Find("LastApearEvent").transform.position
-                : fsm.transform.position);
+                ? fsm.transform.position
+                : GameObject.Find("LastApearEvent").transform.position);
             musicNormal.Pause();
             hardMusic.Play();
         }
