@@ -48,7 +48,6 @@ namespace Assets.Scripts.Characters.Enemy
             allStates = new State[] {stoppedState, followingState, walkAroundState, killingTargetState};
         }
 
-
         public void MoveAndSetState<T>(Vector2 position) where T : State
         {
             transform.position = position;

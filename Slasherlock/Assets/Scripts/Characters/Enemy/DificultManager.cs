@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Assets.Scripts.Characters.Enemy;
 using Assets.Scripts.Physics;
 using UnityEngine;
@@ -69,7 +67,7 @@ public class DificultManager : MonoBehaviour
         {
             shadowsMidtonesHighlights.active = true;
             fsm.MoveAndSetState<FollowingTarget>(
-                fsm.Awareness.HasTargetOnSight()
+                fsm.Awareness.HasTargetOnSight() || fsm.CurrentState == nameof(FollowingTarget)
                 ? fsm.transform.position
                 : GameObject.Find("LastApearEvent").transform.position);
             musicNormal.Pause();
