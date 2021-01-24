@@ -2311,7 +2311,8 @@ MonoBehaviour:
   background: {fileID: 1512678272}
   thought: {fileID: 1793978599}
   timePerLetter: 0.05
-  timePerThought: 1
+  timePerThoughtFast: 1.5
+  timePerThought: 3
 --- !u!114 &267857363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2341,7 +2342,10 @@ MonoBehaviour:
   possibleThoughts:
   - OH SHIT!
   - FUCK!
-  - OMG
+  - Who is him?
+  - He will kill me!
+  - Is him Mr.J?
+  - NOPE
   chanceToPlay: 40
 --- !u!1 &279303546
 GameObject:
@@ -14280,7 +14284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941239914512948537, guid: 6c7a4ca622c09417c8af42a27b10ec20, type: 3}
       propertyPath: possibleThoughts.Array.data[0]
-      value: I can lock doors with padlocks
+      value: I can lock doors with this
       objectReference: {fileID: 0}
     - target: {fileID: 8941239914512948537, guid: 6c7a4ca622c09417c8af42a27b10ec20, type: 3}
       propertyPath: possibleThoughts.Array.data[1]
@@ -15960,7 +15964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941239914512948538, guid: 6c7a4ca622c09417c8af42a27b10ec20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.57
+      value: 8.87
       objectReference: {fileID: 0}
     - target: {fileID: 8941239914512948538, guid: 6c7a4ca622c09417c8af42a27b10ec20, type: 3}
       propertyPath: m_LocalPosition.y

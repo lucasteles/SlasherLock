@@ -14,6 +14,7 @@ namespace Assets.Scripts.Ui.Character
         [SerializeField] RectTransform background;
         [SerializeField] TextMeshProUGUI thought;
         [SerializeField] float timePerLetter;
+        [SerializeField] float timePerThoughtFast;
         [SerializeField] float timePerThought;
         Queue<string> thoughtQueue = new Queue<string>();
         string thoughtToShow = string.Empty;
@@ -90,6 +91,8 @@ namespace Assets.Scripts.Ui.Character
                 {
                     if (until != null)
                         yield return new WaitUntil(until);
+                    else if (thoughtQueue.Count > 0)
+                        yield return new WaitForSeconds(timePerThoughtFast);
                     else
                         yield return new WaitForSeconds(timePerThought);
 
