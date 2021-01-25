@@ -140,7 +140,7 @@ namespace Assets.Interactables.Physics
                     other.gameObject.GetComponent<EnemyFsm>().ResetAfterCloseDoorCoolDown();
 
                 OpenDoor(enemyPlayLockSound);
-                if (enemyPlayLockSound)
+                if (enemyPlayLockSound && !needsKey)
                     Invoke(nameof(EnableEnemyToPlayLockedSound), 1f);
                 enemyPlayLockSound = false;
                 if (CurrentState == State.Locked) ConfirmLockDoor();
