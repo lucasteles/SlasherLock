@@ -64,9 +64,11 @@ public class Safe : MonoBehaviour
     {
         if (!canInteract) return;
 
-        if (Input.GetKeyDown(KeyCode.Q) && !safePasswordUi.gameObject.activeSelf)
+        if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Space) ) && !safePasswordUi.gameObject.activeSelf)
             TryOpenSafe();
-        else if (canInteract && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Q)))
+        else if (canInteract && (Input.GetKeyDown(KeyCode.Escape) ||
+                                 Input.GetKeyDown(KeyCode.Q) ||
+                                 Input.GetKeyDown(KeyCode.Space)))
         {
             safePasswordUi.gameObject.SetActive(false);
             safePasswordUi.ResetPassword();

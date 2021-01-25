@@ -7,10 +7,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
     {
         readonly AudioClip seeYou;
         float lastTimeSee;
-        float minTimeToSeeAgain = 1f;
-
-        float timetofocus = 0.3f;
-        float focusingTime;
+        float minTimeToSeeAgain = .5f;
 
         public TargetOnSightTransition(Fsm fsm, IState nextState, AudioClip seeYou) : base(fsm, nextState)
         {
@@ -20,15 +17,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
         public override bool IsValid()
         {
             lastTimeSee += Time.deltaTime;
-
-            if (fsm.Awareness.HasTargetOnSight())
-            {
-                focusingTime += Time.deltaTime;
-            }
-            else
-                focusingTime = 0;
-
-            return focusingTime > timetofocus;
+            return fsm.Awareness.HasTargetOnSight();
         }
 
         public override void OnTransition()
