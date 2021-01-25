@@ -818,7 +818,6 @@ GameObject:
   - component: {fileID: 113535484}
   - component: {fileID: 113535494}
   - component: {fileID: 113535495}
-  - component: {fileID: 113535488}
   - component: {fileID: 113535487}
   m_Layer: 7
   m_Name: Character
@@ -873,34 +872,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   waitFor: 0
---- !u!61 &113535487
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113535483}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00454998, y: -0.21708012}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.66324043, y: 1.304636}
-  m_EdgeRadius: 0
---- !u!58 &113535488
-CircleCollider2D:
+--- !u!70 &113535487
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -912,9 +885,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02, y: -0.52}
-  serializedVersion: 2
-  m_Radius: 0.28791428
+  m_Offset: {x: -0.013039589, y: -0.31165314}
+  m_Size: {x: 0.29135323, y: 0.76893234}
+  m_Direction: 0
 --- !u!50 &113535489
 Rigidbody2D:
   serializedVersion: 4
@@ -4787,7 +4760,7 @@ MonoBehaviour:
   macheteSound: {fileID: 8300000, guid: 9cd768b3d4cc145beaf03a3a59f4bf0e, type: 3}
   brokeDoorPercentage: 0.5
   timeToGiveUp: 10
-  timeToWaitWhenWalkingAndSeePlayer: 0.5
+  timeToWaitWhenWalkingAndSeePlayer: 0.3
   numberOfFlagsToLookAt: 4
   numberOfFlagsToSkip: 2
   minKillCoolDownAfterCloseDoor: 0.3
