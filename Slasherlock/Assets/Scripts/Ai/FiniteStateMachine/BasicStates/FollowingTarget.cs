@@ -73,7 +73,7 @@ public class FollowingTarget : State
     public override void OnTriggerStay(Collider2D other)
     {
         if (waiting) return;
-        if (onDoor)
+        if (onDoor && !onDoor.NeedsKey)
         {
             if (onDoor.GetState() == Door.State.ConfirmedLock)
             {
