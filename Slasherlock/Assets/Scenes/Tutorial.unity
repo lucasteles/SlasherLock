@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lock Door
+  m_text: 'Lock/Unlock Door
 
 '
   m_isRightToLeft: 0
