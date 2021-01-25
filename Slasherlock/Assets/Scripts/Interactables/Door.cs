@@ -30,6 +30,7 @@ namespace Assets.Interactables.Physics
         public State GetState() => CurrentState;
 
         [SerializeField] bool needsKey;
+        [SerializeField] bool unbrokable;
         [SerializeField] KeyColors keyName = KeyColors.Golden;
         [SerializeField] AudioClip open;
         [SerializeField] AudioClip openForced;
@@ -325,8 +326,11 @@ namespace Assets.Interactables.Physics
                     UnlockDoor();
         }
 
-        public void ForceOpen()
+        public void ForceOpen(bool skipUnbrokable)
         {
+            if (unbrokable && !skipUnbrokable)
+                return;
+
             hasLockIn = false;
             AnimOpenDoor();
 
@@ -354,5 +358,7 @@ namespace Assets.Interactables.Physics
             UpdatePath();
             CurrentState = State.Closed;
         }
+
+        public bool IsUnbrokable => unbrokable;
     }
 }

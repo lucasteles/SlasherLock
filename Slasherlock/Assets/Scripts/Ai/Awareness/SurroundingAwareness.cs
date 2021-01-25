@@ -21,6 +21,7 @@ public class SurroundingAwareness : MonoBehaviour
         var hitFromRay = Physics2D.Raycast(transform.position, directionToTarget, sightRadius,
             layersToSearchFor | obstacleLayer | playerObstacleLayer);
 
+        Debug.DrawLine(transform.position, hitFromRay.point, hit.collider == hitFromRay.collider ? Color.magenta : Color.yellow);
         LastTargetFound = hit.collider.transform;
         return hit.collider == hitFromRay.collider;
     }

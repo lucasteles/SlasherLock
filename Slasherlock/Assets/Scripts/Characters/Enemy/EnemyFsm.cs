@@ -18,6 +18,7 @@ namespace Assets.Scripts.Characters.Enemy
         [SerializeField] float timeToGiveUp;
         [SerializeField] float timeToWaitWhenWalkingAndSeePlayer;
         [SerializeField] int numberOfFlagsToLookAt;
+        [SerializeField] int numberOfFlagsToSkip;
         [SerializeField] float minKillCoolDownAfterCloseDoor;
 
         float coolDownAfterCloseDoor;
@@ -36,7 +37,9 @@ namespace Assets.Scripts.Characters.Enemy
             var followingState = new FollowingTarget(this, tryingToOpenDoorSound,
                 () => brokeDoorPercentage, timeToWaitWhenWalkingAndSeePlayer);
             var walkAroundState = new WalkAroundState(this, tryingToOpenDoorSound,
-                () => brokeDoorPercentage,timeToWaitWhenWalkingAndSeePlayer, () => numberOfFlagsToLookAt);
+                () => brokeDoorPercentage,timeToWaitWhenWalkingAndSeePlayer,
+                () => numberOfFlagsToLookAt,
+                () => numberOfFlagsToSkip);
             var killingTargetState = new KillingTargetState(this, macheteSound);
 
             var seenTargetTransition = new TargetOnSightTransition(this, followingState, seeYou);
@@ -55,9 +58,9 @@ namespace Assets.Scripts.Characters.Enemy
             allStates = new State[] {stoppedState, followingState, walkAroundState, killingTargetState};
         }
 
-        public void MoveAndSetState<T>(Vector2 position) where T : State
+        public void MoveAndSetState<T>(Vector2? position = null) where T : State
         {
-            transform.position = position;
+            transform.position = position ?? transform.position;
             SetFirstState(allStates.OfType<T>().FirstOrDefault());
         }
 
@@ -66,5 +69,7 @@ namespace Assets.Scripts.Characters.Enemy
             coolDownAfterCloseDoor += Time.deltaTime;
             base.UpdateFsm();
         }
+
+        public IState GetState() => currentState;
     }
 }

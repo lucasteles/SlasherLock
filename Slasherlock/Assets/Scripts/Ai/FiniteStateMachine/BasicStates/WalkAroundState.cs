@@ -14,6 +14,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
         bool debug = false;
 
         readonly Func<int> numberOfFlagsToLookAt;
+        readonly Func<int> numberOfFlagsToSkip;
         float timeToFindNextFlag = 5;
         float elapsedTime = 0;
         WalkFlag[] flags;
@@ -23,21 +24,25 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
         bool waitingTeleport;
         Coroutine teleport;
 
+        bool walkFar = false;
+
         public WalkAroundState(
             Fsm fsm,
             AudioClip tryingToOpenDoorSound,
             Func<float> brokeDoorPercentage,
             float timeWaitWhenWalking,
-            Func<int> numberOfFlagsToLookAt
+            Func<int> numberOfFlagsToLookAt,
+            Func<int> numberOfFlagsToSkip
         ) : base(fsm, tryingToOpenDoorSound, brokeDoorPercentage, timeWaitWhenWalking)
         {
             this.numberOfFlagsToLookAt = numberOfFlagsToLookAt;
+            this.numberOfFlagsToSkip = numberOfFlagsToSkip;
         }
 
 
         public override void UpdateState()
         {
-            if (!startWalking) return;
+            if (!startWalking || walkFar) return;
 
             if (elapsedTime > timeToFindNextFlag)
             {
@@ -102,6 +107,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
                     nearFlags
                         .Where(x => !x.isVisible)
                         .Where(NotCloseTo)
+                        .Skip(numberOfFlagsToSkip())
                         .Take(numberOfFlagsToLookAt())
                         .ToArray();
 
@@ -158,6 +164,27 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
             if (lastFlag) lastFlag.Hide();
             startWalking = false;
             elapsedTime = 0;
+        }
+
+        public void WalkFarFormPlayer()
+        {
+            walkFar = true;
+
+            IEnumerator wait()
+            {
+                yield return new WaitForSeconds(13);
+                walkFar = false;
+            }
+
+            var flagToWalk =
+                flags
+                    .OrderByDescending(x => x.distanceFromPlayer)
+                    .Take(numberOfFlagsToLookAt())
+                    .ToArray();
+
+            var flagToFollow = flagToWalk[Random.Range(0, flagToWalk.Length)];
+            fsm.PathFinder.FollowTarget(flagToFollow.transform);
+            fsm.StartCoroutine(wait());
         }
     }
 }

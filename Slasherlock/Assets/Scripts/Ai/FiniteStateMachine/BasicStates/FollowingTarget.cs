@@ -25,6 +25,7 @@ public class FollowingTarget : State
         this.tryingToOpenDoorSound = tryingToOpenDoorSound;
         this.brokeDoorPercentage = brokeDoorPercentage;
         this.waitWhenWaking = waitWhenWaking;
+        enemyFsm = fsm as EnemyFsm;
     }
 
     public override void UpdateState()
@@ -84,12 +85,19 @@ public class FollowingTarget : State
                     waiting = false;
 
                     if (!door.NeedsKey && Random.value <= brokeDoorPercentage())
-                        door.ForceOpen();
+                        door.ForceOpen(brokeDoorPercentage() == 1);
                     else
                         // nao deixa o jason preso fora da grid da porta
                         fsm.transform.position = AstarPath.active.GetNearest(fsm.transform.position).position;
 
-                    OnEnter();
+                    if (door.IsUnbrokable)
+                    {
+                        enemyFsm.MoveAndSetState<WalkAroundState>();
+                        var state = enemyFsm.GetState() as WalkAroundState;
+                        state?.WalkFarFormPlayer();
+                    }
+                    else
+                        OnEnter();
                 }
 
                 waiting = true;

@@ -22,11 +22,13 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
             lastTimeSee += Time.deltaTime;
 
             if (fsm.Awareness.HasTargetOnSight())
+            {
                 focusingTime += Time.deltaTime;
+            }
             else
                 focusingTime = 0;
 
-            return focusingTime >  timetofocus && !fsm.PathFinder.IsNotPossible();
+            return focusingTime > timetofocus;
         }
 
         public override void OnTransition()
