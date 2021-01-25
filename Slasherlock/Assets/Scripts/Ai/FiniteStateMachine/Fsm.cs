@@ -55,7 +55,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine
             NotifyListeners(currentState);
         }
 
-        protected void UpdateFsm()
+        protected virtual void UpdateFsm()
         {
             currentState.Update();
         }

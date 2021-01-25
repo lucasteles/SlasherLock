@@ -118,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.20378357}
+  m_Offset: {x: -0.012627214, y: -0.15400064}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.8787662}
+  m_Size: {x: 0.783107, y: 0.7792003}
   m_EdgeRadius: 0
 --- !u!50 &571045383415751204
 Rigidbody2D:
@@ -164,7 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11257d118a63d46079f6611fbe851c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SortingOrderBase: 5000
   Offset: 10
 --- !u!1 &8245527455290082392
 GameObject:
@@ -312,7 +311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11257d118a63d46079f6611fbe851c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SortingOrderBase: 5000
   Offset: 5
 --- !u!1 &9209769731614485857
 GameObject:
@@ -409,7 +407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11257d118a63d46079f6611fbe851c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SortingOrderBase: 5000
   Offset: 5
 --- !u!1 &9209769732889932718
 GameObject:

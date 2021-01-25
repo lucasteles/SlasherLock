@@ -3,6 +3,7 @@ using System.Collections;
 using Assets.Interactables.Physics;
 using Assets.Scripts.Ai.FiniteStateMachine;
 using Assets.Scripts.Ai.FiniteStateMachine.BasicStates;
+using Assets.Scripts.Characters.Enemy;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -16,6 +17,7 @@ public class FollowingTarget : State
     MotionBlur blur;
     Func<float> brokeDoorPercentage;
     readonly float waitWhenWaking;
+    EnemyFsm enemyFsm;
 
     public FollowingTarget(Fsm fsm, AudioClip tryingToOpenDoorSound, Func<float> brokeDoorPercentage,
         float waitWhenWaking) : base(fsm)

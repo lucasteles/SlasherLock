@@ -18,8 +18,16 @@ namespace Assets.Scripts.Characters.Enemy
         [SerializeField] float timeToGiveUp;
         [SerializeField] float timeToWaitWhenWalkingAndSeePlayer;
         [SerializeField] int numberOfFlagsToLookAt;
+        [SerializeField] float minKillCoolDownAfterCloseDoor;
 
+        float coolDownAfterCloseDoor;
         State[] allStates;
+
+        public void ResetAfterCloseDoorCoolDown()
+        {
+            coolDownAfterCloseDoor = 0;
+        }
+
         public void SetBrokeDoorPercentage(float v) => brokeDoorPercentage = v;
         public void SetTimeToGiveUp(float v) => timeToGiveUp = v;
         protected override void SetupStates()
@@ -32,7 +40,7 @@ namespace Assets.Scripts.Characters.Enemy
             var killingTargetState = new KillingTargetState(this, macheteSound);
 
             var seenTargetTransition = new TargetOnSightTransition(this, followingState, seeYou);
-            var targetIsCloseToKill = new TargetIsClose(this, killingTargetState, distanceToKillTarget);
+            var targetIsCloseToKill = new TargetIsClose(this, killingTargetState, distanceToKillTarget, () => coolDownAfterCloseDoor > minKillCoolDownAfterCloseDoor);
             var targetUnreachable = new TargetUnreachable(this, walkAroundState);
             var targetGiveUp = new TargetGiveUp(this, walkAroundState, () => timeToGiveUp);
 
@@ -42,7 +50,6 @@ namespace Assets.Scripts.Characters.Enemy
                 targetUnreachable,
                 targetGiveUp);
             walkAroundState.SetTransitions(seenTargetTransition);
-            // SetFirstState(stoppedState);
             SetFirstState(walkAroundState);
 
             allStates = new State[] {stoppedState, followingState, walkAroundState, killingTargetState};
@@ -52,6 +59,12 @@ namespace Assets.Scripts.Characters.Enemy
         {
             transform.position = position;
             SetFirstState(allStates.OfType<T>().FirstOrDefault());
+        }
+
+        protected override void UpdateFsm()
+        {
+            coolDownAfterCloseDoor += Time.deltaTime;
+            base.UpdateFsm();
         }
     }
 }

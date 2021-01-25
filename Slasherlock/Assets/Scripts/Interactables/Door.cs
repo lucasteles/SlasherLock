@@ -2,6 +2,7 @@
 using Assets.Scripts.Ui.Character;
 using System;
 using System.Collections;
+using Assets.Scripts.Characters.Enemy;
 using UnityEngine;
 
 namespace Assets.Interactables.Physics
@@ -134,6 +135,9 @@ namespace Assets.Interactables.Physics
             hasSomeoneClose = true;
             if (LayerMask.LayerToName(other.gameObject.layer) == "Enemy")
             {
+                if (CurrentState == State.Closed)
+                    other.gameObject.GetComponent<EnemyFsm>().ResetAfterCloseDoorCoolDown();
+
                 OpenDoor(enemyPlayLockSound);
                 if (enemyPlayLockSound)
                     Invoke(nameof(EnableEnemyToPlayLockedSound), 1f);
@@ -312,6 +316,11 @@ namespace Assets.Interactables.Physics
             if (Input.GetKeyDown(KeyCode.Q))
                 if (CurrentState == State.Closed)
                     LockDoor();
+                else if (CurrentState == State.Open)
+                {
+                    CloseDoor();
+                    LockDoor();
+                }
                 else if (IsDoorLocked())
                     UnlockDoor();
         }

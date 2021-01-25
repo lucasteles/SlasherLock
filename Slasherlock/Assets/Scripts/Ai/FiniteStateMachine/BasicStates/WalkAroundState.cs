@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using Assets.Scripts.Characters.Enemy;
 using Pathfinding;
 using UnityEngine;
 using Object = UnityEngine.Object;
