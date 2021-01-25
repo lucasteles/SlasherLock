@@ -4740,7 +4740,7 @@ MonoBehaviour:
   playerObstacleLayer:
     serializedVersion: 2
     m_Bits: 16384
-  sightRadius: 20
+  sightRadius: 17
 --- !u!114 &416435325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19391,10 +19391,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 237279268}
     m_Modifications:
-    - target: {fileID: 2049056638911741025, guid: 149fc098333b046a09c853528897e91d, type: 3}
-      propertyPath: keyName
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 2049056638911741026, guid: 149fc098333b046a09c853528897e91d, type: 3}
       propertyPath: m_Name
       value: RedKey
