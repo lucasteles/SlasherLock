@@ -25,4 +25,12 @@ public class SurroundingAwareness : MonoBehaviour
         LastTargetFound = hit.collider.transform;
         return hit.collider == hitFromRay.collider;
     }
+
+    public bool CanReachLastTarget()
+    {
+        var hitFromRay = Physics2D.Raycast(transform.position, LastTargetFound.position, sightRadius,
+            layersToSearchFor | obstacleLayer | playerObstacleLayer);
+
+        return hitFromRay.collider.gameObject.transform == LastTargetFound;
+    }
 }

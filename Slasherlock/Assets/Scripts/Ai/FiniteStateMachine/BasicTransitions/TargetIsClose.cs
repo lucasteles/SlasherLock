@@ -17,11 +17,14 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
 
         public override bool IsValid()
         {
-             var distance = Vector2.Distance(fsm.Awareness.LastTargetFound.position, fsm.transform.position) < distanceToBeClose;
+            var distance = Vector2.Distance(fsm.Awareness.LastTargetFound.position, fsm.transform.position) <
+                           distanceToBeClose;
 
-             return distance && canKill();
+            return distance && canKill() && fsm.Awareness.CanReachLastTarget();
         }
 
-        public override void OnTransition() { }
+        public override void OnTransition()
+        {
+        }
     }
 }

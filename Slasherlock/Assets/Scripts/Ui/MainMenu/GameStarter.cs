@@ -14,15 +14,17 @@ namespace Assets.Scripts.Ui.MainMenu
         [SerializeField] AudioSource enter;
 
         bool canStartGame = false;
+        bool gameStarted = false;
 
         void Update()
         {
-            if (Input.anyKeyDown && canStartGame)
+            if (Input.anyKeyDown && canStartGame && !gameStarted)
                 StartCoroutine(ShowBloodAndLoadScene());
         }
 
         IEnumerator ShowBloodAndLoadScene()
         {
+            gameStarted = true;
             enter.Play();
             Instantiate(bloodAnimation, transform.parent);
 
