@@ -60,8 +60,8 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
                 .Where(NotCloseTo)
                 .ToArray();
 
-            if (!CanReach(player.transform)
-                || Vector2.Distance(fsm.transform.position, player.transform.position) > fsm.Awareness.SightRadius * 2)
+            if ((!CanReach(player.transform) && !fsm.Awareness.HasTargetOnSight())
+                || Vector2.Distance(fsm.transform.position, player.transform.position) > fsm.Awareness.SightRadius * 1.5)
                 Teleport(nearFlags);
             else
                 StopTeleport();
