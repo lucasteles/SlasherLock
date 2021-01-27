@@ -170,20 +170,27 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
         {
             walkFar = true;
 
-            IEnumerator wait()
+            IEnumerator walking()
             {
                 yield return new WaitForSeconds(13);
                 walkFar = false;
             }
 
-            var flagToWalk =
-                flags
-                    .OrderByDescending(x => x.distanceFromPlayer)
-                    .Take(numberOfFlagsToLookAt())
-                    .ToArray();
+            IEnumerator wait()
+            {
+                fsm.PathFinder.StopFollowing();
+                yield return new WaitForSeconds(2);
+                var flagToWalk =
+                    flags
+                        .OrderByDescending(x => x.distanceFromPlayer)
+                        .Take(numberOfFlagsToLookAt())
+                        .ToArray();
 
-            var flagToFollow = flagToWalk[Random.Range(0, flagToWalk.Length)];
-            fsm.PathFinder.FollowTarget(flagToFollow.transform);
+                var flagToFollow = flagToWalk[Random.Range(0, flagToWalk.Length)];
+                fsm.PathFinder.FollowTarget(flagToFollow.transform);
+                fsm.StartCoroutine(walking());
+            }
+
             fsm.StartCoroutine(wait());
         }
     }
