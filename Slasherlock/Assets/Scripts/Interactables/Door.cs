@@ -124,11 +124,14 @@ namespace Assets.Interactables.Physics
             if (collision.gameObject == door) return;
             hasSomeoneClose = true;
 
+
+            if (LayerMask.LayerToName(collision.gameObject.layer) == "Enemy")
+                enemyPlayLockSound = true;
+
             if (LayerMask.LayerToName(collision.gameObject.layer) == "Player")
                 canInteract = true;
         }
 
-        void EnableEnemyToPlayLockedSound() => enemyPlayLockSound = true;
 
         void OnTriggerStay2D(Collider2D other)
         {
@@ -140,8 +143,6 @@ namespace Assets.Interactables.Physics
                     other.gameObject.GetComponent<EnemyFsm>().ResetAfterCloseDoorCoolDown();
 
                 OpenDoor(enemyPlayLockSound);
-                if (enemyPlayLockSound)
-                    Invoke(nameof(EnableEnemyToPlayLockedSound), 1f);
                 enemyPlayLockSound = false;
                 if (CurrentState == State.Locked) ConfirmLockDoor();
             }
@@ -318,10 +319,7 @@ namespace Assets.Interactables.Physics
                 if (CurrentState == State.Closed)
                     LockDoor();
                 else if (CurrentState == State.Open)
-                {
-                    CloseDoor();
-                    LockDoor();
-                }
+                    ThoughtBubble.Instance.ShowThought("I can lock only closed doors");
                 else if (IsDoorLocked())
                     UnlockDoor();
         }

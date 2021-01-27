@@ -31,6 +31,6 @@ public class SurroundingAwareness : MonoBehaviour
         var hitFromRay = Physics2D.Raycast(transform.position, LastTargetFound.position, sightRadius,
             layersToSearchFor | obstacleLayer | playerObstacleLayer);
 
-        return (1 << hitFromRay.collider.gameObject.layer & layersToSearchFor) != 0;
+        return (1 << hitFromRay.collider.gameObject.layer & layersToSearchFor) != 0 ;
     }
 }

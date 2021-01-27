@@ -11,6 +11,7 @@ namespace Assets.Scripts.Fov
         [SerializeField] float fov;
         [SerializeField] float viewDistance;
         [SerializeField] int rayCount = 50;
+        [SerializeField] Vector3 offset;
         Mesh mesh;
         Vector3 origin;
 
@@ -29,7 +30,7 @@ namespace Assets.Scripts.Fov
             var uv = new Vector2[vertices.Length];
             var triangles = new int[rayCount * 3];
 
-            vertices[0] = origin;
+            vertices[0] = origin ;
 
             var vertexIndex = 1;
             var triangleIndex = 0;
@@ -39,8 +40,8 @@ namespace Assets.Scripts.Fov
                 Vector3 vertex;
                 var vectorForCurrentAngle = GetVectorFromAngle(angle);
                 var raycastHit2D =
-                    Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance, layerMask1 | layerMask2);
-                var flags = Physics2D.Raycast(origin, vectorForCurrentAngle, viewDistance,
+                    Physics2D.Raycast(origin + offset, vectorForCurrentAngle, viewDistance, layerMask1 | layerMask2);
+                var flags = Physics2D.Raycast(origin + offset, vectorForCurrentAngle, viewDistance,
                     layerMask1 | layerMask2 | flagsLayer | enemyLayer);
 
                 if (flags.collider != null)

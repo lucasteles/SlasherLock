@@ -5,6 +5,15 @@ TextureImporter:
   - first:
       213: 5441399975589546316
     second: Mansion-walls-cutted_0
+  - first:
+      213: 1869498374391939910
+    second: Mansion-walls-cutted_1
+  - first:
+      213: -4529471147604731581
+    second: Mansion-walls-cutted_2
+  - first:
+      213: -2534675495314931976
+    second: Mansion-walls-cutted_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,7 +123,7 @@ TextureImporter:
         width: 206
         height: 354
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -122,6 +131,69 @@ TextureImporter:
       bones: []
       spriteID: c4985d1b27cb38b40800000000000000
       internalID: 5441399975589546316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion-walls-cutted_1
+      rect:
+        serializedVersion: 2
+        x: 4843
+        y: 3413
+        width: 115
+        height: 213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6434dc1dddac1f910800000000000000
+      internalID: 1869498374391939910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion-walls-cutted_2
+      rect:
+        serializedVersion: 2
+        x: 4964
+        y: 3349
+        width: 470
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34993aa4df51421c0800000000000000
+      internalID: -4529471147604731581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion-walls-cutted_3
+      rect:
+        serializedVersion: 2
+        x: 5437
+        y: 3397
+        width: 121
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8febdd8f01603dcd0800000000000000
+      internalID: -2534675495314931976
       vertices: []
       indices: 
       edges: []

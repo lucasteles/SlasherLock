@@ -170,12 +170,6 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
         {
             walkFar = true;
 
-            IEnumerator walking()
-            {
-                yield return new WaitForSeconds(13);
-                walkFar = false;
-            }
-
             IEnumerator wait()
             {
                 fsm.PathFinder.StopFollowing();
@@ -188,7 +182,8 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicStates
 
                 var flagToFollow = flagToWalk[Random.Range(0, flagToWalk.Length)];
                 fsm.PathFinder.FollowTarget(flagToFollow.transform);
-                fsm.StartCoroutine(walking());
+                yield return new WaitForSeconds(14);
+                walkFar = false;
             }
 
             fsm.StartCoroutine(wait());
