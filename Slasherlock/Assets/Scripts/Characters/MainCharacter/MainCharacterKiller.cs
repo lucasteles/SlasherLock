@@ -27,6 +27,7 @@ namespace Assets.Scripts.Characters.MainCharacter
         public void Kill()
         {
             mover.PreventMovement();
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             StartCoroutine(DestroyAfterTime());
         }
 

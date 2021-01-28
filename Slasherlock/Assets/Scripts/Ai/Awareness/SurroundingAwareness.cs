@@ -28,7 +28,8 @@ public class SurroundingAwareness : MonoBehaviour
 
     public bool CanReachLastTarget()
     {
-        var hitFromRay = Physics2D.Raycast(transform.position, LastTargetFound.position, sightRadius,
+        var directionToTarget = (LastTargetFound.transform.position - transform.position).normalized;
+        var hitFromRay = Physics2D.Raycast(transform.position, directionToTarget, sightRadius,
             layersToSearchFor | obstacleLayer | playerObstacleLayer);
 
         return (1 << hitFromRay.collider.gameObject.layer & layersToSearchFor) != 0 ;

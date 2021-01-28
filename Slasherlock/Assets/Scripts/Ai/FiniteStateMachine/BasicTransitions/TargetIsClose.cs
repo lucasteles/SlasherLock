@@ -21,7 +21,7 @@ namespace Assets.Scripts.Ai.FiniteStateMachine.BasicTransitions
 
             var isInDistanceToKill = distance < distanceToBeClose;
 
-            return isInDistanceToKill && canKill() && (fsm.Awareness.CanReachLastTarget() || distance <= .3f );
+            return isInDistanceToKill && canKill() && fsm.Awareness.CanReachLastTarget() ;
         }
 
         public override void OnTransition()
